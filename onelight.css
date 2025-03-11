@@ -60,6 +60,8 @@
     --important-border: solid 0.5px #8250df94;
     /* 放大倍数 */
     /* --transform: scale(1); */
+    --radius-small: 5px;
+    --radius-large: 10px;
 }
 
 
@@ -97,7 +99,7 @@ body {
 /* 仅在 <p> 标签不包含图片时应用悬停效果 */
 #write p:not(:has(.md-image)):hover {
     box-shadow: var(--box-shadow);
-    border-radius: 10px;
+    border-radius: var(--radius-large);
     background: white;
     width: fit-content;
 }
@@ -281,7 +283,8 @@ a.md-toc-inner {
 /* 图片 */
 #write img {
     border: 0;
-    border-radius: 5px;
+    border-radius: var(--radius-small);
+
     box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
     display: block;
     height: auto;
@@ -338,7 +341,8 @@ a.md-toc-inner {
 
 .md-fences,
 code {
-    border-radius: 5px;
+    border-radius: var(--radius-small);
+
     margin-left: .2em;
     margin-right: .2em;
     padding: .1em
@@ -444,7 +448,8 @@ pre[lang=sequence] {
 mark {
     margin-right: 2px;
     margin-left: 2px;
-    border-radius: 10px;
+    border-radius: var(--radius-large);
+
     padding: 2px 5px 2px 5px;
     border: 1.5px solid;
     background: transparent;
@@ -634,7 +639,8 @@ kbd {
 /* 目录 */
 p.md-toc-content {
     background: var(--gradient-color);
-    border-radius: 10px;
+    border-radius: var(--radius-large);
+
     box-shadow: var(--box-shadow)
 }
 
@@ -663,7 +669,8 @@ p.md-toc-content:hover {
 
 #write>pre.md-meta-block.md-end-block {
     background: #fff;
-    border-radius: 10px;
+    border-radius: var(--radius-large);
+
     box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
     padding: 10px;
     transition: var(--transition)
@@ -671,7 +678,6 @@ p.md-toc-content:hover {
 
 #write>pre.md-meta-block.md-end-block:hover {
     box-shadow: var(--box-shadow);
-    /* transform: var(--transform); */
 }
 
 .info-panel-tab-title:hover,
@@ -731,7 +737,7 @@ tt {
 
 .modal-content,
 video {
-    border-radius: 10px
+    border-radius: var(--radius-large);
 }
 
 video {
@@ -863,14 +869,14 @@ div.md-alert.md-alert-warning * span[md-inline="plain"].md-plain {
 }
 
 figure.md-table-fig.table-figure {
-    border-radius: 5px;
+    border-radius: var(--radius-small);
+
     box-shadow: var(--box-shadow);
     transition: var(--transition)
 }
 
 figure.md-table-fig.table-figure:hover {
     box-shadow: var(--box-shadow);
-    /* transform: var(--transform); */
 }
 
 .ty-on-outline-filter .ty-outline-hit {
@@ -884,7 +890,7 @@ figure.md-table-fig.table-figure:hover {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background: hsla(0, 0%, 100%, .3);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     box-shadow: unset
 }
 
@@ -995,7 +1001,8 @@ text {
 span[alt=highlight] {
     margin-right: 2px;
     margin-left: 2px;
-    border-radius: 10px;
+    border-radius: var(--radius-large);
+
     padding: 2px 5px 2px 5px;
     background: #ff0;
     color: red;
@@ -1075,7 +1082,7 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
 
 #typora-source .CodeMirror-lines {
     background: #fff;
-    border-radius: 10px;
+    border-radius: var(--radius-large);
     max-width: 90%
 }
 
@@ -1225,4 +1232,31 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
 /* 图片悬浮样式 */
 img:hover {
     background: white;
+}
+
+
+/* 快速打开搜索框 */
+#typora-quick-open {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#typora-quick-open-input input:focus {
+    border-radius: var(--radius-small);
+}
+
+.typora-quick-open-item:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
+    border-radius: var(--radius-large);
+    cursor: pointer;
+    color: var(--main-blue);
+    background: white;
+}
+
+/* 快速打开搜索框高亮结果 */
+.typora-quick-open-item-title>b {
+    border-radius: var(--radius-small);
+    padding: 2px;
+    color: red;
+    background: yellow;
 }
