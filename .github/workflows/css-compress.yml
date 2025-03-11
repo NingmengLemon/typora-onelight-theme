@@ -2,8 +2,11 @@ name: compress
 
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      - onelight
+    paths:
+      - 'onelight.css'
+  
 
 jobs:
   build:
