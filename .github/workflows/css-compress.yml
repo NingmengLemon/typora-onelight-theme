@@ -1,12 +1,13 @@
 name: compress
 
+# on:
+#   push:
+#     branches:
+#       - onelight
+#     paths:
+#       - 'onelight.css'
 on:
-  push:
-    branches:
-      - onelight
-    paths:
-      - 'onelight.css'
-  
+  workflow_dispatch:
 
 jobs:
   build:
