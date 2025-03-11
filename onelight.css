@@ -756,6 +756,13 @@ video {
     box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
 }
 
+/* 引用块、警告框段落悬浮样式重置 */
+blockquote p.md-end-block.md-p,
+.md-alert p:hover {
+    background: transparent !important;
+    box-shadow: unset !important;
+}
+
 /* 提示 */
 .md-alert.md-alert-tip {
     border-bottom: var(--tip-border);

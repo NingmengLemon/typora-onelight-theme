@@ -130,7 +130,7 @@ export default defineConfig({
 | *斜体*                            | `*斜体*`                            | 选中文本后<kbd>Ctrl I</kbd>                        |
 | ~~删除线~~                        | `~~删除线~~`                        | 选中文本后按住<kbd>Shift</kbd>然后双击<kbd>~</kbd> |
 | <u>下划线</u>                     | `<u>下划线</u>`                     | 选中文本后<kbd>Ctrl U</kbd>                        |
-| <kbd>Ctrl</kbd>                   | `<kbd>Ctrl</kbd>`                   | 无vuee                                             |
+| <kbd>Ctrl</kbd>                   | `<kbd>Ctrl</kbd>`                   | 无                                                 |
 | <span alt='highlight'>高亮</span> | `<span alt='highlight'>高亮</span>` | 无，这是主题自定义的                               |
 
 ## 7 表格
