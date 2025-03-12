@@ -967,6 +967,10 @@ input:focus {
     background: transparent
 }
 
+.ty-menu-shortcut {
+    font-family: var(--main-font-family);
+}
+
 .btn-primary.active,
 .btn-primary.focus,
 .btn-primary:active,
@@ -993,11 +997,18 @@ input:focus {
     background: var(--item-bg-color-blue)
 }
 
+/* 右键菜单悬浮 */
 .context-menu.dropdown-menu>.active>a,
 .context-menu.dropdown-menu>li>a:hover,
 .menu-style-btn.active {
+    cursor: pointer;
+    border-radius: 10px;
     background: var(--item-bg-color-blue);
     color: var(--main-blue)
+}
+
+.context-menu {
+    padding-bottom: 0;
 }
 
 script,
