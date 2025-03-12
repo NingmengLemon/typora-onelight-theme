@@ -101,7 +101,6 @@ body {
     box-shadow: var(--box-shadow);
     border-radius: var(--radius-large);
     background: white;
-    width: fit-content;
 }
 
 
@@ -247,7 +246,8 @@ body {
 
 /* 链接 */
 a>span.md-plain,
-a.md-url {
+a.md-url,
+a {
     margin: 3px;
     color: var(--main-purple);
     font-weight: 700;
@@ -326,17 +326,16 @@ a.md-toc-inner {
     font-weight: 700
 }
 
-#write .md-def-name {
-    padding-right: 2.3vw
+/* 脚注 */
+.md-def-name {
+    padding-right: 3ch;
 }
 
-#write .md-def-name:before {
-    color: #000;
-    content: "["
-}
-
-#write .md-def-name:after {
-    color: #000
+.md-footnote {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
 }
 
 .md-fences,
@@ -529,8 +528,12 @@ span#filesearch-case-option-btn:active {
 }
 
 #write .md-footnote {
+    margin-right: 2px;
+    margin-left: 2px;
+    line-height: 1;
+    background: white;
     color: var(--main-red);
-    font-weight: 700
+    font-weight: 700;
 }
 
 
@@ -865,8 +868,10 @@ div.md-alert.md-alert-warning * span[md-inline="plain"].md-plain {
     color: var(--warning-color);
 }
 
+/* 脚注编辑视图 */
 .md-blockmeta {
-    color: #777
+    font-style: normal;
+    color: gray;
 }
 
 figure.md-table-fig.table-figure {
@@ -910,6 +915,11 @@ figure.md-table-fig.table-figure:hover {
 input:focus {
     border-color: unset;
     box-shadow: unset
+}
+
+/* 脚注链接 */
+.code-tooltip-content a {
+    color: rgb(145 205 255);
 }
 
 ::-moz-selection {
