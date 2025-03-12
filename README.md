@@ -86,11 +86,11 @@
 > ```css
 > content {
 >      background-color: transparent;
->      //可以替换此处的图片，不想显示可以将这段整个注释掉
+>      /* 可以替换此处的图片，不想显示可以将这段整个注释掉 */
 >      background-image: url('./onelight/img/bg.gif');
 >      background-position: 100% 100%;
 >      background-repeat: no-repeat;
->      background-size: 100px auto; // 调整图片显示大小
+>      background-size: 100px auto; /* 调整图片显示大小 */
 >      transition: background-image .5s ease-in-out, background-size .5s ease-in-out
 > }
 > ```

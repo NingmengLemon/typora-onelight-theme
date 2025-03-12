@@ -85,11 +85,11 @@ The default font is configured at the beginning of `onelight.css`. You can modif
 > ```css
 > content {
 >   background-color: transparent;
->   // Replace the image path here. Comment out this section to disable background
+>   /* Replace the image path here. Comment out this section to disable background */
 >   background-image: url('./onelight/img/bg.gif');
 >   background-position: 100% 100%;
 >   background-repeat: no-repeat;
->   background-size: 100px auto; // Adjust image size
+>   background-size: 100px auto; /* Adjust image size */
 >   transition: background-image .5s ease-in-out, background-size .5s ease-in-out
 > }
 > ```
