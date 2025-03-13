@@ -131,7 +131,7 @@ export default defineConfig({
 | ~~删除线~~                        | `~~删除线~~`                        | 选中文本后按住<kbd>Shift</kbd>然后双击<kbd>~</kbd> |
 | <u>下划线</u>                     | `<u>下划线</u>`                     | 选中文本后<kbd>Ctrl U</kbd>                        |
 | <kbd>Ctrl</kbd>                   | `<kbd>Ctrl</kbd>`                   | 无                                                 |
-| <span alt='highlight'>高亮</span> | `<span alt='highlight'>高亮</span>` | 无，这是主题自定义的                               |
+| <span alt='highlight'>高亮</span> | `<span alt='highlight'>高亮</span>` | 无                                                 |
 
 ## 7 表格
 
@@ -148,6 +148,8 @@ export default defineConfig({
 `<img align='left' src="......"/> <img align='right' src="......"/>`
 
 <img align='left' src="https://s2.loli.net/2024/12/29/8KTQLnUcGzX2vdx.gif" alt="社恐" style="zoom:25%;" /><img align='left' src="https://s2.loli.net/2024/12/29/mTNin3OZPyucQpV.gif" alt="威胁" style="zoom:25%;" /><img align='left' src="https://s2.loli.net/2024/12/29/LRBkhyGwbI3toO7.gif" alt="气鼓鼓" style="zoom:25%;" /><img align='left' src="https://s2.loli.net/2024/12/29/Zbnxh3fTJUK8r7V.gif" alt="憋笑" style="zoom:25%;" />
+
+
 
 
 

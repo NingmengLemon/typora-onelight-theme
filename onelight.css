@@ -44,6 +44,7 @@
     /* 阴影 */
     --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
     --transition: box-shadow 0.3s ease, transform 0.3s ease;
+    --bg-transition: background-color 0.5s ease;
     /* 左到右透明渐变 */
     --gradient-color: linear-gradient(to right, white, rgba(255, 255, 255, 0));
     /* github警告框 */
@@ -59,9 +60,16 @@
     --important-color: #8250df;
     --important-border: solid 0.5px #8250df94;
     /* 放大倍数 */
-    /* --transform: scale(1); */
     --radius-small: 5px;
     --radius-large: 10px;
+    --radius-xlarge: 15px;
+    /* 云母 */
+    --mica-bg: rgba(255, 255, 255, 0.65);
+    --mica-blur: blur(12px) saturate(1.3);
+    --mica-border: 1px solid rgba(255, 255, 255, 0.15);
+    --mica-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    --mica-transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 
@@ -83,6 +91,7 @@ body {
     text-align: left
 }
 
+/* 段落 */
 #write,
 #write p {
     font-size: 16px
@@ -96,25 +105,27 @@ body {
     margin-top: 3px;
 }
 
-/* 仅在 <p> 标签不包含图片时应用悬停效果 */
+/* 仅在p标签不包含图片时应用悬停效果 */
 #write p:not(:has(.md-image)):hover {
     box-shadow: var(--box-shadow);
     border-radius: var(--radius-large);
     background: white;
 }
 
-
-
 #write p[align="center"]:hover {
     width: inherit;
 }
 
+/* todo-复选框 */
 #write input[type=checkbox] {
+    height: 1.25rem;
+    width: 1.25rem;
     left: -3px;
     margin-right: 5px;
-    margin-top: calc(1em - 2px)
+    margin-top: calc(1em - 6px);
 }
 
+/* 标题 */
 #write h2,
 #write h3,
 #write h4,
@@ -189,9 +200,10 @@ body {
     font-size: 1rem
 }
 
+
+/*列表 */
 #write ol,
 #write ul {
-    /* color: var(--main-red); */
     margin-bottom: 8px;
     margin-top: 8px;
     padding-left: 40px
@@ -213,10 +225,13 @@ body {
     font-size: 15px
 }
 
+
+/*粗体*/
 #write strong {
     color: #136ef7;
     font-weight: 700
 }
+
 
 /* 引用块 */
 #write blockquote {
@@ -232,10 +247,11 @@ body {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     padding: 10px 10px 10px 20px;
-    transition: var(--transition)
+    transition: var(--bg-transition)
 }
 
 #write blockquote:hover {
+    transition: var(--bg-transition);
     background: #fff;
     box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
 }
@@ -296,7 +312,6 @@ a.md-toc-inner {
 
 #write img:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
-    /* transform: var(--transform); */
 }
 
 /* 表格 */
@@ -355,10 +370,6 @@ code {
     padding: .4em 1em .3em;
     transition: var(--transition)
 }
-
-/* .md-fences:hover {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
-} */
 
 .CodeMirror div.CodeMirror-cursor {
     border-left: 1px solid #26ed91;
@@ -536,14 +547,6 @@ span#filesearch-case-option-btn:active {
     font-weight: 700;
 }
 
-
-
-.md-search-hit {
-    background-color: hsla(0, 0%, 100%, .123);
-    contain: style;
-    transform: translateZ(0)
-}
-
 #write h1 {
     font-size: 50px;
     text-align: center
@@ -558,8 +561,9 @@ span#filesearch-case-option-btn:active {
     margin-top: 7px
 }
 
-#write .ul>.li:not(.tab):before,
-#write ul>li:not(.tab):before {
+/* 无序列表前小圆点 */
+#write .ul>.li:not(.tab):not(.task-list-item):before,
+#write ul>li:not(.tab):not(.task-list-item):before {
     border-radius: .31em;
     content: "";
     height: .62em;
@@ -569,13 +573,13 @@ span#filesearch-case-option-btn:active {
     width: .62em
 }
 
+
+
 #write .ol .li:before,
 #write .ul .li:before,
 #write ol li:before,
 #write ul li:before {
     background: var(--main-blue);
-    color: var(--olfore-color);
-    cursor: pointer;
     position: absolute;
 }
 
@@ -620,6 +624,7 @@ span#filesearch-case-option-btn:active {
     margin-top: 0
 }
 
+/* 表格 */
 table tr:hover {
     background-color: #65666841
 }
@@ -649,6 +654,7 @@ p.md-toc-content {
 }
 
 p.md-toc-content:hover {
+    transition: var(--bg-transition);
     background: #fff;
 }
 
@@ -756,17 +762,18 @@ video {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
-    transition: var(--transition);
+    transition: var(--bg-transition);
 }
 
 /* 悬浮样式 */
 .md-alert:hover {
+    transition: var(--bg-transition);
     backdrop-filter: unset;
     background: #fff !important;
     box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
 }
 
-/* 引用块、警告框段落悬浮样式重置 */
+/* 引用块、警告框下 段落悬浮样式重置 */
 blockquote p.md-end-block.md-p,
 .md-alert p:hover {
     background: transparent !important;
@@ -951,17 +958,6 @@ input:focus {
 }
 
 
-/* 菜单 */
-
-.dropdown-menu,
-.menu-item-container a.menu-style-btn {
-    background: rgb(255 255 255 / 81%);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(10px);
-}
 
 .menu-item-container a.menu-style-btn {
     background: transparent
@@ -1016,18 +1012,30 @@ text {
     font-family: var(--main-font-family)
 }
 
-/* 高亮标签、搜索高亮 */
-.cm-search-hit.CodeMirror-selectedtext,
-.md-search-hit.md-search-select,
-.md-search-select,
+/* 高亮标签 */
 span[alt=highlight] {
     margin-right: 2px;
     margin-left: 2px;
     border-radius: var(--radius-large);
-
     padding: 2px 5px 2px 5px;
     background: #ff0;
     color: red;
+    box-shadow: var(--box-shadow);
+}
+
+/* 搜索高亮 */
+.cm-search-hit.CodeMirror-selectedtext,
+.md-search-hit.md-search-select,
+.md-search-select {
+    padding: 2px 5px 2px 5px;
+    border-radius: var(--radius-large);
+    background: #ff0;
+    color: red;
+    box-shadow: var(--box-shadow);
+}
+
+.md-search-hit {
+    background: #ff0;
     box-shadow: var(--box-shadow);
 }
 
@@ -1281,4 +1289,53 @@ img:hover {
     padding: 2px;
     color: red;
     background: yellow;
+}
+
+/* 右键菜单 */
+.dropdown-menu,
+.menu-item-container a.menu-style-btn {
+    border-radius: var(--radius-xlarge);
+    background-color: var(--mica-bg) !important;
+    backdrop-filter: var(--mica-blur);
+    -webkit-backdrop-filter: var(--mica-blur);
+    border: var(--mica-border);
+    box-shadow: var(--box-shadow);
+    transition: var(--mica-transition);
+}
+
+/* 大纲参考线 */
+.outline-h1::after,
+.outline-h2::after,
+.outline-h3::after,
+.outline-h4::after,
+.outline-h5::after,
+.outline-h6::after {
+    content: "";
+    height: calc(100% - 25px);
+    width: 1.5px;
+    background: #a5a5a5;
+    position: absolute;
+    left: 6.5px;
+    top: 25px;
+}
+
+li.outline-item-wrapper.outline-h2.outline-item-open::after {
+    left: 20px;
+}
+
+li.outline-item-wrapper.outline-h3.outline-item-open::after {
+    left: 34px;
+}
+
+li.outline-item-wrapper.outline-h4.outline-item-open::after {
+    left: 48.5px;
+}
+
+li.outline-item-wrapper.outline-h5.outline-item-open::after {
+    left: 62.5px;
+}
+
+/* 折叠箭头 */
+.outline-item-open>.outline-item>.outline-expander:before {
+    color: grey;
 }
