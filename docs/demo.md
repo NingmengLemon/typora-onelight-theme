@@ -186,9 +186,48 @@ $$
 ## 12 mermaid
 
 ```mermaid
+flowchart TD
+    A[Start] --> B{Is it?}
+    B -->|Yes| C[OK]
+    C --> D[Rethink]
+    D --> B
+    B ---->|No| E[End]
+```
+
+```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+```
+
+```mermaid
 pie
     title Pie Chart
     "Sleep" : 7.5
     "Work" : 12
     "Eat" : 2.5 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

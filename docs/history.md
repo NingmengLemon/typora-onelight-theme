@@ -1,3 +1,4 @@
+<img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/v1.4.6/total"></br>
 <img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/v1.4.5/total"></br>
 <img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/v1.4.4/total"></br>
 <img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/v1.4.3/total"></br>
