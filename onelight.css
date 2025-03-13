@@ -545,14 +545,6 @@ span#filesearch-case-option-btn:active {
     font-weight: 700;
 }
 
-
-
-.md-search-hit {
-    background-color: hsla(0, 0%, 100%, .123);
-    contain: style;
-    transform: translateZ(0)
-}
-
 #write h1 {
     font-size: 50px;
     text-align: center
@@ -1016,18 +1008,30 @@ text {
     font-family: var(--main-font-family)
 }
 
-/* 高亮标签、搜索高亮 */
-.cm-search-hit.CodeMirror-selectedtext,
-.md-search-hit.md-search-select,
-.md-search-select,
+/* 高亮标签 */
 span[alt=highlight] {
     margin-right: 2px;
     margin-left: 2px;
     border-radius: var(--radius-large);
-
     padding: 2px 5px 2px 5px;
     background: #ff0;
     color: red;
+    box-shadow: var(--box-shadow);
+}
+
+/* 搜索高亮 */
+.cm-search-hit.CodeMirror-selectedtext,
+.md-search-hit.md-search-select,
+.md-search-select {
+    padding: 2px 5px 2px 5px;
+    border-radius: var(--radius-large);
+    background: #ff0;
+    color: red;
+    box-shadow: var(--box-shadow);
+}
+
+.md-search-hit {
+    background: #ff0;
     box-shadow: var(--box-shadow);
 }
 
