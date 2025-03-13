@@ -300,7 +300,7 @@ a.md-toc-inner {
 
 /* 图片 */
 #write img {
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0));
+    filter: var(--drop-shadow);
     border-radius: var(--radius-small);
     display: block;
     height: auto;
@@ -468,12 +468,16 @@ pre[lang=sequence] {
     color: #333
 }
 
+/* 代码语言类型 */
+span.ty-input.ty-input-after.ty-cm-lang-input {
+    color: white;
+}
+
 /* 高亮 */
 mark {
     margin-right: 2px;
     margin-left: 2px;
     border-radius: var(--radius-large);
-
     padding: 2px 5px 2px 5px;
     border: 1.5px solid;
     background: transparent;
@@ -487,7 +491,7 @@ del {
 
 /* 代码块 */
 #write pre {
-    background: var(--code-bg-color);
+    background: var(--code-bg-color) !important;
     font-family: var(--main-font-family)
 }
 
@@ -1180,8 +1184,12 @@ ul#megamenu-menu-list {
 }
 
 /* mermaid */
-.md-diagram-panel.md-fences-adv-panel:hover {
-    backdrop-filter: blur(50px);
+.md-diagram-panel.md-fences-adv-panel {
+    background: white;
+}
+
+pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm[lang=mermaid]::after {
+    color: black;
 }
 
 pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
@@ -1189,7 +1197,7 @@ pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.t
 }
 
 /* 代码框右下角的语言类型显示 */
-pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm.modeLoaded::after {
+pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
     content: attr(lang);
     position: absolute;
     right: 0;
