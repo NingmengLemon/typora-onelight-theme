@@ -116,11 +116,13 @@ body {
     width: inherit;
 }
 
-
+/* todo-复选框 */
 #write input[type=checkbox] {
+    height: 1.25rem;
+    width: 1.25rem;
     left: -3px;
     margin-right: 5px;
-    margin-top: calc(1em - 2px)
+    margin-top: calc(1em - 6px);
 }
 
 /* 标题 */
@@ -559,8 +561,9 @@ span#filesearch-case-option-btn:active {
     margin-top: 7px
 }
 
-#write .ul>.li:not(.tab):before,
-#write ul>li:not(.tab):before {
+/* 无序列表前小圆点 */
+#write .ul>.li:not(.tab):not(.task-list-item):before,
+#write ul>li:not(.tab):not(.task-list-item):before {
     border-radius: .31em;
     content: "";
     height: .62em;
@@ -570,13 +573,13 @@ span#filesearch-case-option-btn:active {
     width: .62em
 }
 
+
+
 #write .ol .li:before,
 #write .ul .li:before,
 #write ol li:before,
 #write ul li:before {
     background: var(--main-blue);
-    color: var(--olfore-color);
-    cursor: pointer;
     position: absolute;
 }
 
@@ -621,6 +624,7 @@ span#filesearch-case-option-btn:active {
     margin-top: 0
 }
 
+/* 表格 */
 table tr:hover {
     background-color: #65666841
 }
