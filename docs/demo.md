@@ -143,7 +143,9 @@ export default defineConfig({
 
 ## 8 图片
 
-图片默认居中显示，可以设置img标签的algin属性调整为左对齐或者右对齐
+图片默认居中显示，可以设置img标签的algin属性调整为左对齐或者右对齐 
+
+<img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/latest/total">
 
 `<img align='left' src="......"/> <img align='right' src="......"/>`
 
