@@ -202,9 +202,21 @@ sequenceDiagram
 ```
 
 ```mermaid
-pie
-    title Pie Chart
-    "Sleep" : 7.5
-    "Work" : 12
-    "Eat" : 2.5 
+xychart-beta
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
 ```
+
+```mermaid
+gantt
+    dateFormat HH:mm
+    axisFormat %H:%M
+    Initial milestone : milestone, m1, 17:49, 2m
+    Task A : 10m
+    Task B : 5m
+    Final milestone : milestone, m2, 18:08, 4m
+```
+
