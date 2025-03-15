@@ -994,6 +994,33 @@ input:focus {
     background: var(--item-bg-color-blue)
 }
 
+/* 右键菜单 */
+.dropdown-menu,
+.menu-item-container a.menu-style-btn {
+    border-radius: var(--radius-xlarge);
+    background-color: var(--mica-bg) !important;
+    backdrop-filter: var(--mica-blur);
+    -webkit-backdrop-filter: var(--mica-blur);
+    border: var(--mica-border);
+    box-shadow: var(--box-shadow);
+    transition: var(--mica-transition);
+}
+
+/* 任务列表按钮 */
+.ty-check:before {
+    color: #00bb00;
+}
+
+/* 删除按钮 */
+.ty-delete1:before {
+    color: #ff4e4e;
+}
+
+/* 代码按钮 */
+.ty-code:before {
+    color: purple;
+}
+
 /* 右键菜单悬浮 */
 .context-menu.dropdown-menu>.active>a,
 .context-menu.dropdown-menu>li>a:hover,
@@ -1295,17 +1322,7 @@ img:hover {
     background: yellow;
 }
 
-/* 右键菜单 */
-.dropdown-menu,
-.menu-item-container a.menu-style-btn {
-    border-radius: var(--radius-xlarge);
-    background-color: var(--mica-bg) !important;
-    backdrop-filter: var(--mica-blur);
-    -webkit-backdrop-filter: var(--mica-blur);
-    border: var(--mica-border);
-    box-shadow: var(--box-shadow);
-    transition: var(--mica-transition);
-}
+
 
 /* 大纲参考线 */
 .outline-h1::after,
@@ -1342,4 +1359,9 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 /* 折叠箭头 */
 .outline-item-open>.outline-item>.outline-expander:before {
     color: grey;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: var(--main-blue);
 }
