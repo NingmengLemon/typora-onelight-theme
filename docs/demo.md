@@ -143,7 +143,9 @@ export default defineConfig({
 
 ## 8 图片
 
-图片默认居中显示，可以设置img标签的algin属性调整为左对齐或者右对齐
+图片默认居中显示，可以设置img标签的algin属性调整为左对齐或者右对齐 
+
+<img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/latest/total">
 
 `<img align='left' src="......"/> <img align='right' src="......"/>`
 
@@ -186,9 +188,37 @@ $$
 ## 12 mermaid
 
 ```mermaid
-pie
-    title Pie Chart
-    "Sleep" : 7.5
-    "Work" : 12
-    "Eat" : 2.5 
+flowchart TD
+    A[Start] --> B{Is it?}
+    B -->|Yes| C[OK]
+    C --> D[Rethink]
+    D --> B
+    B ---->|No| E[End]
 ```
+
+```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+```
+
+```mermaid
+xychart-beta
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+```
+
+```mermaid
+gantt
+    dateFormat HH:mm
+    axisFormat %H:%M
+    Initial milestone : milestone, m1, 17:49, 2m
+    Task A : 10m
+    Task B : 5m
+    Final milestone : milestone, m2, 18:08, 4m
+```
+

@@ -43,6 +43,8 @@
     --item-bg-color-blue: #42a5f542;
     /* 阴影 */
     --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
+    --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+    /* 过渡 */
     --transition: box-shadow 0.3s ease, transform 0.3s ease;
     --bg-transition: background-color 0.5s ease;
     /* 左到右透明渐变 */
@@ -298,16 +300,14 @@ a.md-toc-inner {
 
 /* 图片 */
 #write img {
-    border: 0;
+    filter: var(--drop-shadow);
     border-radius: var(--radius-small);
-
-    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
     display: block;
     height: auto;
     margin: 0 auto;
     max-width: 100%;
     transition: var(--transition);
-    width: auto
+    width: auto;
 }
 
 #write img:hover {
@@ -315,30 +315,44 @@ a.md-toc-inner {
 }
 
 /* 表格 */
+figure.md-table-fig.table-figure {
+    border: 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radius-large);
+}
+
+/* 表格行 */
+table tr:hover {
+    background-color: #65666841
+}
+
 #write table tr {
     background-color: #fff;
     border: 0;
-    border-top: 1px solid #ccc
 }
 
-/* 交替颜色 */
+/* 斑马纹 */
 #write table tr:nth-child(2n) {
     background-color: #f3f3f3
 }
 
 #write table tr td,
 #write table tr th {
-    border: 1px solid #ccc;
+    border: 0;
     font-size: 16px;
     line-height: 1.5;
     padding: 5px 10px;
-    text-align: left
 }
 
+/* 表头 */
 #write table tr th {
     background-color: #42a5f53d;
     color: var(--main-blue);
     font-weight: 700
+}
+
+#write table tr:hover {
+    background: #e4e4e4;
 }
 
 /* 脚注 */
@@ -454,12 +468,16 @@ pre[lang=sequence] {
     color: #333
 }
 
+/* 代码语言类型 */
+span.ty-input.ty-input-after.ty-cm-lang-input {
+    color: white;
+}
+
 /* 高亮 */
 mark {
     margin-right: 2px;
     margin-left: 2px;
     border-radius: var(--radius-large);
-
     padding: 2px 5px 2px 5px;
     border: 1.5px solid;
     background: transparent;
@@ -473,7 +491,7 @@ del {
 
 /* 代码块 */
 #write pre {
-    background: var(--code-bg-color);
+    background: var(--code-bg-color) !important;
     font-family: var(--main-font-family)
 }
 
@@ -489,7 +507,7 @@ del {
 .md-fences-adv-panel,
 .md-math-container,
 .md-mathjax-preview {
-    font-family: fantasy
+    font-family: var(--main-font-family);
 }
 
 .searchpanel-search-option-btn.active {
@@ -611,7 +629,7 @@ span#filesearch-case-option-btn:active {
     height: 1.65em;
     line-height: 1.7em;
     margin-left: -25px;
-    margin-top: 12px;
+    margin-top: 10px;
     text-align: center;
     width: 1.65em
 }
@@ -622,11 +640,6 @@ span#filesearch-case-option-btn:active {
 #write ul li input {
     margin-bottom: 0;
     margin-top: 0
-}
-
-/* 表格 */
-table tr:hover {
-    background-color: #65666841
 }
 
 .md-fences:not(.md-focus) .CodeMirror-code>:hover {
@@ -676,11 +689,10 @@ p.md-toc-content:hover {
     color: var(--main-blue)
 }
 
-
+/* meta代码块 */
 #write>pre.md-meta-block.md-end-block {
-    background: #fff;
+    background: white !important;
     border-radius: var(--radius-large);
-
     box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
     padding: 10px;
     transition: var(--transition)
@@ -881,17 +893,6 @@ div.md-alert.md-alert-warning * span[md-inline="plain"].md-plain {
     color: gray;
 }
 
-figure.md-table-fig.table-figure {
-    border-radius: var(--radius-small);
-
-    box-shadow: var(--box-shadow);
-    transition: var(--transition)
-}
-
-figure.md-table-fig.table-figure:hover {
-    box-shadow: var(--box-shadow);
-}
-
 .ty-on-outline-filter .ty-outline-hit {
     background: #ff0;
     color: red;
@@ -991,6 +992,33 @@ input:focus {
 
 .file-library-node.file-tree-node.file-library-file-node:hover {
     background: var(--item-bg-color-blue)
+}
+
+/* 右键菜单 */
+.dropdown-menu,
+.menu-item-container a.menu-style-btn {
+    border-radius: var(--radius-xlarge);
+    background-color: var(--mica-bg) !important;
+    backdrop-filter: var(--mica-blur);
+    -webkit-backdrop-filter: var(--mica-blur);
+    border: var(--mica-border);
+    box-shadow: var(--box-shadow);
+    transition: var(--mica-transition);
+}
+
+/* 任务列表按钮 */
+.ty-check:before {
+    color: #00bb00;
+}
+
+/* 删除按钮 */
+.ty-delete1:before {
+    color: #ff4e4e;
+}
+
+/* 代码按钮 */
+.ty-code:before {
+    color: purple;
 }
 
 /* 右键菜单悬浮 */
@@ -1182,8 +1210,12 @@ ul#megamenu-menu-list {
 }
 
 /* mermaid */
-.md-diagram-panel.md-fences-adv-panel:hover {
-    backdrop-filter: blur(50px);
+.md-diagram-panel.md-fences-adv-panel {
+    background: white;
+}
+
+pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm[lang=mermaid]::after {
+    color: black;
 }
 
 pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
@@ -1191,7 +1223,7 @@ pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.t
 }
 
 /* 代码框右下角的语言类型显示 */
-pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm.modeLoaded::after {
+pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
     content: attr(lang);
     position: absolute;
     right: 0;
@@ -1267,8 +1299,7 @@ img:hover {
 
 /* 快速打开搜索框 */
 #typora-quick-open {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: var(--radius-large);
 }
 
 #typora-quick-open-input input:focus {
@@ -1291,17 +1322,7 @@ img:hover {
     background: yellow;
 }
 
-/* 右键菜单 */
-.dropdown-menu,
-.menu-item-container a.menu-style-btn {
-    border-radius: var(--radius-xlarge);
-    background-color: var(--mica-bg) !important;
-    backdrop-filter: var(--mica-blur);
-    -webkit-backdrop-filter: var(--mica-blur);
-    border: var(--mica-border);
-    box-shadow: var(--box-shadow);
-    transition: var(--mica-transition);
-}
+
 
 /* 大纲参考线 */
 .outline-h1::after,
@@ -1338,4 +1359,9 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 /* 折叠箭头 */
 .outline-item-open>.outline-item>.outline-expander:before {
     color: grey;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: var(--main-blue);
 }
