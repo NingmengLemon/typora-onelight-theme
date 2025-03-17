@@ -1013,13 +1013,20 @@ input:focus {
 
 /* 删除按钮 */
 .ty-delete1:before {
-    color: #ff4e4e;
+    color: var(--main-red);
 }
 
 /* 代码按钮 */
 .ty-code:before {
-    color: purple;
+    color: var(--main-purple);
 }
+
+/* 链接按钮 */
+.ty-link-icon:before {
+    color: var(--main-blue);
+}
+
+
 
 /* 右键菜单悬浮 */
 .context-menu.dropdown-menu>.active>a,
