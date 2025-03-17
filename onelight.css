@@ -27,6 +27,7 @@
     --item-hover-text-color: var(--main-red);
     --monospace: monospace;
     --select-text-bg-color: #3b3e4d;
+    --side-bar-menu-active-tint: var(--main-green);
     /* 主题色 */
     --main-blue: #166ff3;
     --main-red: #ff6b6b;
@@ -1100,6 +1101,25 @@ div#megamenu-section-open {
     background-image: unset;
 }
 
+/* 一体化模式-打开 */
+.megamenu-menu-panel:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+/* 一体化模式-打开-最近打开文件列表 */
+ul.dropdown-menu[aria-labelledby="recent-file-panel-action-btn"] {
+    border-radius: 5px;
+}
+
+/* 一体化模式-已保存 */
+a#m-saved:hover {
+    cursor: unset;
+}
+
+a#megamenu-clear-recet-documents:hover {
+    background: transparent;
+}
+
 ::-moz-selection {
     background: var(--item-bg-color-blue)
 }
@@ -1371,4 +1391,16 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 .cm-s-inner .cm-link,
 .cm-s-inner.cm-link {
     color: var(--main-blue);
+}
+
+.theme-preview-div:hover {
+    border-color: var(--main-green);
+}
+
+.theme-preview-div.active>i::before {
+    color: var(--main-green);
+}
+
+#theme-preview-grid {
+    max-width: fit-content;
 }
