@@ -94,10 +94,11 @@ body {
     text-align: left
 }
 
-/* 段落 */
-#write,
-#write p {
-    font-size: 16px
+/* 大纲 */
+.outline-label,
+.sidebar-content-content,
+.info-panel-tab-title {
+    font-size: 1rem;
 }
 
 #write p {
@@ -180,6 +181,11 @@ body {
     right: calc(100% + 3px);
 }
 
+#write h1 {
+    font-size: 2.5rem;
+    text-align: center
+}
+
 #write h2 {
     font-size: 1.7rem;
     margin: 1em 0
@@ -225,7 +231,7 @@ body {
 }
 
 #write li section {
-    font-size: 15px
+    font-size: .9rem;
 }
 
 
@@ -286,7 +292,7 @@ a.md-toc-inner {
     background-color: #ebebeb;
     color: #eb4c37;
     font-family: var(--main-font-family);
-    font-size: 14px
+    font-size: .9rem;
 }
 
 #write li code,
@@ -340,7 +346,7 @@ table tr:hover {
 #write table tr td,
 #write table tr th {
     border: 0;
-    font-size: 16px;
+    font-size: .9rem;
     line-height: 1.5;
     padding: 5px 10px;
 }
@@ -564,11 +570,6 @@ span#filesearch-case-option-btn:active {
     background: white;
     color: var(--main-red);
     font-weight: 700;
-}
-
-#write h1 {
-    font-size: 50px;
-    text-align: center
 }
 
 #write .ol .li,
