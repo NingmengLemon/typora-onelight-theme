@@ -1320,11 +1320,6 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
     cursor: pointer;
 }
 
-/* 图片悬浮样式 */
-img:hover {
-    background: white;
-}
-
 
 /* 快速打开搜索框 */
 #typora-quick-open {
