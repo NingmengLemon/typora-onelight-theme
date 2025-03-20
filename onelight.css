@@ -272,7 +272,8 @@ body {
 a>span.md-plain,
 a.md-url,
 a {
-    margin: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
     color: var(--main-purple);
     font-weight: 700;
     text-decoration: underline;
@@ -591,8 +592,35 @@ span#filesearch-case-option-btn:active {
     line-height: .42em;
     margin-left: -22px;
     margin-top: 15px;
-    width: .62em
+    width: .62em;
+    transition: transform 0.3s;
 }
+
+#write .ul>.li:not(.tab):not(.task-list-item):hover:before,
+#write ul>li:not(.tab):not(.task-list-item):hover:before {
+    transform: rotate(360deg) !important;
+}
+
+
+/* 二级无序列表前小方块 */
+#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item::before {
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+
+/* 三级无序列表前小方块 */
+#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item::before {
+    border-radius: 0;
+    transform: unset;
+}
+
+/* 四级无序列表前小方块 */
+#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item>ul>li.md-list-item::before {
+    border-radius: 0;
+    background: transparent;
+    border: 1.5px solid var(--main-blue);
+}
+
 
 
 
