@@ -29,7 +29,7 @@
     --select-text-bg-color: #3b3e4d;
     --side-bar-menu-active-tint: var(--main-green);
     /* 主题色 */
-    --main-blue: #166ff3;
+    --theme-color: #166ff3;
     --main-red: #ff6b6b;
     --main-green: #2ed573;
     --main-purple: #c94ae9;
@@ -37,6 +37,8 @@
     --light-color: #b2b2b2;
     --code--bg-color: #282c34;
     --code--bg-color-light: #3d404e;
+    --border-color: var(--theme-color);
+    --border: solid 0.5px var(--theme-color)94;
     /* 字体 */
     --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
     /* 悬浮 */
@@ -96,8 +98,8 @@ body {
 
 #write p {
     padding: 5px;
-    line-height: 26px;
     margin: 0;
+    line-height: 26px;
     margin-bottom: 3px;
     margin-top: 3px;
 }
@@ -109,18 +111,29 @@ body {
     background: white;
 }
 
+
+#write p:has(.md-image):hover::before {
+    display: none;
+}
+
 #write p[align="center"]:hover {
     width: inherit;
 }
 
-/* todo-复选框 */
-#write input[type=checkbox] {
-    height: 1.25rem;
-    width: 1.25rem;
-    left: -3px;
-    margin-right: 5px;
-    margin-top: calc(1em - 6px);
+/* ---------------->> todo-复选框 <<---------------- */
+.md-list-item.task-list-item {
+    display: flex;
+    align-items: center;
 }
+
+#write input[type=checkbox] {
+    position: unset;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 3px;
+}
+
+/* ----------------------------------------------- */
 
 /* 标题 */
 #write h2,
@@ -190,7 +203,7 @@ body {
 }
 
 #write h2 span {
-    color: var(--main-blue);
+    color: var(--theme-color);
     font-weight: 700;
 }
 
@@ -236,7 +249,7 @@ body {
 
 /*粗体*/
 #write strong {
-    color: #136ef7;
+    color: var(--theme-color);
     font-weight: 700
 }
 
@@ -245,7 +258,7 @@ body {
 #write blockquote {
     background: var(--gradient-color);
     border-bottom-right-radius: 10px;
-    border-left: 5px solid var(--main-blue);
+    border-left: 5px solid var(--border-color);
     border-top-right-radius: 10px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, .2);
     color: #606060;
@@ -272,7 +285,8 @@ body {
 a>span.md-plain,
 a.md-url,
 a {
-    margin: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
     color: var(--main-purple);
     font-weight: 700;
     text-decoration: underline;
@@ -355,7 +369,7 @@ table tr:hover {
 /* 表头 */
 #write table tr th {
     background-color: #42a5f53d;
-    color: var(--main-blue);
+    color: var(--theme-color);
     font-weight: 700
 }
 
@@ -520,11 +534,11 @@ del {
 
 .searchpanel-search-option-btn.active {
     animation: colorChange 1s infinite;
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 span#filesearch-case-option-btn:active {
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 .md-inline-math-container mjx-container {
@@ -533,7 +547,7 @@ span#filesearch-case-option-btn:active {
 
 .md-expand.md-img-loaded>.md-meta>span,
 .md-image>.md-meta {
-    color: var(--main-blue);
+    color: var(--theme-color);
     font-family: var(--main-font-family)
 }
 
@@ -546,13 +560,13 @@ span#filesearch-case-option-btn:active {
 
 .pin-outline #outline-content .outline-active strong,
 .pin-outline .outline-active {
-    color: var(--main-blue);
+    color: var(--theme-color);
     font-weight: 700
 }
 
 .active-tab-files #info-panel-tab-file .info-panel-tab-border,
 .active-tab-outline #info-panel-tab-outline .info-panel-tab-border {
-    background-color: var(--main-blue)
+    background-color: var(--theme-color)
 }
 
 .ion-close-round:before {
@@ -560,7 +574,7 @@ span#filesearch-case-option-btn:active {
 }
 
 #md-searchpanel .btn label {
-    color: var(--main-blue);
+    color: var(--theme-color);
     font-weight: 700
 }
 
@@ -591,8 +605,35 @@ span#filesearch-case-option-btn:active {
     line-height: .42em;
     margin-left: -22px;
     margin-top: 15px;
-    width: .62em
+    width: .62em;
+    transition: transform 0.3s;
 }
+
+#write .ul>.li:not(.tab):not(.task-list-item):hover:before,
+#write ul>li:not(.tab):not(.task-list-item):hover:before {
+    transform: rotate(360deg) !important;
+}
+
+
+/* 二级无序列表前小方块 */
+#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item::before {
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+
+/* 三级无序列表前小方块 */
+#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item::before {
+    border-radius: 0;
+    transform: unset;
+}
+
+/* 四级无序列表前小方块 */
+#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item>ul>li.md-list-item::before {
+    border-radius: 0;
+    background: transparent;
+    border: 1.5px solid var(--theme-color);
+}
+
 
 
 
@@ -600,7 +641,7 @@ span#filesearch-case-option-btn:active {
 #write .ul .li:before,
 #write ol li:before,
 #write ul li:before {
-    background: var(--main-blue);
+    background: var(--theme-color);
     position: absolute;
 }
 
@@ -651,7 +692,7 @@ span#filesearch-case-option-btn:active {
 
 hr {
     background-color: transparent;
-    border-top: 2px dashed var(--main-blue);
+    border-top: 2px dashed var(--theme-color);
     height: 2px
 }
 
@@ -679,17 +720,17 @@ p.md-toc-content:hover {
 .ty-show-spell-check #footer-spell-check,
 .ty-show-word-count #footer-word-count {
     background: #eee;
-    color: var(--main-blue);
+    color: var(--theme-color);
 }
 
 .footer-item:hover,
 .sidebar-footer-item:hover {
-    color: var(--main-blue);
+    color: var(--theme-color);
 }
 
 /* 显示/隐藏侧边栏 */
 #outline-btn:hover {
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 /* meta代码块 */
@@ -707,11 +748,11 @@ p.md-toc-content:hover {
 
 .info-panel-tab-title:hover,
 .outline-label:hover {
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 .ty-show-search #info-panel-tab-search .info-panel-tab-border {
-    background-color: var(--main-blue)
+    background-color: var(--theme-color)
 }
 
 .md-notification-content {
@@ -726,7 +767,7 @@ p.md-toc-content:hover {
 /* 左侧文件树 */
 .file-library-node.file-tree-node.file-library-file-node.active,
 .file-node-content:hover {
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 .file-library-node:not(.file-node-root):focus>.file-node-content {
@@ -769,127 +810,6 @@ video {
     box-shadow: 11px 10px 12px rgba(0, 0, 0, .5)
 }
 
-
-/* github警告框 */
-.md-alert {
-    border-left: 5px solid var(--main-blue);
-    background: var(--gradient-color);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
-    transition: var(--bg-transition);
-}
-
-/* 悬浮样式 */
-.md-alert:hover {
-    transition: var(--bg-transition);
-    backdrop-filter: unset;
-    background: #fff !important;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
-}
-
-/* 引用块、警告框下 段落悬浮样式重置 */
-blockquote p.md-end-block.md-p,
-.md-alert p:hover {
-    background: transparent !important;
-    box-shadow: unset !important;
-}
-
-/* 提示 */
-.md-alert.md-alert-tip {
-    border-bottom: var(--tip-border);
-    border-right: var(--tip-border);
-    border-top: var(--tip-border);
-    border-left-color: var(--tip-color);
-}
-
-div.md-alert.md-alert-tip * span[md-inline="plain"].md-plain {
-    color: var(--tip-color);
-}
-
-.md-alert-tip li.md-list-item::before,
-.md-alert-tip ul li::before,
-.md-alert-tip ol li::before {
-    background: var(--tip-color) !important;
-}
-
-
-/* 批注 */
-.md-alert.md-alert-note {
-    border-bottom: var(--note-border);
-    border-right: var(--note-border);
-    border-top: var(--note-border);
-    border-left-color: var(--note-color);
-}
-
-div.md-alert.md-alert-note * span[md-inline="plain"].md-plain {
-    color: var(--note-color);
-}
-
-.md-alert-note li.md-list-item::before,
-.md-alert-note ul li::before,
-.md-alert-note ol li::before {
-    background: var(--note-color) !important;
-}
-
-/* 重要 */
-.md-alert.md-alert-important {
-    border-bottom: var(--important-border);
-    border-right: var(--important-border);
-    border-top: var(--important-border);
-    border-left-color: var(--important-color);
-}
-
-div.md-alert.md-alert-important * span[md-inline="plain"].md-plain {
-    color: var(--important-color);
-}
-
-.md-alert-important li.md-list-item::before,
-.md-alert-important ul li::before,
-.md-alert-important ol li::before {
-    background: var(--important-color) !important;
-}
-
-/* 注意 */
-.md-alert.md-alert-caution {
-    border-bottom: var(--caution-border);
-    border-right: var(--caution-border);
-    border-top: var(--caution-border);
-    border-left-color: var(--caution-color);
-}
-
-div.md-alert.md-alert-caution * span[md-inline="plain"].md-plain {
-    color: var(--caution-color);
-}
-
-.md-alert-caution li.md-list-item::before,
-.md-alert-caution ul li::before,
-.md-alert-caution ol li::before {
-    background: var(--caution-color) !important;
-}
-
-/* 警告 */
-.md-alert.md-alert-warning {
-    border-bottom: var(--warning-border);
-    border-right: var(--warning-border);
-    border-top: var(--warning-border);
-    border-left-color: var(--warning-color);
-}
-
-div.md-alert.md-alert-warning * span[md-inline="plain"].md-plain {
-    color: var(--warning-color);
-}
-
-.md-alert-warning li.md-list-item::before,
-.md-alert-warning ul li::before,
-.md-alert-warning ol li::before {
-    background: var(--warning-color) !important;
-}
-
-.md-alert-text-warning {
-    color: var(--warning-color);
-}
-
 /* 脚注编辑视图 */
 .md-blockmeta {
     font-style: normal;
@@ -914,7 +834,7 @@ div.md-alert.md-alert-warning * span[md-inline="plain"].md-plain {
 .btn.focus,
 .btn:focus,
 .btn:hover {
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 .form-control:focus {
@@ -944,7 +864,7 @@ input:focus {
 .megamenu-menu-list li a.active,
 .megamenu-menu-list:not(.saved) li a:hover {
     background-color: var(--item-hover-bg-color);
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 .megamenu-menu {
@@ -982,7 +902,7 @@ input:focus {
 
 .cm-s-inner .cm-header,
 .cm-s-inner.cm-header {
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 .outline-item:hover {
@@ -1026,7 +946,7 @@ input:focus {
 
 /* 链接按钮 */
 .ty-link-icon:before {
-    color: var(--main-blue);
+    color: var(--theme-color);
 }
 
 
@@ -1038,7 +958,7 @@ input:focus {
     cursor: pointer;
     border-radius: 10px;
     background: var(--item-bg-color-blue);
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 .context-menu {
@@ -1151,7 +1071,7 @@ a#megamenu-clear-recet-documents:hover {
 }
 
 a#megamenu-back-btn:hover {
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 #megamenu-back-btn {
@@ -1200,12 +1120,12 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
 
 .cm-s-typora-default .cm-atom,
 .cm-s-typora-default .cm-number {
-    color: var(--main-blue)
+    color: var(--theme-color)
 }
 
 #typora-source .CodeMirror-activeline .CodeMirror-linenumber,
 #typora-source .CodeMirror-linenumber.CodeMirror-linenumber-show {
-    color: var(--main-blue);
+    color: var(--theme-color);
     font-family: var(--main-font-family)
 }
 
@@ -1270,7 +1190,7 @@ pre.CodeMirror-line>span {
 }
 
 .md-rawblock-tooltip-name {
-    color: var(--main-blue);
+    color: var(--theme-color);
 }
 
 /* 代码块语言类型框 */
@@ -1290,7 +1210,7 @@ pre.CodeMirror-line>span {
 }
 
 .file-list-item:hover {
-    color: var(--main-blue);
+    color: var(--theme-color);
     background: #42a5f514;
 }
 
@@ -1312,7 +1232,7 @@ pre.CodeMirror-line>span {
 
 /* 一体化-返回按钮 */
 span.megamenu-menu-header-title-back[data-localize=Back]:hover {
-    color: var(--main-blue);
+    color: var(--theme-color);
 }
 
 /* 一体化-主题预览卡片 */
@@ -1334,7 +1254,7 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
     border-radius: var(--radius-large);
     cursor: pointer;
-    color: var(--main-blue);
+    color: var(--theme-color);
     background: white;
 }
 
@@ -1387,7 +1307,7 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 
 .cm-s-inner .cm-link,
 .cm-s-inner.cm-link {
-    color: var(--main-blue);
+    color: var(--theme-color);
 }
 
 .theme-preview-div:hover {
@@ -1401,3 +1321,70 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 #theme-preview-grid {
     max-width: fit-content;
 }
+
+
+/* ---------------->> 警告框样式 <<---------------- */
+/* 提示 */
+.md-alert {
+    --border: solid 1px var(--border-color);
+    background: var(--gradient-color);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+    transition: var(--bg-transition);
+}
+
+/* 不同类型的警告框颜色 */
+.md-alert-tip {
+    --border-color: #1f883d;
+}
+
+.md-alert-note {
+    --border-color: #0969da;
+}
+
+.md-alert-important {
+    --border-color: #8250df;
+}
+
+.md-alert-caution {
+    --border-color: #cf222e;
+}
+
+.md-alert-warning {
+    --border-color: #faad14;
+}
+
+/* 边框 */
+.md-alert {
+    border: var(--border);
+    border-left: 5px solid var(--border-color);
+    border-left-color: var(--border-color) !important;
+}
+
+/* 悬浮样式 */
+.md-alert:hover {
+    background: #fff !important;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
+}
+
+/* 警告框下段落悬浮样式重置 */
+.md-alert p:hover {
+    background: transparent !important;
+    box-shadow: unset !important;
+}
+
+/* 警告框内文本颜色 */
+div.md-alert span[md-inline="plain"].md-plain,
+span.md-alert-text-container {
+    color: var(--border-color);
+}
+
+/* 警告框内列表样式 */
+.md-alert li.md-list-item::before,
+.md-alert ul li::before,
+.md-alert ol li::before {
+    background: var(--border-color) !important;
+}
+
+/* ------------------------------------------------ */

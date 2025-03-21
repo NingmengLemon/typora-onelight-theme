@@ -53,8 +53,8 @@
 
 > [!important]
 >
-> 1. 下载 [主题文件压缩包](https://github.com/caolib/typora-onelight-theme/releases)
->2. 在typora中选择 文件 → 偏好设置 → 外观 → 打开主题文件夹
+> 1. 下载[主题文件压缩包](https://github.com/caolib/typora-onelight-theme/releases)
+> 2. 在typora中选择 文件 → 偏好设置 → 外观 → 打开主题文件夹
 > 3. 将下载的压缩包解压，将**css文件**和**文件夹**粘贴到typora的主题文件夹中
 > 4. 重启Typora然后在菜单栏切换主题，大功告成
 
