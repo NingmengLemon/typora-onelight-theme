@@ -98,8 +98,8 @@ body {
 
 #write p {
     padding: 5px;
-    line-height: 26px;
     margin: 0;
+    line-height: 26px;
     margin-bottom: 3px;
     margin-top: 3px;
 }
@@ -111,18 +111,29 @@ body {
     background: white;
 }
 
+
+#write p:has(.md-image):hover::before {
+    display: none;
+}
+
 #write p[align="center"]:hover {
     width: inherit;
 }
 
-/* todo-复选框 */
-#write input[type=checkbox] {
-    height: 1.25rem;
-    width: 1.25rem;
-    left: -3px;
-    margin-right: 5px;
-    margin-top: calc(1em - 6px);
+/* ---------------->> todo-复选框 <<---------------- */
+.md-list-item.task-list-item {
+    display: flex;
+    align-items: center;
 }
+
+#write input[type=checkbox] {
+    position: unset;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 3px;
+}
+
+/* ----------------------------------------------- */
 
 /* 标题 */
 #write h2,
