@@ -1,0 +1,74 @@
+name: ci
+on:
+  push:
+    tags:
+      - '*'  # 监听所有标签的推送
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: 获取当前的标签名
+      id: get_tag_name
+      run: |
+          TAG_NAME=${GITHUB_REF##*/}  # 获取标签名，去掉 refs/tags/
+          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV  # 将标签名存储在环境变量中
+
+    - name: 获取提交信息
+      id: get_commits
+      run: |
+        # 获取上一个标签
+        PREVIOUS_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+        
+        if [ -z "$PREVIOUS_TAG" ]; then
+          # 如果没有上一个标签，获取所有提交
+          COMMITS=$(git log --pretty=format:"- %s (%h)" --reverse)
+        else
+          # 获取从上一个标签到现在的所有提交
+          COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"- %s (%h)" --reverse)
+        fi
+        
+        # 保存提交信息到文件
+        echo "$COMMITS" > release_notes.txt
+        
+        # 添加标题
+        echo "### 提交记录" > complete_notes.txt
+        echo "" >> complete_notes.txt
+        cat release_notes.txt >> complete_notes.txt
+        echo "" >> complete_notes.txt
+        echo "[完整变更日志](https://github.com/caolib/typora-onelight-theme/commits/${{ github.ref }})" >> complete_notes.txt
+        
+        # 将提交信息保存到环境变量，用于后续步骤
+        RELEASE_NOTES=$(cat complete_notes.txt)
+        echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
+        echo "$RELEASE_NOTES" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
+
+    - name: 打包文件
+      run: |
+        echo ${{ env.TAG_NAME }}
+        zip -r dist/onelight-${{ env.TAG_NAME }}.zip ./onelight.css ./onelight
+
+    - name: 创建发布
+      id: release
+      uses: actions/create-release@v1
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body: ${{ env.RELEASE_NOTES }}
+        prerelease: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+    - name: 上传发布文件
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ steps.release.outputs.upload_url }}
+        asset_path: dist/onelight-${{ env.TAG_NAME }}.zip
+        asset_name: onelight-${{ env.TAG_NAME }}.zip
+        asset_content_type: application/zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
