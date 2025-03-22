@@ -31,8 +31,11 @@ jobs:
           COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"- %s (%h)" --reverse)
         fi
         
-        # 保存提交信息到文件
-        echo "$COMMITS" > release_notes.txt
+        # 将所有提交信息合并为一条信息
+        SINGLE_COMMIT=$(echo "$COMMITS" | tr '\n' ' ')
+        
+        # 保存合并后的提交信息到文件
+        echo "$SINGLE_COMMIT" > release_notes.txt
         
         # 添加标题
         echo "### 提交记录" > complete_notes.txt
