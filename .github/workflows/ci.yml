@@ -11,7 +11,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        fetch-depth: 20  # 只获取最近的20条提交记录
+        fetch-depth: 10  # 只获取最近的10条提交记录
 
     - name: 获取当前的标签名
       id: get_tag_name
@@ -90,7 +90,7 @@ jobs:
         tag_name: ${{ github.ref }}
         release_name: Release ${{ github.ref }}
         body: ${{ env.RELEASE_NOTES }}
-        prerelease: true
+        prerelease: false
       env:
         GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
