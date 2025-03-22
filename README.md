@@ -22,7 +22,7 @@
 > **这里有两篇文章使用OneLight主题，可点击查看主题详细效果展示**
 >
 > 1. **[OneLight](https://bin-sites.pages.dev/onelight)**
-> 2. **[计算机网络](https://bin-sites.pages.dev/net/计算机网络)**
+> 2. **[计算机网络](https://bin-sites.pages.dev/net)**
 
 ---
 
