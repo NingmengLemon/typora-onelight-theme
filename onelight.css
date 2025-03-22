@@ -1241,7 +1241,7 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
 }
 
 
-/* 快速打开搜索框 */
+/* ---------------->> 快速打开搜索框 <<---------------- */
 #typora-quick-open {
     border-radius: var(--radius-large);
 }
@@ -1266,9 +1266,10 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
     background: yellow;
 }
 
+/* ----------------------------------------------- */
 
 
-/* 大纲参考线 */
+/* ---------------->> 大纲参考线 <<---------------- */
 .outline-h1::after,
 .outline-h2::after,
 .outline-h3::after,
@@ -1304,6 +1305,9 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 .outline-item-open>.outline-item>.outline-expander:before {
     color: grey;
 }
+
+/* ----------------------------------------------- */
+
 
 .cm-s-inner .cm-link,
 .cm-s-inner.cm-link {
@@ -1369,6 +1373,7 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 }
 
 /* 警告框下段落悬浮样式重置 */
+blockquote p:hover,
 .md-alert p:hover {
     background: transparent !important;
     box-shadow: unset !important;
