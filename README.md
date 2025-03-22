@@ -5,7 +5,6 @@
     |
     <a href="https://github.com/caolib/typora-onelight-theme/blob/onelight/docs/README_en.md">English</a>
 </p>
-
 <p align="center">
   <img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/total?labelColor=grey&color=blue" alt="Downloads">
   <img src="https://img.shields.io/github/v/release/caolib/typora-onelight-theme?labelColor=grey&color=red" alt="Release">
@@ -13,11 +12,7 @@
   <img src="https://img.shields.io/github/stars/caolib/typora-onelight-theme" alt="Stars">
   <img src="https://img.shields.io/github/issues/caolib/typora-onelight-theme?label=Issues" alt="Issues">
   <img src="https://img.shields.io/github/last-commit/caolib/typora-onelight-theme?label=%E4%B8%8A%E6%AC%A1%E6%8F%90%E4%BA%A4" alt="Last Commit">
-  <a href="https://typora-theme.netlify.app">
-    <img src="https://api.netlify.com/api/v1/badges/6ca72e1b-7dc6-4d51-8542-e07bf9ad0a88/deploy-status" alt="Netlify Status">
-  </a>
 </p>
-
 
 
 ## **1.概览**
@@ -49,23 +44,19 @@
 
 ## 2.如何使用
 
-### 2.1 下载文件（推荐）
+### 2.1 下载文件
 
-> [!important]
->
-> 1. 下载[主题文件压缩包](https://github.com/caolib/typora-onelight-theme/releases)
-> 2. 在typora中选择 文件 → 偏好设置 → 外观 → 打开主题文件夹
+> 1. 下载 [主题文件压缩包](https://github.com/caolib/typora-onelight-theme/releases)
+>2. 在typora中选择 文件 → 偏好设置 → 外观 → 打开主题文件夹
 > 3. 将下载的压缩包解压，将**css文件**和**文件夹**粘贴到typora的主题文件夹中
-> 4. 重启Typora然后在菜单栏切换主题，大功告成
+>4. 重启Typora然后在菜单栏切换主题，大功告成
 
 ### 2.2 克隆
 
-> [!caution]
->
 > **如果你想克隆本仓库，为了避免克隆到其他分支，请使用下面这条命令,这样只会克隆主分支**
 >
 > ```shell
-> git clone --single-branch https://github.com/caolib/typora-onelight-theme.git
+>git clone --single-branch https://github.com/caolib/typora-onelight-theme.git
 > ```
 
 ---
