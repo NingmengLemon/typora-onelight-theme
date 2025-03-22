@@ -22,7 +22,7 @@
 > **Here are two articles using the OneLight theme, click to see detailed theme effects**
 >
 > 1. **[OneLight](https://bin-sites.pages.dev/onelight)**
-> 2. **[Computer Network](https://bin-sites.pages.dev/net/计算机网络)**
+> 2. **[Computer Network](https://bin-sites.pages.dev/net)**
 
 ---
 
