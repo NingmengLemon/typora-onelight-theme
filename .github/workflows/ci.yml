@@ -27,17 +27,43 @@ jobs:
         
         if [ -z "$PREVIOUS_TAG" ]; then
           # 如果没有上一个标签，获取所有提交
-          ALL_COMMITS=$(git log --pretty=format:"- %s (%h)" --reverse)
+          ALL_COMMITS=$(git log --pretty=format:"%s|%h" --reverse)
         else
           # 获取从上一个标签到现在的所有提交
-          ALL_COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"- %s (%h)" --reverse)
+          ALL_COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"%s|%h" --reverse)
         fi
         
         # 过滤掉包含"Merge branch"的提交消息
-        COMMITS=$(echo "$ALL_COMMITS" | grep -v "Merge branch")
+        FILTERED_COMMITS=$(echo "$ALL_COMMITS" | grep -v "Merge branch")
+        
+        # 创建一个关联数组来存储每个提交消息的最新提交哈希
+        declare -A commit_hashes
+        
+        # 遍历所有提交，为每个提交消息保存最新的哈希值
+        while IFS="|" read -r message hash; do
+          commit_hashes["$message"]="$hash"
+        done <<< "$FILTERED_COMMITS"
+        
+        # 创建一个有序数组以保持提交的原始顺序
+        declare -a ordered_messages=()
+        declare -A seen_messages=()
+        
+        # 再次遍历所有提交，但只保留每个消息的第一个实例（保持顺序）
+        while IFS="|" read -r message hash; do
+          if [[ -z "${seen_messages[$message]}" ]]; then
+            ordered_messages+=("$message")
+            seen_messages["$message"]=1
+          fi
+        done <<< "$FILTERED_COMMITS"
+        
+        # 构建最终的提交列表，使用最新的哈希值
+        FINAL_COMMITS=""
+        for message in "${ordered_messages[@]}"; do
+          FINAL_COMMITS+="- ${message} (${commit_hashes["$message"]})"$'\n'
+        done
         
         # 直接保存提交信息到文件，保持每行一个提交
-        echo "$COMMITS" > release_notes.txt
+        echo "$FINAL_COMMITS" > release_notes.txt
         
         # 添加标题
         echo "### 提交记录" > complete_notes.txt
