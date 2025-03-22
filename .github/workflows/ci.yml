@@ -33,11 +33,8 @@ jobs:
           COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"- %s (%h)" --reverse)
         fi
         
-        # 将所有提交信息合并为一条信息
-        SINGLE_COMMIT=$(echo "$COMMITS" | tr '\n' ' ')
-        
-        # 保存合并后的提交信息到文件
-        echo "$SINGLE_COMMIT" > release_notes.txt
+        # 直接保存提交信息到文件，保持每行一个提交
+        echo "$COMMITS" > release_notes.txt
         
         # 添加标题
         echo "### 提交记录" > complete_notes.txt
@@ -47,9 +44,9 @@ jobs:
         echo "[完整变更日志](https://github.com/caolib/typora-onelight-theme/commits/${{ github.ref }})" >> complete_notes.txt
         
         # 将提交信息保存到环境变量，用于后续步骤
-        RELEASE_NOTES=$(cat complete_notes.txt)
+        # 使用EOF方式确保多行文本正确保存
         echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
-        echo "$RELEASE_NOTES" >> $GITHUB_ENV
+        cat complete_notes.txt >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
 
     - name: 打包文件
