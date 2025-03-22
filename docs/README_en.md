@@ -1,11 +1,10 @@
 <h1 align='center'>OneLight Theme For Typora</h1>
 
 <p align="center">
-    Simplified Chinese
+    English
     |
-    <a href="https://github.com/caolib/typora-onelight-theme/blob/onelight/docs/README_en.md">English</a>
+    <a href="https://github.com/caolib/typora-onelight-theme">简体中文</a>
 </p>
-
 <p align="center">
   <img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/total?labelColor=grey&color=blue" alt="Downloads">
   <img src="https://img.shields.io/github/v/release/caolib/typora-onelight-theme?labelColor=grey&color=red" alt="Release">
@@ -13,9 +12,6 @@
   <img src="https://img.shields.io/github/stars/caolib/typora-onelight-theme" alt="Stars">
   <img src="https://img.shields.io/github/issues/caolib/typora-onelight-theme?label=Issues" alt="Issues">
   <img src="https://img.shields.io/github/last-commit/caolib/typora-onelight-theme?label=Last%20Commit" alt="Last Commit">
-  <a href="https://typora-theme.netlify.app">
-    <img src="https://api.netlify.com/api/v1/badges/6ca72e1b-7dc6-4d51-8542-e07bf9ad0a88/deploy-status" alt="Netlify Status">
-  </a>
 </p>
 
 
@@ -23,10 +19,10 @@
 
 
 > [!tip]
-> **Here are two articles using the OneLight theme. Click to see detailed effect demonstrations:**
+> **Here are two articles using the OneLight theme, click to see detailed theme effects**
 >
 > 1. **[OneLight](https://bin-sites.pages.dev/onelight)**
-> 2. **[Computer Networks](https://bin-sites.pages.dev/net/计算机网络)**
+> 2. **[Computer Network](https://bin-sites.pages.dev/net/计算机网络)**
 
 ---
 
@@ -36,42 +32,42 @@
 
 ![image-20250119102419998](https://s2.loli.net/2025/01/19/4jotBCzeDdlAwfF.png)
 
-<details><summary><kbd>Click to view more screenshots</kbd></summary>
+<details><summary><kbd>Click to see more screenshots</summary></kbd>
   <img src="https://s2.loli.net/2025/01/08/Ir1mgZCto4YS6lj.png"></br>
   <img src="https://s2.loli.net/2025/03/04/YzmsQOAFJ2UkpC7.png"></br>
   <img src="https://s2.loli.net/2025/01/08/cAgBOqFoCMYE8S6.png"></br>
-  Integrated Menu Interface
+	Integrated menu interface
   <img src="https://s2.loli.net/2025/01/08/QF2UA9zPOW5X6ji.png"></br>
 </details>
 
 ---
 
-## **2. How to Use**
+## 2. How to Use
 
-### 2.1 Download Files (Recommended)
+### 2.1 Download Files
 
-> [!important]
->
-> 1. Download [Theme Package](https://github.com/caolib/typora-onelight-theme/releases)
-> 2. In Typora, go to: File → Preferences → Appearance → Open Theme Folder
-> 3. Extract the downloaded package and copy **CSS files** and **folders** to Typora's theme folder
-> 4. Restart Typora and select the theme from the menu bar. Done!
+> 1. Download the [theme file package](https://github.com/caolib/typora-onelight-theme/releases)
+> 2. In Typora, select File → Preferences → Appearance → Open Theme Folder
+> 3. Unzip the downloaded package, paste the **css files** and **folders** into Typora's theme folder
+> 4. Restart Typora and switch the theme from the menu bar, done
 
-### 2.2 Clone Repository
+### 2.2 Clone
 
 > [!caution]
 >
-> **If cloning this repository, use this command to clone only the main branch:**
+> 1. Open a command line in Typora's themes folder
 >
-> ```shell
-> git clone --single-branch https://github.com/caolib/typora-onelight-theme.git
-> ```
+> 2. **To avoid cloning irrelevant files from other branches, be sure to use the command below to clone!! Otherwise, it will take a long time to download**
+>
+>    ```shell
+>    git clone --single-branch https://github.com/caolib/typora-onelight-theme.git
+>    ```
 
 ---
 
-## **3. Font Settings**
+## **3. About Fonts**
 
-The default font is configured at the beginning of `onelight.css`. You can modify it as needed. Font files are in the [fonts](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/fonts) folder.
+The default font is set at the beginning of the `onelight.css` file, you can modify it yourself. The font files are in the [fonts](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/fonts) folder
 ![](https://github.com/user-attachments/assets/ab75260f-cff0-43b7-b8e5-dfea38e8525c)
 
 ---
@@ -80,17 +76,17 @@ The default font is configured at the beginning of `onelight.css`. You can modif
 
 > [!important]
 >
-> Background images are located in the `onelight/img` folder. Some sample images are provided. You can add your own images (preferably with transparent background) and modify the path in the CSS file by searching for `background-image`:
+> Background images are in the `onelight/img` folder. There are several prepared images in the folder, you can also add your own images (preferably with a transparent background), then search for `background-image` in the css file to find the code below to replace the image path
 >
 > ```css
 > content {
->   background-color: transparent;
->   /* Replace the image path here. Comment out this section to disable background */
->   background-image: url('./onelight/img/bg.gif');
->   background-position: 100% 100%;
->   background-repeat: no-repeat;
->   background-size: 100px auto; /* Adjust image size */
->   transition: background-image .5s ease-in-out, background-size .5s ease-in-out
+>      background-color: transparent;
+>      /* You can replace the image here, or comment out this section if you don't want it displayed */
+>      background-image: url('./onelight/img/bg.gif');
+>      background-position: 100% 100%;
+>      background-repeat: no-repeat;
+>      background-size: 100px auto; /* Adjust the display size of the image */
+>      transition: background-image .5s ease-in-out, background-size .5s ease-in-out
 > }
 > ```
 >
@@ -98,16 +94,16 @@ The default font is configured at the beginning of `onelight.css`. You can modif
 
 ---
 
-## **5. Others**
+## 5. Others
 
-<img align='right' src="https://s2.loli.net/2025/01/04/zt7O3daMLDC5EHW.png" alt="Like" />⭐ If you like this theme, please give it a star. Thank you! 🙏
+<img align='right' src="https://s2.loli.net/2025/01/04/zt7O3daMLDC5EHW.png" alt="Like" />⭐ If you like the theme, please give it a star, thank you 🙏!
 
-✅ Best experienced in **Integrated Menu Mode** ✨
+✅ The theme looks better in integrated mode ✨
 
-❓ For issues, please use [Issues](https://github.com/caolib/typora-onelight-theme/issues). Feedback welcome!
+❓ If you have any questions, you can ask in [Issues](https://github.com/caolib/typora-onelight-theme/issues), all opinions are welcome
 
-📄 Sample markdown files are in the [docs](https://github.com/caolib/typora-onelight-theme/tree/onelight/docs) folder
+📄 The [docs](https://github.com/caolib/typora-onelight-theme/tree/onelight/docs) folder contains markdown files of example articles 📄
 
-🖼️ Background images are in the [img](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/img) folder. Delete them if unused
+🖼️ The [img](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/img) folder contains background images for the theme, you can delete them if not needed
 
-[Translated By AI]
+[translated by AI]

@@ -53,11 +53,15 @@
 
 ### 2.2 克隆
 
-> **如果你想克隆本仓库，为了避免克隆到其他分支，请使用下面这条命令,这样只会克隆主分支**
+> [!caution]
 >
-> ```shell
->git clone --single-branch https://github.com/caolib/typora-onelight-theme.git
-> ```
+> 1. 在typora的themes文件夹打开一个命令行
+>
+> 2. **为了避免克隆到其他分支的无关文件，请一定要使用下面这条命令克隆！！否则你要下载很长时间**
+>
+>    ```shell
+>    git clone --single-branch https://github.com/caolib/typora-onelight-theme.git
+>    ```
 
 ---
 
