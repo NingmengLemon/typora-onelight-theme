@@ -27,11 +27,14 @@ jobs:
         
         if [ -z "$PREVIOUS_TAG" ]; then
           # 如果没有上一个标签，获取所有提交
-          COMMITS=$(git log --pretty=format:"- %s (%h)" --reverse)
+          ALL_COMMITS=$(git log --pretty=format:"- %s (%h)" --reverse)
         else
           # 获取从上一个标签到现在的所有提交
-          COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"- %s (%h)" --reverse)
+          ALL_COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"- %s (%h)" --reverse)
         fi
+        
+        # 过滤掉包含"Merge branch"的提交消息
+        COMMITS=$(echo "$ALL_COMMITS" | grep -v "Merge branch")
         
         # 直接保存提交信息到文件，保持每行一个提交
         echo "$COMMITS" > release_notes.txt
