@@ -47,25 +47,14 @@
     --item-bg-color-blue: #42a5f542;
     /* 阴影 */
     --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
-    --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+    --box-shadow-large: 0 8px 15px rgba(0, 0, 0, .3);
+    --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
     /* 过渡 */
     --transition: box-shadow 0.3s ease, transform 0.3s ease;
     --bg-transition: background-color 0.5s ease;
     /* 左到右透明渐变 */
     --gradient-color: linear-gradient(to right, white, rgba(255, 255, 255, 0));
-    /* github警告框 */
-    --tip-color: #1f883d;
-    --tip-border: solid 0.5px #1f883d94;
-    --tip-bg-color: #f0f9eb;
-    --note-color: #0969da;
-    --note-border: solid 0.5px #0969da94;
-    --warning-color: #faad14;
-    --warning-border: solid 0.5px #faad1494;
-    --caution-color: #cf222e;
-    --caution-border: solid 0.5px #cf222e94;
-    --important-color: #8250df;
-    --important-border: solid 0.5px #8250df94;
-    /* 放大倍数 */
+    /* 圆角 */
     --radius-small: 5px;
     --radius-large: 10px;
     --radius-xlarge: 15px;
@@ -261,7 +250,7 @@ body {
     border-bottom-right-radius: 10px;
     border-left: 5px solid var(--border-color);
     border-top-right-radius: 10px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
     color: #606060;
     font-size: .9em;
     margin-bottom: 16px;
@@ -275,7 +264,7 @@ body {
 #write blockquote:hover {
     transition: var(--bg-transition);
     background: #fff;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
+    box-shadow: var(--box-shadow-large);
 }
 
 #write blockquote p {
@@ -313,7 +302,7 @@ a.md-toc-inner {
 #write li code,
 #write p code,
 #write span code {
-    border-radius: 4px;
+    border-radius: var(--radius-small);
     margin: 0 2px;
     padding: 2px 4px;
     word-break: break-all;
@@ -322,6 +311,8 @@ a.md-toc-inner {
 
 /* 图片 */
 #write img {
+    border-left: 0;
+    border-right: 0;
     filter: var(--drop-shadow);
     border-radius: var(--radius-small);
     display: block;
@@ -333,7 +324,7 @@ a.md-toc-inner {
 }
 
 #write img:hover {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
+    box-shadow: var(--box-shadow-large);
 }
 
 /* 表格 */
@@ -738,13 +729,13 @@ p.md-toc-content:hover {
 #write>pre.md-meta-block.md-end-block {
     background: white !important;
     border-radius: var(--radius-large);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    box-shadow: var(--box-shadow);
     padding: 10px;
     transition: var(--transition)
 }
 
 #write>pre.md-meta-block.md-end-block:hover {
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-large);
 }
 
 .info-panel-tab-title:hover,
@@ -808,7 +799,7 @@ video {
 }
 
 video {
-    box-shadow: 11px 10px 12px rgba(0, 0, 0, .5)
+    box-shadow: var(--box-shadow-large);
 }
 
 /* 脚注编辑视图 */
@@ -957,7 +948,7 @@ input:focus {
 .context-menu.dropdown-menu>li>a:hover,
 .menu-style-btn.active {
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: var(--radius-large);
     background: var(--item-bg-color-blue);
     color: var(--theme-color)
 }
@@ -1031,7 +1022,7 @@ div#megamenu-section-open {
 
 /* 一体化模式-打开-最近打开文件列表 */
 ul.dropdown-menu[aria-labelledby="recent-file-panel-action-btn"] {
-    border-radius: 5px;
+    border-radius: var(--radius-small);
 }
 
 /* 一体化模式-已保存 */
@@ -1180,7 +1171,7 @@ pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
     bottom: 0;
     color: #e0e0e0;
     padding: 2px 5px;
-    border-radius: 3px;
+    border-radius: var(--radius-small);
     z-index: 100;
 }
 
@@ -1244,16 +1235,11 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
 
 /* ---------------->> 快速打开搜索框 <<---------------- */
 #typora-quick-open {
-    border-radius: var(--radius-large);
-}
-
-#typora-quick-open-input input:focus {
     border-radius: var(--radius-small);
 }
 
 .typora-quick-open-item:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
-    border-radius: var(--radius-large);
+    box-shadow: var(--box-shadow);
     cursor: pointer;
     color: var(--theme-color);
     background: white;
@@ -1265,6 +1251,10 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
     padding: 2px;
     color: red;
     background: yellow;
+}
+
+.typora-quick-open-item.active {
+    background: var(--item-bg-color-blue);
 }
 
 /* ----------------------------------------------- */
@@ -1343,7 +1333,7 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
     background: var(--gradient-color);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
     transition: var(--bg-transition);
 }
 
@@ -1378,7 +1368,7 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 /* 悬浮样式 */
 .md-alert:hover {
     background: #fff !important;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, .3);
+    box-shadow: var(--box-shadow-large);
 }
 
 /* 警告框下段落悬浮样式重置 */
