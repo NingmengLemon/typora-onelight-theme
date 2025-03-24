@@ -335,6 +335,12 @@ figure.md-table-fig.table-figure {
     border-radius: var(--radius-large);
 }
 
+/* ---------------->> 表格调整控件 <<---------------- */
+.popover.bottom.md-table-resize-popover {
+    width: fit-content;
+}
+
+
 /* ---------------->> 表格行 <<---------------- */
 table tr:hover {
     background-color: #65666841
@@ -629,6 +635,7 @@ span#filesearch-case-option-btn:active {
     background: transparent;
     border: 1.5px solid var(--theme-color);
 }
+
 
 
 
