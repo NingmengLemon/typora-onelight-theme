@@ -29,7 +29,7 @@
     --select-text-bg-color: #3b3e4d;
     --side-bar-menu-active-tint: var(--main-green);
     --outline-color: #a5a5a5;
-    /* 主题色 */
+    /* ---------------->> 主题色 <<---------------- */
     --theme-color: #166ff3;
     --main-red: #ff6b6b;
     --main-green: #2ed573;
@@ -41,25 +41,25 @@
     --code--bg-color-light: #3d404e;
     --border-color: var(--theme-color);
     --border: solid 0.5px var(--theme-color)94;
-    /* 字体 */
+    /* ---------------->> 字体 <<---------------- */
     --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
-    /* 悬浮 */
+    /* ---------------->> 悬浮 <<---------------- */
     --item-bg-color-red: #f4433638;
     --item-bg-color-blue: #42a5f542;
-    /* 阴影 */
+    /* ---------------->> 阴影 <<---------------- */
     --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
     --box-shadow-large: 0 8px 15px rgba(0, 0, 0, .3);
     --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
-    /* 过渡 */
+    /* ---------------->> 过渡 <<---------------- */
     --transition: box-shadow 0.3s ease, transform 0.3s ease;
     --bg-transition: background-color 0.5s ease;
-    /* 左到右透明渐变 */
+    /* ---------------->> 左到右透明渐变 <<---------------- */
     --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
-    /* 圆角 */
+    /* ---------------->> 圆角 <<---------------- */
     --radius-small: 5px;
     --radius-large: 10px;
     --radius-xlarge: 15px;
-    /* 云母 */
+    /* ---------------->> 云母 <<---------------- */
     --mica-bg: rgba(255, 255, 255, 0.65);
     --mica-blur: blur(12px) saturate(1.3);
     --mica-border: 1px solid rgba(255, 255, 255, 0.15);
@@ -124,9 +124,9 @@ body {
     margin-right: 3px;
 }
 
-/* ----------------------------------------------- */
 
-/* 标题 */
+
+/* ---------------->> 标题 <<---------------- */
 #write h2,
 #write h3,
 #write h4,
@@ -212,7 +212,7 @@ body {
 }
 
 
-/*列表 */
+/* ---------------->> 列表 <<---------------- */
 #write ol,
 #write ul {
     margin-bottom: 8px;
@@ -238,14 +238,14 @@ body {
 }
 
 
-/*粗体*/
+/* ---------------->> 粗体 <<---------------- */
 #write strong {
     color: var(--theme-color);
     font-weight: 700
 }
 
 
-/* 引用块 */
+/* ---------------->> 引用块 <<---------------- */
 #write blockquote {
     background: var(--gradient-color);
     border-bottom-right-radius: 10px;
@@ -272,7 +272,7 @@ body {
     line-height: 26px
 }
 
-/* 链接 */
+/* ---------------->> 链接 <<---------------- */
 a>span.md-plain,
 a.md-url,
 a {
@@ -283,7 +283,7 @@ a {
     text-decoration: underline;
 }
 
-/* 目录项 */
+/* ---------------->> 目录项 <<---------------- */
 a.md-toc-inner {
     color: var(--main-purple);
 }
@@ -310,7 +310,7 @@ a.md-toc-inner {
     word-wrap: break-word
 }
 
-/* 图片 */
+/* ---------------->> 图片 <<---------------- */
 #write img {
     border-left: 0;
     border-right: 0;
@@ -328,14 +328,14 @@ a.md-toc-inner {
     box-shadow: var(--box-shadow-large);
 }
 
-/* 表格 */
+/* ---------------->> 表格 <<---------------- */
 figure.md-table-fig.table-figure {
     border: 0;
     box-shadow: var(--box-shadow);
     border-radius: var(--radius-large);
 }
 
-/* 表格行 */
+/* ---------------->> 表格行 <<---------------- */
 table tr:hover {
     background-color: #65666841
 }
@@ -345,7 +345,7 @@ table tr:hover {
     border: 0;
 }
 
-/* 斑马纹 */
+/* ---------------->> 斑马纹 <<---------------- */
 #write table tr:nth-child(2n) {
     background-color: #f3f3f3
 }
@@ -359,7 +359,7 @@ table tr:hover {
     padding: 5px 10px;
 }
 
-/* 表头 */
+/* ---------------->> 表头 <<---------------- */
 #write table tr th {
     background-color: #42a5f53d;
     color: var(--theme-color);
@@ -370,7 +370,7 @@ table tr:hover {
     background: #e4e4e4;
 }
 
-/* 脚注 */
+/* ---------------->> 脚注 <<---------------- */
 .md-def-name {
     padding-right: 3ch;
 }
@@ -406,7 +406,7 @@ code {
     z-index: 5;
 }
 
-/* ----------------------------------------------- */
+
 
 .cm-s-inner div.CodeMirror-selected {
     background: rgba(113, 124, 180, .2)
@@ -486,12 +486,12 @@ pre[lang=sequence] {
     color: #333
 }
 
-/* 代码语言类型 */
+/* ---------------->> 代码语言类型 <<---------------- */
 span.ty-input.ty-input-after.ty-cm-lang-input {
     color: white;
 }
 
-/* 高亮 */
+/* ---------------->> 高亮 <<---------------- */
 mark {
     margin-right: 2px;
     margin-left: 2px;
@@ -502,19 +502,19 @@ mark {
     color: var(--main-red);
 }
 
-/* 删除线 */
+/* ---------------->> 删除线 <<---------------- */
 del {
     color: grey;
 }
 
-/* 代码块 */
+/* ---------------->> 代码块 <<---------------- */
 #write pre {
     background: var(--code-bg-color) !important;
     font-family: var(--main-font-family)
 }
 
 
-/* 代码块选中 */
+/* ---------------->> 代码块选中 <<---------------- */
 .CodeMirror-selected,
 .CodeMirror-selectedtext {
     color: white !important;
@@ -592,7 +592,7 @@ span#filesearch-case-option-btn:active {
     margin-top: 7px
 }
 
-/* 无序列表前小圆点 */
+/* ---------------->> 无序列表前小圆点 <<---------------- */
 #write .ul>.li:not(.tab):not(.task-list-item):before,
 #write ul>li:not(.tab):not(.task-list-item):before {
     border-radius: .31em;
@@ -611,19 +611,19 @@ span#filesearch-case-option-btn:active {
 }
 
 
-/* 二级无序列表前小方块 */
+/* ---------------->> 二级无序列表前小方块 <<---------------- */
 #write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item::before {
     border-radius: 0;
     transform: rotate(45deg);
 }
 
-/* 三级无序列表前小方块 */
+/* ---------------->> 三级无序列表前小方块 <<---------------- */
 #write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item::before {
     border-radius: 0;
     transform: unset;
 }
 
-/* 四级无序列表前小方块 */
+/* ---------------->> 四级无序列表前小方块 <<---------------- */
 #write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item>ul>li.md-list-item::before {
     border-radius: 0;
     background: transparent;
@@ -697,7 +697,7 @@ kbd {
     font-weight: 700
 }
 
-/* 目录 */
+/* ---------------->> 目录 <<---------------- */
 p.md-toc-content {
     padding-left: 10px !important;
     margin-left: 20px !important;
@@ -711,7 +711,7 @@ p.md-toc-content:hover {
     background: var(--theme-light-color);
 }
 
-/* 底部状态栏*/
+/* ---------------->> 底部状态栏 <<---------------- */
 #footer-word-count:hover,
 .ty-show-spell-check #footer-spell-check,
 .ty-show-word-count #footer-word-count {
@@ -724,12 +724,12 @@ p.md-toc-content:hover {
     color: var(--theme-color);
 }
 
-/* 显示/隐藏侧边栏 */
+/* ---------------->> 显示/隐藏侧边栏 <<---------------- */
 #outline-btn:hover {
     color: var(--theme-color)
 }
 
-/* meta代码块 */
+/* ---------------->> meta代码块 <<---------------- */
 #write>pre.md-meta-block.md-end-block {
     background: var(--theme-light-color) !important;
     border-radius: var(--radius-large);
@@ -760,7 +760,7 @@ p.md-toc-content:hover {
     text-decoration: line-through
 }
 
-/* 左侧文件树 */
+/* ---------------->> 左侧文件树 <<---------------- */
 .file-library-node.file-tree-node.file-library-file-node.active,
 .file-node-content:hover {
     color: var(--theme-color)
@@ -806,7 +806,7 @@ video {
     box-shadow: var(--box-shadow-large);
 }
 
-/* 脚注编辑视图 */
+/* ---------------->> 脚注编辑视图 <<---------------- */
 .md-blockmeta {
     font-style: normal;
     color: gray;
@@ -844,7 +844,7 @@ input:focus {
     box-shadow: unset
 }
 
-/* 脚注链接 */
+/* ---------------->> 脚注链接 <<---------------- */
 .code-tooltip-content a {
     color: rgb(145 205 255);
 }
@@ -913,7 +913,7 @@ input:focus {
     background: var(--item-bg-color-blue)
 }
 
-/* 右键菜单 */
+/* ---------------->> 右键菜单 <<---------------- */
 .dropdown-menu,
 .menu-item-container a.menu-style-btn {
     border-radius: var(--radius-xlarge);
@@ -925,29 +925,35 @@ input:focus {
     transition: var(--mica-transition);
 }
 
-/* 任务列表按钮 */
+.dropdown-menu .divider {
+    opacity: 0;
+}
+
+
+
+/* ---------------->> 任务列表按钮 <<---------------- */
 .ty-check:before {
     color: #00bb00;
 }
 
-/* 删除按钮 */
+/* ---------------->> 删除按钮 <<---------------- */
 .ty-delete1:before {
     color: var(--main-red);
 }
 
-/* 代码按钮 */
+/* ---------------->> 代码按钮 <<---------------- */
 .ty-code:before {
     color: var(--main-purple);
 }
 
-/* 链接按钮 */
+/* ---------------->> 链接按钮 <<---------------- */
 .ty-link-icon:before {
     color: var(--theme-color);
 }
 
 
 
-/* 右键菜单悬浮 */
+/* ---------------->> 右键菜单悬浮 <<---------------- */
 .context-menu.dropdown-menu>.active>a,
 .context-menu.dropdown-menu>li>a:hover,
 .menu-style-btn.active {
@@ -966,7 +972,7 @@ text {
     font-family: var(--main-font-family)
 }
 
-/* 高亮标签 */
+/* ---------------->> 高亮标签 <<---------------- */
 span[alt=highlight] {
     margin-right: 2px;
     margin-left: 2px;
@@ -977,7 +983,7 @@ span[alt=highlight] {
     box-shadow: var(--box-shadow);
 }
 
-/* 搜索高亮 */
+/* ---------------->> 搜索高亮 <<---------------- */
 .cm-search-hit.CodeMirror-selectedtext,
 .md-search-hit.md-search-select,
 .md-search-select {
@@ -994,7 +1000,7 @@ span[alt=highlight] {
 }
 
 
-/* 主界面背景图片 */
+/* ---------------->> 主界面背景图片 <<---------------- */
 content {
     background-color: transparent;
     background-image: url('./onelight/img/bg.gif');
@@ -1005,7 +1011,7 @@ content {
 }
 
 
-/* 一体化菜单界面背景图片 */
+/* ---------------->> 一体化菜单界面背景图片 <<---------------- */
 div#megamenu-section-open {
     background-color: transparent;
     background-image: url('./onelight/img/bg4.gif');
@@ -1019,17 +1025,17 @@ div#megamenu-section-open {
     background-image: unset;
 }
 
-/* 一体化模式-打开 */
+/* ---------------->> 一体化模式-打开 <<---------------- */
 .megamenu-menu-panel:not(:first-of-type) {
     margin-top: 10px;
 }
 
-/* 一体化模式-打开-最近打开文件列表 */
+/* ---------------->> 一体化模式-打开-最近打开文件列表 <<---------------- */
 ul.dropdown-menu[aria-labelledby="recent-file-panel-action-btn"] {
     border-radius: var(--radius-small);
 }
 
-/* 一体化模式-已保存 */
+/* ---------------->> 一体化模式-已保存 <<---------------- */
 a#m-saved:hover {
     cursor: unset;
 }
@@ -1141,13 +1147,13 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
     text-decoration: underline
 }
 
-/* 一体化模式的侧边菜单 */
+/* ---------------->> 一体化模式的侧边菜单 <<---------------- */
 ul#megamenu-menu-list {
     height: 100%;
     background: transparent;
 }
 
-/* 一体化模式最近打开文件列表 */
+/* ---------------->> 一体化模式最近打开文件列表 <<---------------- */
 .megamenu-menu-panel table {
     font-weight: unset;
 }
@@ -1161,9 +1167,9 @@ pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.t
     background: transparent !important;
 }
 
-/* ----------------------------------------------- */
 
-/* 代码框右下角的语言类型显示 */
+
+/* ---------------->> 代码框右下角的语言类型显示 <<---------------- */
 pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
     content: attr(lang);
     position: absolute;
@@ -1176,7 +1182,7 @@ pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
 }
 
 
-/* 代码块下span文本 */
+/* ---------------->> 代码块下span文本 <<---------------- */
 pre.CodeMirror-line>span {
     color: var(--light-color);
 }
@@ -1185,14 +1191,14 @@ pre.CodeMirror-line>span {
     color: var(--theme-color);
 }
 
-/* 代码块语言类型框 */
+/* ---------------->> 代码块语言类型框 <<---------------- */
 .code-tooltip .ty-input,
 .code-tooltip input {
     min-width: auto;
 }
 
 
-/* 左侧文档列表 */
+/* ---------------->> 左侧文档列表 <<---------------- */
 .file-list-item.active {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -1206,7 +1212,7 @@ pre.CodeMirror-line>span {
     background: #42a5f514;
 }
 
-/* 滚动条 */
+/* ---------------->> 滚动条 <<---------------- */
 ::-webkit-scrollbar {
     width: 10px;
     height: 5px;
@@ -1222,12 +1228,12 @@ pre.CodeMirror-line>span {
     width: 10px
 }
 
-/* 一体化-返回按钮 */
+/* ---------------->> 一体化-返回按钮 <<---------------- */
 span.megamenu-menu-header-title-back[data-localize=Back]:hover {
     color: var(--theme-color);
 }
 
-/* 一体化-主题预览卡片 */
+/* ---------------->> 一体化-主题预览卡片 <<---------------- */
 .theme-preview-div {
     cursor: pointer;
 }
@@ -1245,7 +1251,7 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
     background: var(--theme-light-color);
 }
 
-/* 快速打开搜索框高亮结果 */
+/* ---------------->> 快速打开搜索框高亮结果 <<---------------- */
 .typora-quick-open-item-title>b {
     border-radius: var(--radius-small);
     padding: 2px;
@@ -1257,7 +1263,7 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
     background: var(--item-bg-color-blue);
 }
 
-/* ----------------------------------------------- */
+
 
 
 /* ---------------->> 大纲参考线 <<---------------- */
@@ -1300,12 +1306,12 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
     left: 62.5px;
 }
 
-/* 折叠箭头 */
+/* ---------------->> 折叠箭头 <<---------------- */
 .outline-expander:before {
     font-weight: bold;
 }
 
-/* ----------------------------------------------- */
+
 
 
 .cm-s-inner .cm-link,
@@ -1327,7 +1333,7 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 
 
 /* ---------------->> 警告框样式 <<---------------- */
-/* 提示 */
+/* ---------------->> 提示 <<---------------- */
 .md-alert {
     --border: solid 1px var(--border-color);
     background: var(--gradient-color);
@@ -1337,7 +1343,7 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
     transition: var(--bg-transition);
 }
 
-/* 不同类型的警告框颜色 */
+/* ---------------->> 不同类型的警告框颜色 <<---------------- */
 .md-alert-tip {
     --border-color: #1f883d;
 }
@@ -1358,37 +1364,35 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
     --border-color: #faad14;
 }
 
-/* 边框 */
+/* ---------------->> 边框 <<---------------- */
 .md-alert {
     border: var(--border);
     border-left: 5px solid var(--border-color);
     border-left-color: var(--border-color) !important;
 }
 
-/* 悬浮样式 */
+/* ---------------->> 悬浮样式 <<---------------- */
 .md-alert:hover {
     background: var(--theme-light-color) !important;
     box-shadow: var(--box-shadow-large);
 }
 
-/* 警告框下段落悬浮样式重置 */
+/* ---------------->> 警告框下段落悬浮样式重置 <<---------------- */
 blockquote p:hover,
 .md-alert p:hover {
     background: transparent !important;
     box-shadow: unset !important;
 }
 
-/* 警告框内文本颜色 */
+/* ---------------->> 警告框内文本颜色 <<---------------- */
 div.md-alert span[md-inline="plain"].md-plain,
 span.md-alert-text-container {
     color: var(--border-color);
 }
 
-/* 警告框内列表样式 */
+/* ---------------->> 警告框内列表样式 <<---------------- */
 .md-alert li.md-list-item::before,
 .md-alert ul li::before,
 .md-alert ol li::before {
     background: var(--border-color) !important;
 }
-
-/* ------------------------------------------------ */
