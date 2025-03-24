@@ -36,6 +36,7 @@
     --main-purple: #c94ae9;
     --main-yellow: #f9b03d;
     --light-color: #b2b2b2;
+    --theme-light-color: white;
     --code--bg-color: #282c34;
     --code--bg-color-light: #3d404e;
     --border-color: var(--theme-color);
@@ -53,7 +54,7 @@
     --transition: box-shadow 0.3s ease, transform 0.3s ease;
     --bg-transition: background-color 0.5s ease;
     /* 左到右透明渐变 */
-    --gradient-color: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+    --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
     /* 圆角 */
     --radius-small: 5px;
     --radius-large: 10px;
@@ -98,7 +99,7 @@ body {
 #write p:not(:has(.md-image)):hover {
     box-shadow: var(--box-shadow);
     border-radius: var(--radius-large);
-    background: white;
+    background: var(--theme-light-color);
 }
 
 
@@ -263,7 +264,7 @@ body {
 
 #write blockquote:hover {
     transition: var(--bg-transition);
-    background: #fff;
+    background: var(--theme-light-color);
     box-shadow: var(--box-shadow-large);
 }
 
@@ -340,7 +341,7 @@ table tr:hover {
 }
 
 #write table tr {
-    background-color: #fff;
+    background-color: var(--theme-light-color);
     border: 0;
 }
 
@@ -399,10 +400,13 @@ code {
     transition: var(--transition)
 }
 
+/* ---------------->> 代码块光标 <<---------------- */
 .CodeMirror div.CodeMirror-cursor {
-    border-left: 1px solid #26ed91;
-    z-index: 5
+    border-left: 1.5px solid var(--main-green);
+    z-index: 5;
 }
+
+/* ----------------------------------------------- */
 
 .cm-s-inner div.CodeMirror-selected {
     background: rgba(113, 124, 180, .2)
@@ -478,7 +482,7 @@ code {
 pre[lang=flow],
 pre[lang=mermaid],
 pre[lang=sequence] {
-    background: #fff;
+    background: var(--theme-light-color);
     color: #333
 }
 
@@ -574,7 +578,7 @@ span#filesearch-case-option-btn:active {
     margin-right: 2px;
     margin-left: 2px;
     line-height: 1;
-    background: white;
+    background: var(--theme-light-color);
     color: var(--main-red);
     font-weight: 700;
 }
@@ -704,7 +708,7 @@ p.md-toc-content {
 
 p.md-toc-content:hover {
     transition: var(--bg-transition);
-    background: #fff;
+    background: var(--theme-light-color);
 }
 
 /* 底部状态栏*/
@@ -727,7 +731,7 @@ p.md-toc-content:hover {
 
 /* meta代码块 */
 #write>pre.md-meta-block.md-end-block {
-    background: white !important;
+    background: var(--theme-light-color) !important;
     border-radius: var(--radius-large);
     box-shadow: var(--box-shadow);
     padding: 10px;
@@ -790,7 +794,7 @@ tt {
 
 .md-image-btn,
 .modal-content {
-    background: #fff
+    background: var(--theme-light-color)
 }
 
 .modal-content,
@@ -1080,7 +1084,7 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
 }
 
 #typora-source .CodeMirror-lines {
-    background: #fff;
+    background: var(--theme-light-color);
     border-radius: var(--radius-large);
     max-width: 90%
 }
@@ -1097,7 +1101,7 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
 }
 
 .cm-s-inner .cm-tag {
-    color: #dd69f4;
+    color: var(--main-purple);
 }
 
 .cm-s-typora-default .cm-overlay {
@@ -1132,12 +1136,10 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
 }
 
 .cm-s-typora-default .cm-link {
-    color: #cd00dc;
+    color: var(--main-purple);
     font-style: italic;
     text-decoration: underline
 }
-
-
 
 /* 一体化模式的侧边菜单 */
 ul#megamenu-menu-list {
@@ -1150,18 +1152,16 @@ ul#megamenu-menu-list {
     font-weight: unset;
 }
 
-/* mermaid */
+/* ---------------->> mermaid <<---------------- */
 .md-diagram-panel.md-fences-adv-panel {
-    background: white;
-}
-
-pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm[lang=mermaid]::after {
-    color: black;
+    background: var(--theme-light-color);
 }
 
 pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
     background: transparent !important;
 }
+
+/* ----------------------------------------------- */
 
 /* 代码框右下角的语言类型显示 */
 pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
@@ -1242,7 +1242,7 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
     box-shadow: var(--box-shadow);
     cursor: pointer;
     color: var(--theme-color);
-    background: white;
+    background: var(--theme-light-color);
 }
 
 /* 快速打开搜索框高亮结果 */
@@ -1301,8 +1301,8 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 }
 
 /* 折叠箭头 */
-.outline-item-open>.outline-item>.outline-expander:before {
-    color: grey;
+.outline-expander:before {
+    font-weight: bold;
 }
 
 /* ----------------------------------------------- */
@@ -1367,7 +1367,7 @@ li.outline-item-wrapper.outline-h5.outline-item-open::after {
 
 /* 悬浮样式 */
 .md-alert:hover {
-    background: #fff !important;
+    background: var(--theme-light-color) !important;
     box-shadow: var(--box-shadow-large);
 }
 
