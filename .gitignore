@@ -1,8 +1,8 @@
 *
 
 !onelight.css
-!onelight/**
-!docs/**
+!/onelight/**
+!/docs/**
 !LICENSE
 !README.md
 !.gitignore
