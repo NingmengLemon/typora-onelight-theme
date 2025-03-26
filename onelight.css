@@ -13,7 +13,6 @@
 }
 
 :root {
-    --select-text-font-color: inherit !important;
     --bg-color: #f2f2f2;
     --code-bg-color: #282c34;
     --text-color: #333;
@@ -26,6 +25,7 @@
     --item-hover-bg-color: hsla(0, 0%, 90%, .59);
     --item-hover-text-color: var(--main-red);
     --monospace: monospace;
+    --select-text-font-color: inherit !important;
     --select-text-bg-color: #3b3e4d;
     --side-bar-menu-active-tint: var(--main-green);
     --outline-color: #a5a5a5;
@@ -575,11 +575,19 @@ span#filesearch-case-option-btn:active {
     color: var(--main-red)
 }
 
+/* ---------------->> 搜索框 <<---------------- */
+
 #md-searchpanel .btn label {
     color: var(--theme-color);
-    font-weight: 700
+    font-weight: bold;
 }
 
+div#md-searchpanel {
+    background: var(--main-bg);
+}
+
+
+/* ---------------->> 脚注 <<---------------- */
 #write .md-footnote {
     margin-right: 2px;
     margin-left: 2px;
@@ -589,6 +597,7 @@ span#filesearch-case-option-btn:active {
     font-weight: 700;
 }
 
+/* ---------------->> 列表 <<---------------- */
 #write .ol .li,
 #write .ul .li,
 #write ol li,
@@ -635,9 +644,6 @@ span#filesearch-case-option-btn:active {
     background: transparent;
     border: 1.5px solid var(--theme-color);
 }
-
-
-
 
 
 #write .ol .li:before,
@@ -699,6 +705,8 @@ hr {
     height: 2px
 }
 
+
+/* ---------------->> 键盘快捷键 <<---------------- */
 kbd {
     font-family: var(--main-font-family);
     font-weight: 700
