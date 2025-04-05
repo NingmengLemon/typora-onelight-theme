@@ -1290,33 +1290,33 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
 .outline-h6::after {
     content: "";
     height: calc(100% - 25px);
-    width: 1.5px;
+    width: 1px;
     background: transparent;
     position: absolute;
     top: 25px;
 }
 
-li.outline-item-wrapper.outline-h1.outline-item-open::after {
+li.outline-item-wrapper.outline-h1.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 6.5px;
 }
 
-li.outline-item-wrapper.outline-h2.outline-item-open::after {
+li.outline-item-wrapper.outline-h2.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 20px;
 }
 
-li.outline-item-wrapper.outline-h3.outline-item-open::after {
+li.outline-item-wrapper.outline-h3.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 34px;
 }
 
-li.outline-item-wrapper.outline-h4.outline-item-open::after {
+li.outline-item-wrapper.outline-h4.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 48.5px;
 }
 
-li.outline-item-wrapper.outline-h5.outline-item-open::after {
+li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 62.5px;
 }
