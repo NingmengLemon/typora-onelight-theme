@@ -3,6 +3,7 @@ on:
   push:
     tags:
       - '*'  # 监听所有标签的推送
+  workflow_dispatch:  # 手动触发
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -11,7 +12,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        fetch-depth: 15  # 只获取最近的15条提交记录
+        fetch-depth: 5  # 只获取最近的5条提交记录
 
     - name: 获取当前的标签名
       id: get_tag_name
