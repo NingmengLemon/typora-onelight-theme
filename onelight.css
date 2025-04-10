@@ -1206,11 +1206,6 @@ pre.CodeMirror-line>span {
     color: var(--theme-color);
 }
 
-/* ---------------->> 代码块语言类型框 <<---------------- */
-.code-tooltip .ty-input,
-.code-tooltip input {
-    min-width: auto;
-}
 
 
 /* ---------------->> 左侧文档列表 <<---------------- */
