@@ -60,18 +60,19 @@ jobs:
         # 构建最终的提交列表，使用最新的哈希值
         FINAL_COMMITS=""
         for message in "${ordered_messages[@]}"; do
-          FINAL_COMMITS+="- ${message} (${commit_hashes["$message"]})"$'\n'
+          hash="${commit_hashes[$message]}"
+          FINAL_COMMITS+="- [${hash:0:7}] ${message}"$'\n'
         done
         
         # 直接保存提交信息到文件，保持每行一个提交
         echo "$FINAL_COMMITS" > release_notes.txt
         
         # 添加标题
-        echo "### 提交记录" > complete_notes.txt
+        echo "### Commits" > complete_notes.txt
         echo "" >> complete_notes.txt
         cat release_notes.txt >> complete_notes.txt
         echo "" >> complete_notes.txt
-        echo "[完整变更日志](https://github.com/caolib/typora-onelight-theme/commits/${{ github.ref }})" >> complete_notes.txt
+        echo "[Full Changelog](https://github.com/caolib/typora-onelight-theme/commits/${{ github.ref }})" >> complete_notes.txt
         
         # 将提交信息保存到环境变量，用于后续步骤
         # 使用EOF方式确保多行文本正确保存
