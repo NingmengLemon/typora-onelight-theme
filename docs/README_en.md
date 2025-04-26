@@ -12,6 +12,7 @@
   <img src="https://img.shields.io/github/stars/caolib/typora-onelight-theme" alt="Stars">
   <img src="https://img.shields.io/github/issues/caolib/typora-onelight-theme?label=Issues" alt="Issues">
   <img src="https://img.shields.io/github/last-commit/caolib/typora-onelight-theme?label=Last%20Commit" alt="Last Commit">
+  <img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/latest/total">
   <img src="https://github.com/caolib/typora-onelight-theme/actions/workflows/ci.yml/badge.svg" alt="ci">
 </p>
 
