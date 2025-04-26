@@ -69,9 +69,13 @@
 }
 
 
-body {
+body,
+script,
+text {
     font-family: var(--main-font-family)
 }
+
+
 
 ::-moz-selection {
     color: #fff
@@ -941,21 +945,7 @@ input:focus {
     background: var(--item-bg-color-blue)
 }
 
-/* ---------------->> 右键菜单 <<---------------- */
-.dropdown-menu,
-.menu-item-container a.menu-style-btn {
-    border-radius: var(--radius-xlarge);
-    background-color: var(--mica-bg) !important;
-    backdrop-filter: var(--mica-blur);
-    -webkit-backdrop-filter: var(--mica-blur);
-    border: var(--mica-border);
-    box-shadow: var(--box-shadow);
-    transition: var(--mica-transition);
-}
 
-.dropdown-menu .divider {
-    opacity: 0;
-}
 
 
 
@@ -980,8 +970,23 @@ input:focus {
 }
 
 
+/* ---------------->> 右键菜单 <<---------------- */
+.dropdown-menu,
+.menu-item-container a.menu-style-btn {
+    border-radius: var(--radius-large);
+    background-color: var(--mica-bg) !important;
+    backdrop-filter: var(--mica-blur);
+    -webkit-backdrop-filter: var(--mica-blur);
+    border: var(--mica-border);
+    box-shadow: var(--box-shadow);
+    transition: var(--mica-transition);
+}
 
-/* ---------------->> 右键菜单悬浮 <<---------------- */
+.dropdown-menu .divider {
+    opacity: 0;
+}
+
+
 .context-menu.dropdown-menu>.active>a,
 .context-menu.dropdown-menu>li>a:hover,
 .menu-style-btn.active {
@@ -995,10 +1000,16 @@ input:focus {
     padding-bottom: 0;
 }
 
-script,
-text {
-    font-family: var(--main-font-family)
+.ty-bold:before {
+    font-weight: bold;
 }
+
+.menu-item-container a.menu-style-btn.active,
+.menu-item-container a.menu-style-btn:hover {
+    background-color: var(--item-bg-color-blue) !important;
+}
+
+
 
 /* ---------------->> 高亮标签 <<---------------- */
 span[alt=highlight] {
