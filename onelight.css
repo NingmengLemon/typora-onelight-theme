@@ -71,7 +71,13 @@
 
 body,
 script,
-text {
+text,
+.md-rawblock-after,
+.md-rawblock-before,
+code,
+pre,
+samp,
+tt {
     font-family: var(--main-font-family)
 }
 
@@ -801,18 +807,15 @@ p.md-toc-content:hover {
     cursor: pointer;
 }
 
-.md-rawblock-after,
-.md-rawblock-before,
-code,
-pre,
-samp,
-tt {
-    font-family: var(--main-font-family)
+.fa-file-text-o:before {
+    content: '📄';
 }
+
+
 
 .fa-folder:before,
 .md-image-btn:before {
-    color: var(--main-yellow) !important;
+    color: var(--main-yellow);
 }
 
 .md-image-btn:before {
