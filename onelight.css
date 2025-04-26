@@ -1062,7 +1062,7 @@ content {
     background-image: url('./onelight/img/bg.gif');
     background-position: 100% 100%;
     background-repeat: no-repeat;
-    background-size: 200px auto;
+    background-size: 100px auto;
     transition: background-image .5s ease-in-out, background-size .5s ease-in-out
 }
 
