@@ -571,10 +571,6 @@ span#filesearch-case-option-btn:active {
     background-color: var(--theme-color)
 }
 
-.ion-close-round:before {
-    color: var(--main-red)
-}
-
 /* ---------------->> 搜索框 <<---------------- */
 
 #md-searchpanel .btn label {
@@ -584,6 +580,17 @@ span#filesearch-case-option-btn:active {
 
 div#md-searchpanel {
     background: var(--main-bg);
+}
+
+#md-searchpanel .btn {
+    text-align: center !important;
+    border-radius: 10px;
+    background: #dddddd73;
+    margin: 0 2px;
+}
+
+#md-searchpanel .btn:hover {
+    background: var(--item-bg-color-blue);
 }
 
 
@@ -753,7 +760,8 @@ p.md-toc-content:hover {
     transition: var(--transition)
 }
 
-#write>pre.md-meta-block.md-end-block:hover {
+#write>pre.md-meta-block.md-end-block:hover,
+#write>pre.md-meta-block.md-end-block:focus {
     box-shadow: var(--box-shadow-large);
 }
 
@@ -840,6 +848,11 @@ video {
     background: hsla(0, 0%, 100%, .3);
     border-radius: var(--radius-small);
     box-shadow: unset
+}
+
+#file-library-search-input:focus,
+#md-searchpanel input:focus {
+    border-color: var(--theme-color);
 }
 
 .btn.focus,
@@ -1004,14 +1017,19 @@ span[alt=highlight] {
 .md-search-select {
     padding: 2px 5px 2px 5px;
     border-radius: var(--radius-large);
-    background: #ff0;
-    color: red;
+    background: #ff0 !important;
+    color: red !important;
     box-shadow: var(--box-shadow);
 }
 
 .md-search-hit {
     background: #ff0;
     box-shadow: var(--box-shadow);
+}
+
+.cm-search-hit {
+    background: unset;
+    color: unset;
 }
 
 
