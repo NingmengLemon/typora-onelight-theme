@@ -288,9 +288,14 @@ a.md-url,
 a {
     margin-left: 1px;
     margin-right: 1px;
-    color: var(--main-purple) !important;
+    color: var(--main-purple);
     font-weight: 700;
     text-decoration: underline;
+}
+
+/* 目录中取消链接箭头 */
+#write a.md-toc-inner::after {
+    background: unset;
 }
 
 #write a::after {
