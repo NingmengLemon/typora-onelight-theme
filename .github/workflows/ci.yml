@@ -12,7 +12,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        fetch-depth: 5  # 只获取最近的5条提交记录
+        fetch-depth: 0  # 获取所有历史记录，以便比较标签
 
     - name: 获取当前的标签名
       id: get_tag_name
@@ -25,15 +25,29 @@ jobs:
       run: |
         # 获取上一个标签
         PREVIOUS_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
-        
+        CURRENT_TAG=${GITHUB_REF##*/} # GITHUB_REF is refs/tags/<tag_name>
+
+        # 计算提交数量
+        if [ -z "$PREVIOUS_TAG" ]; then
+          echo "No previous tag found. Counting all commits up to ${CURRENT_TAG}."
+          COMMIT_COUNT=$(git rev-list --count HEAD)
+        else
+          echo "Counting commits between ${PREVIOUS_TAG} and ${CURRENT_TAG}."
+          # Use rev-list --count for direct counting
+          COMMIT_COUNT=$(git rev-list --count ${PREVIOUS_TAG}..HEAD)
+        fi
+        echo "COMMIT_COUNT=${COMMIT_COUNT}" >> $GITHUB_ENV
+        echo "Calculated commit count: ${COMMIT_COUNT}"
+
+        # 获取提交列表 (用于发布说明)
         if [ -z "$PREVIOUS_TAG" ]; then
           # 如果没有上一个标签，获取所有提交
-          ALL_COMMITS=$(git log --pretty=format:"%s|%h" --reverse)
+          ALL_COMMITS=$(git log --pretty=format:"%s|%h" --reverse HEAD)
         else
           # 获取从上一个标签到现在的所有提交
           ALL_COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"%s|%h" --reverse)
         fi
-        
+
         # 过滤掉包含"Merge branch"、"docs:"和"README"的提交消息
         FILTERED_COMMITS=$(echo "$ALL_COMMITS" | grep -v -E "Merge branch|docs:|README")
         

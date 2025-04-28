@@ -293,6 +293,12 @@ a {
     text-decoration: underline;
 }
 
+.md-alert a>span.md-plain,
+.md-alert a.md-url,
+.md-alert a {
+    color: var(--main-purple) !important;
+}
+
 /* 目录中取消链接箭头 */
 #write a.md-toc-inner::after {
     background: unset;
