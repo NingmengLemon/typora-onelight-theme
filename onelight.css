@@ -17,8 +17,8 @@
     --code-bg-color: #282c34;
     --text-color: #333;
     --primary-btn-text-color: #fff;
-    --window-border: 1px solid #eee;
     --active-file-bg-color: #eee;
+    --window-border: 1px solid var(--active-file-bg-color);
     --active-file-text-color: inherit;
     --active-file-border-color: var(--main-red);
     --side-bar-bg-color: var(--bg-color);
@@ -44,8 +44,8 @@
     /* ---------------->> 字体 <<---------------- */
     --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
     /* ---------------->> 悬浮 <<---------------- */
-    --item-bg-color-red: #f4433638;
-    --item-bg-color-blue: #42a5f542;
+    --item-bg-color-red: rgb(from var(--main-red) r g b / 0.22);
+    --item-bg-color-blue: rgb(from var(--theme-color) r g b / 0.26);
     /* ---------------->> 阴影 <<---------------- */
     --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
     --box-shadow-large: 0 8px 15px rgba(0, 0, 0, .3);
@@ -84,12 +84,12 @@ tt {
 
 
 ::-moz-selection {
-    color: #fff
+    color: var(--theme-light-color)
 }
 
 ::-webkit-selection {
     background: #b981d1;
-    color: #fff
+    color: var(--theme-light-color)
 }
 
 #write {
@@ -142,7 +142,7 @@ tt {
 #write h4,
 #write h5,
 #write h6 {
-    color: #000;
+    color: black;
     font-weight: 700;
     margin: .72em 0;
     padding: 0
@@ -181,7 +181,7 @@ tt {
     line-height: 25px;
     padding: 0 1px 0 1px;
     bottom: 0;
-    color: #42a5f5ed;
+    color: var(--item-bg-color-blue);
     font-size: .9rem;
     font-variant: "small-caps";
     position: absolute;
@@ -1337,7 +1337,7 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
 .outline-h6::after {
     content: "";
     height: calc(100% - 25px);
-    width: 1px;
+    width: 1.3px;
     background: transparent;
     position: absolute;
     top: 25px;
