@@ -15,7 +15,7 @@
 :root {
     --bg-color: #f2f2f2;
     --code-bg-color: #282c34;
-    --text-color: #333;
+    --text-color: black;
     --primary-btn-text-color: #fff;
     --active-file-bg-color: #eee;
     --window-border: 1px solid var(--active-file-bg-color);
@@ -142,7 +142,6 @@ tt {
 #write h4,
 #write h5,
 #write h6 {
-    color: black;
     font-weight: 700;
     margin: .72em 0;
     padding: 0
@@ -262,7 +261,7 @@ tt {
     border-left: 5px solid var(--border-color);
     border-top-right-radius: 10px;
     box-shadow: var(--box-shadow);
-    color: #606060;
+    color: rgb(from var(--text-color) r g b / 0.85);
     font-size: .9em;
     margin-bottom: 16px;
     margin-top: 16px;
@@ -274,7 +273,7 @@ tt {
 
 #write blockquote:hover {
     transition: var(--bg-transition);
-    background: var(--theme-light-color);
+    background: var(--bg-color);
     box-shadow: var(--box-shadow-large);
 }
 
@@ -323,7 +322,7 @@ a.md-toc-inner {
 }
 
 #write code {
-    background-color: #ebebeb;
+    background-color: var(--item-hover-bg-color);
     color: #eb4c37;
     font-family: var(--main-font-family);
     font-size: .9rem;
@@ -373,7 +372,7 @@ figure.md-table-fig.table-figure {
 
 /* ---------------->> 表格行 <<---------------- */
 table tr:hover {
-    background-color: #65666841
+    background-color: rgb(from var(--bg-color) r g b / 0.8);
 }
 
 #write table tr {
@@ -383,7 +382,7 @@ table tr:hover {
 
 /* ---------------->> 斑马纹 <<---------------- */
 #write table tr:nth-child(2n) {
-    background-color: #f3f3f3
+    background-color: rgb(from var(--bg-color) r g b / 0.8)
 }
 
 #write table tr td,
@@ -403,7 +402,7 @@ table tr:hover {
 }
 
 #write table tr:hover {
-    background: #e4e4e4;
+    background: rgb(from var(--bg-color) r g b / 0.7);
 }
 
 /* ---------------->> 脚注 <<---------------- */
@@ -421,7 +420,6 @@ table tr:hover {
 .md-fences,
 code {
     border-radius: var(--radius-small);
-
     margin-left: .2em;
     margin-right: .2em;
     padding: .1em
@@ -430,7 +428,7 @@ code {
 .md-fences {
     background-color: var(--code-bg-color);
     box-shadow: 0 4px 10px gray;
-    color: #ececec;
+    color: var(--bg-color);
     margin: 0 0 20px;
     padding: .4em 1em .3em;
     transition: var(--transition)
@@ -615,7 +613,7 @@ div#md-searchpanel {
 #md-searchpanel .btn {
     text-align: center !important;
     border-radius: 10px;
-    background: #dddddd73;
+    background: rgb(from var(--bg-color) r g b / 0.4);
     margin: 0 2px;
 }
 
@@ -872,7 +870,7 @@ video {
 #md-searchpanel input {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background: hsla(0, 0%, 100%, .3);
+    background: rgb(from var(--bg-color) r g b / 0.7);
     border-radius: var(--radius-small);
     box-shadow: unset
 }
@@ -929,7 +927,7 @@ input:focus {
 .typora-node.pin-outline .md-notification-container {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background: hsla(0, 0%, 100%, .3)
+    background: rgb(from var(--bg-color) r g b / 0.7);
 }
 
 

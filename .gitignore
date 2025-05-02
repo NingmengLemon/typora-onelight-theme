@@ -1,6 +1,7 @@
 *
 
 !onelight.css
+!onelight-dark.css
 !/onelight/**
 !/docs/**
 !LICENSE

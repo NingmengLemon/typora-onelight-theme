@@ -2,120 +2,120 @@ name: ci
 on:
   push:
     tags:
-      - '*'  # 监听所有标签的推送
-  workflow_dispatch:  # 允许手动触发
+      - "*" # 监听所有标签的推送
+  workflow_dispatch: # 允许手动触发
 jobs:
   release:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0  # 获取所有历史记录，以便比较标签
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 获取所有历史记录，以便比较标签
 
-    - name: 获取当前的标签名
-      id: get_tag_name
-      run: |
+      - name: 获取当前的标签名
+        id: get_tag_name
+        run: |
           TAG_NAME=${GITHUB_REF##*/}  # 获取标签名，去掉 refs/tags/
           echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV  # 将标签名存储在环境变量中
 
-    - name: 获取提交信息
-      id: get_commits
-      run: |
-        # 获取上一个标签
-        PREVIOUS_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
-        CURRENT_TAG=${GITHUB_REF##*/} # GITHUB_REF is refs/tags/<tag_name>
+      - name: 获取提交信息
+        id: get_commits
+        run: |
+          # 获取上一个标签
+          PREVIOUS_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          CURRENT_TAG=${GITHUB_REF##*/} # GITHUB_REF is refs/tags/<tag_name>
 
-        # 计算提交数量
-        if [ -z "$PREVIOUS_TAG" ]; then
-          echo "No previous tag found. Counting all commits up to ${CURRENT_TAG}."
-          COMMIT_COUNT=$(git rev-list --count HEAD)
-        else
-          echo "Counting commits between ${PREVIOUS_TAG} and ${CURRENT_TAG}."
-          # Use rev-list --count for direct counting
-          COMMIT_COUNT=$(git rev-list --count ${PREVIOUS_TAG}..HEAD)
-        fi
-        echo "COMMIT_COUNT=${COMMIT_COUNT}" >> $GITHUB_ENV
-        echo "Calculated commit count: ${COMMIT_COUNT}"
-
-        # 获取提交列表 (用于发布说明)
-        if [ -z "$PREVIOUS_TAG" ]; then
-          # 如果没有上一个标签，获取所有提交
-          ALL_COMMITS=$(git log --pretty=format:"%s|%h" --reverse HEAD)
-        else
-          # 获取从上一个标签到现在的所有提交
-          ALL_COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"%s|%h" --reverse)
-        fi
-
-        # 过滤掉包含"Merge branch"、"docs:"和"README"的提交消息
-        FILTERED_COMMITS=$(echo "$ALL_COMMITS" | grep -v -E "Merge branch|docs:|README")
-        
-        # 创建一个关联数组来存储每个提交消息的最新提交哈希
-        declare -A commit_hashes
-        
-        # 遍历所有提交，为每个提交消息保存最新的哈希值
-        while IFS="|" read -r message hash; do
-          commit_hashes["$message"]="$hash"
-        done <<< "$FILTERED_COMMITS"
-        
-        # 创建一个有序数组以保持提交的原始顺序
-        declare -a ordered_messages=()
-        declare -A seen_messages=()
-        
-        # 再次遍历所有提交，但只保留每个消息的第一个实例（保持顺序）
-        while IFS="|" read -r message hash; do
-          if [[ -z "${seen_messages[$message]}" ]]; then
-            ordered_messages+=("$message")
-            seen_messages["$message"]=1
+          # 计算提交数量
+          if [ -z "$PREVIOUS_TAG" ]; then
+            echo "No previous tag found. Counting all commits up to ${CURRENT_TAG}."
+            COMMIT_COUNT=$(git rev-list --count HEAD)
+          else
+            echo "Counting commits between ${PREVIOUS_TAG} and ${CURRENT_TAG}."
+            # Use rev-list --count for direct counting
+            COMMIT_COUNT=$(git rev-list --count ${PREVIOUS_TAG}..HEAD)
           fi
-        done <<< "$FILTERED_COMMITS"
-        
-        # 构建最终的提交列表，使用最新的哈希值
-        FINAL_COMMITS=""
-        for message in "${ordered_messages[@]}"; do
-          hash="${commit_hashes[$message]}"
-          FINAL_COMMITS+="- [${hash:0:7}] ${message}"$'\n'
-        done
-        
-        # 直接保存提交信息到文件，保持每行一个提交
-        echo "$FINAL_COMMITS" > release_notes.txt
-        
-        # 添加标题
-        echo "### Commits" > complete_notes.txt
-        echo "" >> complete_notes.txt
-        cat release_notes.txt >> complete_notes.txt
-        echo "" >> complete_notes.txt
-        echo "[Full Changelog](https://github.com/caolib/typora-onelight-theme/commits/${{ github.ref }})" >> complete_notes.txt
-        
-        # 将提交信息保存到环境变量，用于后续步骤
-        # 使用EOF方式确保多行文本正确保存
-        echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
-        cat complete_notes.txt >> $GITHUB_ENV
-        echo "EOF" >> $GITHUB_ENV
+          echo "COMMIT_COUNT=${COMMIT_COUNT}" >> $GITHUB_ENV
+          echo "Calculated commit count: ${COMMIT_COUNT}"
 
-    - name: 打包文件
-      run: |
-        echo ${{ env.TAG_NAME }}
-        zip -r onelight-${{ env.TAG_NAME }}.zip ./onelight.css ./onelight
+          # 获取提交列表 (用于发布说明)
+          if [ -z "$PREVIOUS_TAG" ]; then
+            # 如果没有上一个标签，获取所有提交
+            ALL_COMMITS=$(git log --pretty=format:"%s|%h" --reverse HEAD)
+          else
+            # 获取从上一个标签到现在的所有提交
+            ALL_COMMITS=$(git log ${PREVIOUS_TAG}..HEAD --pretty=format:"%s|%h" --reverse)
+          fi
 
-    - name: 创建发布
-      id: release
-      uses: actions/create-release@v1
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: ${{ env.RELEASE_NOTES }}
-        prerelease: false
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          # 过滤掉包含"Merge branch"、"docs:"和"README"的提交消息
+          FILTERED_COMMITS=$(echo "$ALL_COMMITS" | grep -v -E "Merge branch|docs:|README")
 
-    - name: 上传发布文件
-      uses: actions/upload-release-asset@v1
-      with:
-        upload_url: ${{ steps.release.outputs.upload_url }}
-        asset_path: onelight-${{ env.TAG_NAME }}.zip
-        asset_name: onelight-${{ env.TAG_NAME }}.zip
-        asset_content_type: application/zip
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          # 创建一个关联数组来存储每个提交消息的最新提交哈希
+          declare -A commit_hashes
+
+          # 遍历所有提交，为每个提交消息保存最新的哈希值
+          while IFS="|" read -r message hash; do
+            commit_hashes["$message"]="$hash"
+          done <<< "$FILTERED_COMMITS"
+
+          # 创建一个有序数组以保持提交的原始顺序
+          declare -a ordered_messages=()
+          declare -A seen_messages=()
+
+          # 再次遍历所有提交，但只保留每个消息的第一个实例（保持顺序）
+          while IFS="|" read -r message hash; do
+            if [[ -z "${seen_messages[$message]}" ]]; then
+              ordered_messages+=("$message")
+              seen_messages["$message"]=1
+            fi
+          done <<< "$FILTERED_COMMITS"
+
+          # 构建最终的提交列表，使用最新的哈希值
+          FINAL_COMMITS=""
+          for message in "${ordered_messages[@]}"; do
+            hash="${commit_hashes[$message]}"
+            FINAL_COMMITS+="- [${hash:0:7}] ${message}"$'\n'
+          done
+
+          # 直接保存提交信息到文件，保持每行一个提交
+          echo "$FINAL_COMMITS" > release_notes.txt
+
+          # 添加标题
+          echo "### Commits" > complete_notes.txt
+          echo "" >> complete_notes.txt
+          cat release_notes.txt >> complete_notes.txt
+          echo "" >> complete_notes.txt
+          echo "[Full Changelog](https://github.com/caolib/typora-onelight-theme/commits/${{ github.ref }})" >> complete_notes.txt
+
+          # 将提交信息保存到环境变量，用于后续步骤
+          # 使用EOF方式确保多行文本正确保存
+          echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
+          cat complete_notes.txt >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: 打包文件
+        run: |
+          echo ${{ env.TAG_NAME }}
+          zip -r onelight-${{ env.TAG_NAME }}.zip ./onelight.css ./onelight-dark.css ./onelight
+
+      - name: 创建发布
+        id: release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: ${{ env.RELEASE_NOTES }}
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+      - name: 上传发布文件
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: onelight-${{ env.TAG_NAME }}.zip
+          asset_name: onelight-${{ env.TAG_NAME }}.zip
+          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
