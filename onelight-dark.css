@@ -70,6 +70,7 @@
     --alert-warning-original: #faad14;
 }
 
+/* Github风格警告框 */
 .md-alert-tip {
     --border-color: color-mix(in srgb, var(--alert-tip-original) var(--darken-ratio), black);
 }
@@ -95,6 +96,7 @@
     box-shadow: unset;
 }
 
+/* 引用块 */
 #write blockquote {
     border: solid 0.5px var(--theme-color-original);
     border-left: 5px solid var(--border-color);
@@ -107,10 +109,37 @@
     box-shadow: var(--box-shadow-large);
 }
 
+/* 代码块 */
 .md-fences {
     box-shadow: unset;
 }
 
+/* 表格 */
 #write table tr th {
     color: var(--main-red-original);
+}
+
+
+/* 一体化菜单选项 */
+.megamenu-menu-list li a {
+    color: var(--text-color) !important;
+}
+
+/* 菜单按钮 */
+.dropdown-menu,
+.menu-item-container a.menu-style-btn {
+    background-color: var(--bg-color) !important;
+}
+
+
+/* 一体化菜单背景 */
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+
+
+.megamenu-menu-header {
+    background: var(--bg-color);
 }
