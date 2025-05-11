@@ -23,23 +23,30 @@
 > [!tip]
 > **Here are two articles using the OneLight theme, click to see detailed theme effect demonstrations**
 >
-> 1. **[OneLight](https://bin-sites.pages.dev/onelight)**
+> 1. **[OneLight](https://bin-sites.pages.dev/onelight)**、**[OneLight-Dark](https://bin-sites.pages.dev/onelight)**
 > 2. **[Computer Networks](https://bin-sites.pages.dev/net)**
 
 ---
 
-![image-20250108140354139](https://s2.loli.net/2025/01/08/fNQF1ZCOgGydEUL.png)
+![image-20250511190033183](https://s2.loli.net/2025/05/11/tXwTfmnGl65IdNM.png)
 
-![image-20250108140529374](https://s2.loli.net/2025/01/08/aMkKwdmVuTCtW4G.png)
+![image-20250511184053268](https://s2.loli.net/2025/05/11/dw8bS9NGp351n7O.png)
 
-![image-20250119102419998](https://s2.loli.net/2025/01/19/4jotBCzeDdlAwfF.png)
+![image-20250511190116728](https://s2.loli.net/2025/05/11/dDVoupIWsH9aQxq.png)
+
+![image-20250511184920000](https://s2.loli.net/2025/05/11/c51PL9yEfrkOCeF.png)
+
+![image-20250511190156498](https://s2.loli.net/2025/05/11/UJgcdoH16Dl9vCX.png)
+
+![image-20250511185936255](https://s2.loli.net/2025/05/11/ULwkB9dnPiTEpaM.png)
 
 <details><summary><kbd>Expand to see more screenshots</kbd></summary>
-  <img src="https://s2.loli.net/2025/01/08/Ir1mgZCto4YS6lj.png"></br>
-  <img src="https://s2.loli.net/2025/03/04/YzmsQOAFJ2UkpC7.png"></br>
-  <img src="https://s2.loli.net/2025/01/08/cAgBOqFoCMYE8S6.png"></br>
-	Integrated menu interface
-  <img src="https://s2.loli.net/2025/01/08/QF2UA9zPOW5X6ji.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/23GUxWvkhDE4doF.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/JUrxQsdYvVg6OZe.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/aZsAW1kXDBqM2hV.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/x35yzoV2GC4vXIU.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/PrlOStnM3J4Tehz.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/4l1rUvLfhHQCc2g.png"></br>
 </details>
 
 ---
@@ -90,7 +97,7 @@ Default fonts are set at the beginning of the `onelight.css` file, which you can
 
 > [!important]
 >
-> Background images are in the `onelight/img` folder. There are several prepared images in the folder, and you can also add your own images (preferably with transparent backgrounds). Then search for `background-image` in the CSS file to find the code below and replace the image path:
+> Background images are in the `onelight/img` folder. There are several prepared images in the folder, and you can also add your own images (preferably with transparent backgrounds). Then search for `bg.gif` in the CSS file to find the code below and replace the image path:
 >
 > ```css
 > content {
