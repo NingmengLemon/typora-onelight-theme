@@ -23,7 +23,7 @@
 > [!tip]
 > **Here are two articles using the OneLight theme, click to see detailed theme effect demonstrations**
 >
-> 1. **[OneLight](https://bin-sites.pages.dev/onelight)**、**[OneLight-Dark](https://bin-sites.pages.dev/onelight)**
+> 1. **[OneLight](https://bin-sites.pages.dev/onelight)**、**[OneLight-Dark](https://bin-sites.pages.dev/onelight/dark)**
 > 2. **[Computer Networks](https://bin-sites.pages.dev/net)**
 
 ---
