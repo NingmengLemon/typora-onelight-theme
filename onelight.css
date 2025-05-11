@@ -25,8 +25,8 @@
     --item-hover-bg-color: hsla(0, 0%, 90%, .59);
     --item-hover-text-color: var(--main-red);
     --monospace: monospace;
-    --select-text-font-color: inherit !important;
-    --select-text-bg-color: #3b3e4d;
+    --select-text-font-color: white !important;
+    --select-text-bg-color: #3266D0;
     --side-bar-menu-active-tint: var(--main-green);
     --outline-color: #a5a5a5;
     /* ---------------->> 主题色 <<---------------- */
@@ -53,7 +53,7 @@
     /* ---------------->> 过渡 <<---------------- */
     --transition: box-shadow 0.3s ease, transform 0.3s ease;
     --bg-transition: background-color 0.5s ease;
-    /* ---------------->> 左到右透明渐变 <<---------------- */
+    /* ---------------->> 左到右透明渐变色 <<---------------- */
     --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
     /* ---------------->> 圆角 <<---------------- */
     --radius-small: 5px;
@@ -82,15 +82,6 @@ tt {
 }
 
 
-
-::-moz-selection {
-    color: var(--theme-light-color)
-}
-
-::-webkit-selection {
-    background: #b981d1;
-    color: var(--theme-light-color)
-}
 
 #write {
     letter-spacing: 0;
@@ -442,10 +433,6 @@ code {
 
 
 
-.cm-s-inner div.CodeMirror-selected {
-    background: rgba(113, 124, 180, .2)
-}
-
 .cm-s-inner .cm-keyword {
     color: var(--main-purple)
 }
@@ -552,7 +539,7 @@ del {
 .CodeMirror-selected,
 .CodeMirror-selectedtext {
     color: white !important;
-    background: #3266D0 !important;
+    background: var(--select-text-bg-color) !important;
 }
 
 
@@ -902,14 +889,6 @@ input:focus {
     color: rgb(145 205 255);
 }
 
-::-moz-selection {
-    background: #42a5f554
-}
-
-::selection {
-    background: #42a5f554
-}
-
 .megamenu-menu-list li a.active,
 .megamenu-menu-list:not(.saved) li a:hover {
     background-color: var(--item-hover-bg-color);
@@ -1109,15 +1088,6 @@ a#megamenu-clear-recet-documents:hover {
     background: transparent;
 }
 
-::-moz-selection {
-    background: var(--item-bg-color-blue)
-}
-
-.in-text-selection,
-::selection {
-    background: var(--item-bg-color-blue)
-}
-
 .CodeMirror-gutters {
     border-right: unset
 }
@@ -1247,7 +1217,7 @@ pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
 }
 
 
-/* ---------------->> 代码块下span文本 <<---------------- */
+/* ---------------->> 代码块文本 <<---------------- */
 pre.CodeMirror-line>span {
     color: var(--light-color);
 }
