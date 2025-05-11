@@ -16,31 +16,37 @@
   <img src="https://github.com/caolib/typora-onelight-theme/actions/workflows/ci.yml/badge.svg" alt="ci">
 </p>
 
-
-## **1.概览**
-
+## 1.概览
 
 > [!tip]
 > **这里有两篇文章使用OneLight主题，可点击查看主题详细效果展示**
 >
-> 1. **[OneLight](https://bin-sites.pages.dev/onelight)**
+> 1. **[OneLight](https://bin-sites.pages.dev/onelight)**、**[OneLight-Dark](https://bin-sites.pages.dev/onelight)**
 > 2. **[计算机网络](https://bin-sites.pages.dev/net)**
 
 ---
 
-![image-20250108140354139](https://s2.loli.net/2025/01/08/fNQF1ZCOgGydEUL.png)
+![image-20250511190033183](https://s2.loli.net/2025/05/11/tXwTfmnGl65IdNM.png)
 
-![image-20250108140529374](https://s2.loli.net/2025/01/08/aMkKwdmVuTCtW4G.png)
+![image-20250511184053268](https://s2.loli.net/2025/05/11/dw8bS9NGp351n7O.png)
 
-![image-20250119102419998](https://s2.loli.net/2025/01/19/4jotBCzeDdlAwfF.png)
+![image-20250511190116728](https://s2.loli.net/2025/05/11/dDVoupIWsH9aQxq.png)
+
+![image-20250511184920000](https://s2.loli.net/2025/05/11/c51PL9yEfrkOCeF.png)
+
+![image-20250511190156498](https://s2.loli.net/2025/05/11/UJgcdoH16Dl9vCX.png)
+
+![image-20250511185936255](https://s2.loli.net/2025/05/11/ULwkB9dnPiTEpaM.png)
 
 <details><summary><kbd>展开查看更多截图</summary></kbd>
-  <img src="https://s2.loli.net/2025/01/08/Ir1mgZCto4YS6lj.png"></br>
-  <img src="https://s2.loli.net/2025/03/04/YzmsQOAFJ2UkpC7.png"></br>
-  <img src="https://s2.loli.net/2025/01/08/cAgBOqFoCMYE8S6.png"></br>
-	一体化菜单界面
-  <img src="https://s2.loli.net/2025/01/08/QF2UA9zPOW5X6ji.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/23GUxWvkhDE4doF.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/JUrxQsdYvVg6OZe.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/aZsAW1kXDBqM2hV.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/x35yzoV2GC4vXIU.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/PrlOStnM3J4Tehz.png"></br>
+  <img src="https://s2.loli.net/2025/05/11/4l1rUvLfhHQCc2g.png"></br>
 </details>
+
 
 ---
 
@@ -79,18 +85,18 @@
 
 如果`onelight.user.css`无效，你可能要添加`!important`提高优先级
 
-## **4.关于字体**
+## 4.关于字体
 
 在`onelight.css`文件开头设置了默认字体，可以自行修改，字体文件在[fonts](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/fonts)文件夹下
 ![](https://github.com/user-attachments/assets/ab75260f-cff0-43b7-b8e5-dfea38e8525c)
 
 ---
 
-## **4.背景图片**
+## 4.背景图片
 
 > [!important]
 >
-> 背景图片在`onelight/img`文件夹下，文件夹下有几张准备好的图片，你也可以添加自己的图片（最好使用透明背景的图片），然后在css文件中搜索 `background-image`找到下面代码替换图片路径
+> 背景图片在`onelight/img`文件夹下，文件夹下有几张准备好的图片，你也可以添加自己的图片（最好使用透明背景的图片），然后在css文件中搜索 `bg.gif`找到下面代码替换图片名
 >
 > ```css
 > content {
