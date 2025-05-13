@@ -119,7 +119,8 @@ tt {
 }
 
 #write input[type=checkbox] {
-    position: unset;
+    top: 13px;
+    position: absolute;
     height: 1.2rem;
     width: 1.2rem;
     margin-right: 3px;
