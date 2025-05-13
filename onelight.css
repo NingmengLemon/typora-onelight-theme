@@ -390,7 +390,7 @@ table tr:hover {
 
 /* ---------------->> 斑马纹 <<---------------- */
 #write table tr:nth-child(2n) {
-    background-color: rgb(from var(--bg-color) r g b / 0.95)
+    background-color: rgb(from var(--bg-color) r g b / 0.95) background-color: rgb(from var(--bg-color) r g b / 0.95)
 }
 
 #write table tr td,
