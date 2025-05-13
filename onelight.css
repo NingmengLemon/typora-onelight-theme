@@ -126,8 +126,6 @@ tt {
     margin-right: 3px;
 }
 
-
-
 /* ---------------->> 标题 <<---------------- */
 #write h2,
 #write h3,
@@ -135,7 +133,9 @@ tt {
 #write h5,
 #write h6 {
     margin: .72em 0;
-    padding: 0
+    padding: 0;
+    position: relative;
+    font-weight: lighter;
 }
 
 #write h2:hover:before {
@@ -173,44 +173,60 @@ tt {
     bottom: 0;
     color: var(--item-bg-color-blue);
     font-size: .9rem;
-    font-variant: "small-caps";
     position: absolute;
     right: calc(100% + 3px);
 }
 
 #write h1 {
     font-size: 2.5rem;
-    text-align: center
-}
-
-#write h1 {
-    font-size: 2.5rem;
-    text-align: center
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 0.3em;
 }
 
 #write h2 {
+    color: var(--theme-color);
     font-size: 1.7rem;
-    margin: 1em 0
+    margin: 1em 0;
+    border-bottom: 2px solid var(--theme-color);
+    padding-bottom: 0.2em;
 }
 
-#write h2 span {
-    color: var(--theme-color);
+#write h2::after {
+    content: none;
 }
 
 #write h3 {
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    color: var(--theme-color);
+    padding-left: 15px;
+    position: relative;
+}
+
+#write h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    z-index: 0;
 }
 
 #write h4 {
-    font-size: 1.25rem
+    font-size: 1.25rem;
+    width: fit-content;
 }
 
 #write h5 {
-    font-size: 1.15rem
+    font-size: 1.15rem;
 }
 
 #write h6 {
-    font-size: 1rem
+    font-size: 1rem;
+    font-style: italic;
 }
 
 /* ---------------->> 列表 <<---------------- */
@@ -374,7 +390,7 @@ table tr:hover {
 
 /* ---------------->> 斑马纹 <<---------------- */
 #write table tr:nth-child(2n) {
-    background-color: rgb(from var(--bg-color) r g b / 0.8)
+    background-color: rgb(from var(--bg-color) r g b / 0.95)
 }
 
 #write table tr td,
