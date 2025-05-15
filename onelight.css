@@ -400,6 +400,23 @@ figure.md-table-fig.table-figure {
     width: fit-content;
 }
 
+#write td.md-reset {
+    border: 0;
+    padding: 0 !important;
+}
+
+.md-grid-board a {
+    border: 0;
+}
+
+tr.md-reset {
+    background: var(--theme-light-color) !important;
+}
+
+td.md-reset.md-grid-ext>a {
+    margin: 0;
+    padding: 0;
+}
 
 /* ---------------->> 表格行 <<---------------- */
 #write table tr {
@@ -415,7 +432,6 @@ figure.md-table-fig.table-figure {
 #write table tr td,
 #write table tr th {
     border: 0.5px solid var(--tb-border-color);
-    font-size: .9rem;
     font-size: .9rem;
     line-height: 1.5;
     padding: 5px 10px;
@@ -460,7 +476,7 @@ code {
 /* ---------------->> 代码块光标 <<---------------- */
 .CodeMirror div.CodeMirror-cursor {
     border-left: 1.5px solid var(--main-green);
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 
@@ -1245,7 +1261,7 @@ pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
     color: #e0e0e0;
     padding: 2px 5px;
     border-radius: var(--radius-small);
-    z-index: 100;
+    z-index: 20;
 }
 
 
