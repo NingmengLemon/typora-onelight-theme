@@ -29,6 +29,7 @@
     --select-text-bg-color: #3266D0;
     --side-bar-menu-active-tint: var(--main-green);
     --outline-color: #a5a5a5;
+    --tb-border-color: #e8e8e8;
     /* ---------------->> 主题色 <<---------------- */
     --theme-color: #166ff3;
     --main-red: #ff6b6b;
@@ -78,7 +79,7 @@ code,
 pre,
 samp,
 tt {
-    font-family: var(--main-font-family)
+    font-family: var(--main-font-family);
 }
 
 
@@ -389,7 +390,12 @@ figure.md-table-fig.table-figure {
     transition: var(--mica-transition);
 }
 
-/* ---------------->> 表格调整控件 <<---------------- */
+/* 删除表格按钮 */
+.ty-delete:before {
+    color: var(--main-red);
+}
+
+/* ---------------->> 表格行列调整控件 <<---------------- */
 .popover.bottom.md-table-resize-popover {
     width: fit-content;
 }
@@ -408,7 +414,7 @@ figure.md-table-fig.table-figure {
 
 #write table tr td,
 #write table tr th {
-    border: 0;
+    border: 0.5px solid var(--tb-border-color);
     font-size: .9rem;
     font-size: .9rem;
     line-height: 1.5;

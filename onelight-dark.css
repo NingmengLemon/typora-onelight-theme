@@ -16,6 +16,7 @@
     --monospace: monospace;
     --side-bar-menu-active-tint: var(--main-green);
     --outline-color: #7a7a7a;
+    --tb-border-color: #393e49;
     /* ---------------->> 暗化比例 <<---------------- */
     --darken-ratio: 80%;
     /* ---------------->> 主题色 <<---------------- */
