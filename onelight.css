@@ -311,6 +311,13 @@ a {
     background: unset;
 }
 
+/* 表格组件取消链接箭头 */
+.md-reset>a::after {
+    content: none !important;
+}
+
+
+/* 链接箭头 */
 #write a::after {
     content: "";
     display: inline-block;
@@ -372,6 +379,16 @@ figure.md-table-fig.table-figure {
     border-radius: var(--radius-large);
 }
 
+/* ---------------->> 表格调节组件 <<---------------- */
+.ty-table-edit {
+    border-radius: var(--radius-large);
+    background-color: var(--mica-bg) !important;
+    backdrop-filter: var(--mica-blur);
+    border: var(--mica-border);
+    box-shadow: var(--box-shadow);
+    transition: var(--mica-transition);
+}
+
 /* ---------------->> 表格调整控件 <<---------------- */
 .popover.bottom.md-table-resize-popover {
     width: fit-content;
@@ -379,10 +396,6 @@ figure.md-table-fig.table-figure {
 
 
 /* ---------------->> 表格行 <<---------------- */
-table tr:hover {
-    background-color: rgb(from var(--bg-color) r g b / 0.8);
-}
-
 #write table tr {
     background-color: var(--theme-light-color);
     border: 0;
@@ -390,7 +403,7 @@ table tr:hover {
 
 /* ---------------->> 斑马纹 <<---------------- */
 #write table tr:nth-child(2n) {
-    background-color: rgb(from var(--bg-color) r g b / 0.95) background-color: rgb(from var(--bg-color) r g b / 0.95)
+    background-color: var(--bg-color);
 }
 
 #write table tr td,
@@ -407,10 +420,6 @@ table tr:hover {
     background-color: #42a5f53d;
     color: var(--theme-color);
     font-weight: 700
-}
-
-#write table tr:hover {
-    background: rgb(from var(--bg-color) r g b / 0.7);
 }
 
 /* ---------------->> 脚注 <<---------------- */
