@@ -388,6 +388,7 @@ figure.md-table-fig.table-figure {
     border: var(--mica-border);
     box-shadow: var(--box-shadow);
     transition: var(--mica-transition);
+    z-index: 999;
 }
 
 /* 删除表格按钮 */
