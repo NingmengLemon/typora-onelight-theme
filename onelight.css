@@ -97,13 +97,17 @@ tt {
     margin-top: 3px;
 }
 
+/* 为p标签添加过渡动画效果 */
+#write p:not(:has(.md-image)) {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
 /* 仅在p标签不包含图片时应用悬停效果 */
 #write p:not(:has(.md-image)):hover {
     box-shadow: var(--box-shadow);
     border-radius: var(--radius-large);
     background: var(--theme-light-color);
 }
-
 
 #write p:has(.md-image):hover::before {
     display: none;
@@ -1303,6 +1307,7 @@ pre.CodeMirror-line>span {
 }
 
 ::-webkit-scrollbar-thumb {
+    border-radius: var(--radius-small);
     background: rgba(0, 0, 0, .1);
     width: 10px
 }
