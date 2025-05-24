@@ -106,7 +106,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
           body: ${{ env.RELEASE_NOTES }}
-          prerelease: false
+          prerelease: true
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
