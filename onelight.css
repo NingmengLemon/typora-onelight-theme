@@ -329,6 +329,7 @@ tt {
     border-color: transparent;
 }
 
+/* ---------------->> 有序列表前数字 <<---------------- */
 #write .ol>.li:before,
 #write ol>li:before {
     border-radius: .825em;
@@ -341,12 +342,13 @@ tt {
     margin-left: -25px;
     margin-top: 10px;
     text-align: center;
-    width: 1.65em
+    width: 1.65em;
+    transition: transform 0.5s;
 }
 
 #write .ol>.li:hover:before,
 #write ol>li:hover:before {
-    background-color: var(--main-red);
+    transform: rotate(720deg) !important;
 }
 
 #write .ol .li input,
@@ -559,6 +561,7 @@ td.md-reset.md-grid-ext>a {
     vertical-align: middle;
 }
 
+/* ---------------->> 代码块 <<---------------- */
 .md-fences,
 code {
     border-radius: var(--radius-small);
