@@ -1,4 +1,6 @@
 *
+!.github/
+!.github/**
 
 !onelight.css
 !onelight-dark.css
@@ -7,5 +9,3 @@
 !LICENSE
 !README.md
 !.gitignore
-!.github/
-!.github/workflows/ci.yml

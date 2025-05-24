@@ -1,0 +1,13 @@
+name: 功能建议
+description: 提出新功能或改进建议
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 功能概述
+      description: 请简要说明你希望增加或改进的功能
+      placeholder: 例如：希望添加新的代码块样式，改进表格显示效果等
+    validations:
+      required: true
