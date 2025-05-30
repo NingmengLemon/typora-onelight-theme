@@ -183,3 +183,7 @@ pre.CodeMirror-line>span {
 .typora-sourceview-on #toggle-sourceview-btn {
     background: transparent;
 }
+
+#write h4 {
+    color: var(--text-color);
+}

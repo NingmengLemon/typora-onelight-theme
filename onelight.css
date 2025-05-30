@@ -1,3 +1,10 @@
+@import './onelight/style/list.css';
+@import './onelight/style/blockquote.css';
+@import './onelight/style/editor.css';
+@import './onelight/style/code.css';
+@import './onelight/style/table.css';
+@import './onelight/style/title.css';
+
 @font-face {
     font-family: 'Cascadia Code';
     src: url('./onelight/fonts/CascadiaCode.woff2') format('woff2');
@@ -117,247 +124,8 @@ tt {
     width: inherit;
 }
 
-/* ---------------->> todo-复选框 <<---------------- */
-
-#write input[type=checkbox] {
-    top: 10px;
-    position: absolute;
-    height: 1.2rem;
-    width: 1.2rem;
-    margin-right: 3px;
-}
-
-/* ---------------->> 标题 <<---------------- */
-#write h2,
-#write h3,
-#write h4,
-#write h5,
-#write h6 {
-    margin: .72em 0;
-    padding: 0;
-    position: relative;
-    font-weight: lighter;
-}
-
-#write h2:hover:before {
-    bottom: .2rem;
-    content: "H2"
-}
-
-#write h3:hover:before {
-    bottom: .2rem;
-    content: "H3"
-}
-
-#write h4:hover:before {
-    bottom: .2rem;
-    content: "H4"
-}
-
-#write h5:hover:before {
-    bottom: .2rem;
-    content: "H5"
-}
-
-#write h6:hover:before {
-    bottom: .2rem;
-    content: "H6"
-}
-
-#write h2:hover:before,
-#write h3:hover:before,
-#write h4:hover:before,
-#write h5:hover:before,
-#write h6:hover:before {
-    line-height: 25px;
-    padding: 0 1px 0 1px;
-    bottom: 0;
-    color: var(--item-bg-color-blue);
-    font-size: .9rem;
-    position: absolute;
-    right: calc(100% + 3px);
-}
-
-#write h1 {
-    font-size: 2.5rem;
-    font-weight: lighter;
-    text-align: center;
-    padding-bottom: 0.3em;
-}
-
-#write h2 {
-    color: var(--theme-color);
-    font-size: 1.7rem;
-    margin: 1em 0;
-    border-bottom: 2px solid var(--theme-color);
-    padding-bottom: 0.2em;
-}
-
-#write h2::after {
-    content: none;
-}
-
-#write h3 {
-    font-size: 1.5rem;
-    color: var(--theme-color);
-    padding-left: 15px;
-    position: relative;
-}
-
-#write h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: var(--theme-color);
-    border-radius: 2px;
-    z-index: 0;
-}
-
-#write h4 {
-    font-size: 1.25rem;
-    width: fit-content;
-}
-
-#write h5 {
-    font-size: 1.15rem;
-}
-
-#write h6 {
-    font-size: 1rem;
-    font-style: italic;
-}
-
-/* ---------------->> 列表 <<---------------- */
-#write ol,
-#write ul {
-    margin-bottom: 8px;
-    margin-top: 8px;
-    padding-left: 40px !important;
-}
-
-#write ul {
-    list-style-type: disclosure-closed
-}
-
-#write ul ul {
-    list-style-type: square
-}
-
-#write ol {
-    list-style-type: decimal
-}
-
-#write li section {
-    font-size: .9rem;
-    font-size: .9rem;
-}
-
-#write .ol .li,
-#write .ul .li,
-#write ol li,
-#write ul li {
-    list-style-type: none;
-    margin-bottom: 7px;
-    margin-top: 7px
-}
-
-/* ---------------->> 无序列表前小圆点 <<---------------- */
-#write .ul>.li:not(.tab):not(.task-list-item):before,
-#write ul>li:not(.tab):not(.task-list-item):before {
-    border-radius: .31em;
-    content: "";
-    height: .62em;
-    line-height: .42em;
-    margin-left: -22px;
-    margin-top: 15px;
-    width: .62em;
-    transition: transform 0.3s;
-}
-
-#write .ul>.li:not(.tab):not(.task-list-item):hover:before,
-#write ul>li:not(.tab):not(.task-list-item):hover:before {
-    transform: rotate(360deg) !important;
-}
 
 
-/* ---------------->> 二级无序列表前小方块 <<---------------- */
-#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item::before {
-    border-radius: 0;
-    transform: rotate(45deg);
-}
-
-/* ---------------->> 三级无序列表前小方块 <<---------------- */
-#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item::before {
-    border-radius: 0;
-    transform: unset;
-}
-
-/* ---------------->> 四级无序列表前小方块 <<---------------- */
-#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item>ul>li.md-list-item::before {
-    border-radius: 0;
-    background: transparent;
-    border: 1.5px solid var(--theme-color);
-}
-
-
-#write .ol .li:before,
-#write .ul .li:before,
-#write ol li:before,
-#write ul li:before {
-    background: var(--theme-color);
-    position: absolute;
-}
-
-#write .ol .li:first-child,
-#write ol li:first-child {
-    counter-reset: li
-}
-
-#write .ol .li:hover:before,
-#write .ul .li:hover:before,
-#write ol li:hover:before,
-#write ul li:hover:before {
-    transform: rotate(1turn)
-}
-
-#write .ul>.li:not(.tab):hover:before,
-#write ul>li:not(.tab):hover:before {
-    background-color: var(--main-red);
-    border-color: transparent;
-}
-
-/* ---------------->> 有序列表前数字 <<---------------- */
-#write .ol>.li:before,
-#write ol>li:before {
-    border-radius: .825em;
-    color: #fff;
-    content: counter(li);
-    counter-increment: li;
-    font-size: .65em;
-    height: 1.65em;
-    line-height: 1.7em;
-    margin-left: -25px;
-    margin-top: 10px;
-    text-align: center;
-    width: 1.65em;
-    transition: transform 0.5s;
-}
-
-#write .ol>.li:hover:before,
-#write ol>li:hover:before {
-    transform: rotate(720deg) !important;
-}
-
-#write .ol .li input,
-#write .ul .li input,
-#write ol li input,
-#write ul li input {
-    margin-bottom: 0;
-    margin-top: 0
-}
 
 
 /* ---------------->> 粗体 <<---------------- */
@@ -367,32 +135,7 @@ tt {
 }
 
 
-/* ---------------->> 引用块 <<---------------- */
-#write blockquote {
-    background: var(--gradient-color);
-    border-bottom-right-radius: 10px;
-    border-left: 5px solid var(--border-color);
-    border-top-right-radius: 10px;
-    box-shadow: var(--box-shadow);
-    color: rgb(from var(--text-color) r g b / 0.85);
-    font-size: .9em;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 10px 10px 10px 20px;
-    transition: var(--bg-transition)
-}
 
-#write blockquote:hover {
-    transition: var(--bg-transition);
-    background: var(--bg-color);
-    box-shadow: var(--box-shadow-large);
-}
-
-#write blockquote p {
-    line-height: 26px
-}
 
 /* ---------------->> 链接 <<---------------- */
 a>span.md-plain,
@@ -477,77 +220,6 @@ a.md-toc-inner {
     box-shadow: var(--box-shadow-large);
 }
 
-/* ---------------->> 表格 <<---------------- */
-figure.md-table-fig.table-figure {
-    border: 0;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--radius-large);
-}
-
-/* ---------------->> 表格调节组件 <<---------------- */
-.ty-table-edit {
-    border-radius: var(--radius-large);
-    background-color: var(--mica-bg) !important;
-    backdrop-filter: var(--mica-blur);
-    border: var(--mica-border);
-    box-shadow: var(--box-shadow);
-    transition: var(--mica-transition);
-    z-index: 999;
-}
-
-/* 删除表格按钮 */
-.ty-delete:before {
-    color: var(--main-red);
-}
-
-/* ---------------->> 表格行列调整控件 <<---------------- */
-.popover.bottom.md-table-resize-popover {
-    width: fit-content;
-}
-
-#write td.md-reset {
-    border: 0;
-    padding: 0 !important;
-}
-
-.md-grid-board a {
-    border: 0;
-}
-
-tr.md-reset {
-    background: var(--theme-light-color) !important;
-}
-
-td.md-reset.md-grid-ext>a {
-    margin: 0;
-    padding: 0;
-}
-
-/* ---------------->> 表格行 <<---------------- */
-#write table tr {
-    background-color: var(--theme-light-color);
-    border: 0;
-}
-
-/* ---------------->> 斑马纹 <<---------------- */
-#write table tr:nth-child(2n) {
-    background-color: var(--bg-color);
-}
-
-#write table tr td,
-#write table tr th {
-    border: 0.5px solid var(--tb-border-color);
-    font-size: .9rem;
-    line-height: 1.5;
-    padding: 5px 10px;
-}
-
-/* ---------------->> 表头 <<---------------- */
-#write table tr th {
-    background-color: #42a5f53d;
-    color: var(--theme-color);
-    font-weight: 700
-}
 
 /* ---------------->> 脚注 <<---------------- */
 .md-def-name {
@@ -561,110 +233,6 @@ td.md-reset.md-grid-ext>a {
     vertical-align: middle;
 }
 
-/* ---------------->> 代码块 <<---------------- */
-.md-fences,
-code {
-    border-radius: var(--radius-small);
-    margin-left: .2em;
-    margin-right: .2em;
-    padding: .1em
-}
-
-.md-fences {
-    background-color: var(--code-bg-color);
-    box-shadow: 0 4px 10px gray;
-    color: var(--bg-color);
-    margin: 0 0 20px;
-    padding: .4em 1em .3em;
-    transition: var(--transition)
-}
-
-/* ---------------->> 代码块光标 <<---------------- */
-.CodeMirror div.CodeMirror-cursor {
-    border-left: 1.5px solid var(--main-green);
-    /* z-index: 5; */
-}
-
-
-
-.cm-s-inner .cm-keyword {
-    color: var(--main-purple)
-}
-
-.cm-s-inner .cm-operator {
-    color: #89ddff
-}
-
-.cm-s-inner .cm-variable-2 {
-    color: #eff
-}
-
-.cm-s-inner .cm-type,
-.cm-s-inner .cm-variable-3 {
-    color: #ea6717
-}
-
-.cm-s-inner .cm-builtin {
-    color: #ffcb6b
-}
-
-.cm-s-inner .cm-atom {
-    color: #f78c6c
-}
-
-.cm-s-inner .cm-number {
-    color: #ff5370
-}
-
-.cm-s-inner .cm-def {
-    color: #ff8c00
-}
-
-.cm-s-inner .cm-string {
-    color: #00ad47
-}
-
-.cm-s-inner .cm-string-2 {
-    color: #f07178
-}
-
-.cm-s-inner .cm-comment {
-    color: #cdcdcd;
-}
-
-.cm-s-inner .cm-variable {
-    color: #42a5f5
-}
-
-.cm-s-inner .cm-meta {
-    color: var(--main-red)
-}
-
-.cm-s-inner .cm-attribute {
-    color: #e26fff;
-}
-
-.cm-s-inner .cm-property,
-.cm-s-inner .cm-qualifier {
-    color: var(--main-red)
-}
-
-.cm-s-inner .cm-error {
-    border: solid 0.25px #e9405c;
-    color: #fff;
-}
-
-pre[lang=flow],
-pre[lang=mermaid],
-pre[lang=sequence] {
-    background: var(--theme-light-color);
-    color: #333
-}
-
-/* ---------------->> 代码语言类型 <<---------------- */
-span.ty-input.ty-input-after.ty-cm-lang-input {
-    color: white;
-}
 
 /* ---------------->> 高亮 <<---------------- */
 mark {
@@ -677,24 +245,11 @@ mark {
     color: var(--main-red);
 }
 
-/* ---------------->> 删除线 <<---------------- */
-del {
-    color: grey;
-}
-
-/* ---------------->> 代码块 <<---------------- */
-#write pre {
-    background: var(--code-bg-color) !important;
-    font-family: var(--main-font-family)
-}
 
 
-/* ---------------->> 代码块选中 <<---------------- */
-.CodeMirror-selected,
-.CodeMirror-selectedtext {
-    color: white !important;
-    background: var(--select-text-bg-color) !important;
-}
+
+
+
 
 
 .md-fences-adv-panel,
@@ -740,27 +295,7 @@ span#filesearch-case-option-btn:active {
     background-color: var(--theme-color)
 }
 
-/* ---------------->> 搜索框 <<---------------- */
 
-#md-searchpanel .btn label {
-    color: var(--theme-color);
-    font-weight: bold;
-}
-
-div#md-searchpanel {
-    background: var(--main-bg);
-}
-
-#md-searchpanel .btn {
-    text-align: center !important;
-    border-radius: 10px;
-    background: rgb(from var(--bg-color) r g b / 0.4);
-    margin: 0 2px;
-}
-
-#md-searchpanel .btn:hover {
-    background: var(--item-bg-color-blue);
-}
 
 
 /* ---------------->> 脚注 <<---------------- */
@@ -806,37 +341,6 @@ p.md-toc-content:hover {
     background: var(--theme-light-color);
 }
 
-/* ---------------->> 底部状态栏 <<---------------- */
-#footer-word-count:hover,
-.ty-show-spell-check #footer-spell-check,
-.ty-show-word-count #footer-word-count {
-    background: #eee;
-    color: var(--theme-color);
-}
-
-.footer-item:hover,
-.sidebar-footer-item:hover {
-    color: var(--theme-color);
-}
-
-/* ---------------->> 显示/隐藏侧边栏 <<---------------- */
-#outline-btn:hover {
-    color: var(--theme-color)
-}
-
-/* ---------------->> meta代码块 <<---------------- */
-#write>pre.md-meta-block.md-end-block {
-    background: var(--theme-light-color) !important;
-    border-radius: var(--radius-large);
-    box-shadow: var(--box-shadow);
-    padding: 10px;
-    transition: var(--transition)
-}
-
-#write>pre.md-meta-block.md-end-block:hover,
-#write>pre.md-meta-block.md-end-block:focus {
-    box-shadow: var(--box-shadow-large);
-}
 
 .info-panel-tab-title:hover,
 .outline-label:hover {
@@ -856,23 +360,7 @@ p.md-toc-content:hover {
     text-decoration: line-through
 }
 
-/* ---------------->> 左侧文件树 <<---------------- */
-.file-library-node.file-tree-node.file-library-file-node.active,
-.file-node-content:hover {
-    color: var(--theme-color)
-}
 
-.file-library-node:not(.file-node-root):focus>.file-node-content {
-    outline: unset;
-}
-
-.file-node-content {
-    cursor: pointer;
-}
-
-.fa-file-text-o:before {
-    content: '📄';
-}
 
 
 
@@ -1007,65 +495,12 @@ input:focus {
 
 
 
-/* ---------------->> 任务列表按钮 <<---------------- */
-.ty-check:before {
-    color: #00bb00;
-}
-
-/* ---------------->> 删除按钮 <<---------------- */
-.ty-delete1:before {
-    color: var(--main-red);
-}
-
-/* ---------------->> 代码按钮 <<---------------- */
-.ty-code:before {
-    color: var(--main-purple);
-}
-
-/* ---------------->> 链接按钮 <<---------------- */
-.ty-link-icon:before {
-    color: var(--theme-color);
-}
 
 
-/* ---------------->> 右键菜单 <<---------------- */
-.dropdown-menu,
-.menu-item-container a.menu-style-btn {
-    border-radius: var(--radius-large);
-    background-color: var(--mica-bg) !important;
-    backdrop-filter: var(--mica-blur);
-    -webkit-backdrop-filter: var(--mica-blur);
-    border: var(--mica-border);
-    box-shadow: var(--box-shadow);
-    transition: var(--mica-transition);
-}
-
-.dropdown-menu .divider {
-    opacity: 0;
-}
 
 
-.context-menu.dropdown-menu>.active>a,
-.context-menu.dropdown-menu>li>a:hover,
-.menu-style-btn.active {
-    cursor: pointer;
-    border-radius: var(--radius-large);
-    background: var(--item-bg-color-blue);
-    color: var(--theme-color)
-}
 
-.context-menu {
-    padding-bottom: 0;
-}
 
-.ty-bold:before {
-    font-weight: bold;
-}
-
-.menu-item-container a.menu-style-btn.active,
-.menu-item-container a.menu-style-btn:hover {
-    background-color: var(--item-bg-color-blue) !important;
-}
 
 
 
@@ -1113,66 +548,13 @@ content {
 }
 
 
-/* ---------------->> 一体化菜单界面背景图片 <<---------------- */
-div#megamenu-section-open {
-    background-color: transparent;
-    background-image: url('./onelight/img/bg4.gif');
-    background-position: 100% 0%;
-    background-repeat: no-repeat;
-    background-size: 100px auto;
-    transition: background-image .5s ease-in-out, background-size .5s ease-in-out;
-}
 
-.megamenu-opened header {
-    background-image: unset;
-}
 
-/* ---------------->> 一体化模式-打开 <<---------------- */
-.megamenu-menu-panel:not(:first-of-type) {
-    margin-top: 10px;
-}
-
-/* ---------------->> 一体化模式-打开-最近打开文件列表 <<---------------- */
-ul.dropdown-menu[aria-labelledby="recent-file-panel-action-btn"] {
-    border-radius: var(--radius-small);
-}
-
-/* ---------------->> 一体化模式-已保存 <<---------------- */
-a#m-saved:hover {
-    cursor: unset;
-}
-
-a#megamenu-clear-recet-documents:hover {
-    background: transparent;
-}
 
 .CodeMirror-gutters {
     border-right: unset
 }
 
-.megamenu-menu-header {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background: #2e2e2e;
-    border-bottom: unset;
-    height: 90px;
-    position: relative;
-    text-align: center
-}
-
-.ion-android-arrow-back:before {
-    content: "<-";
-    font-family: cascadia code, fira code, var(--main-font-family)
-}
-
-a#megamenu-back-btn:hover {
-    color: var(--theme-color)
-}
-
-#megamenu-back-btn {
-    border: 0;
-    font-size: 25px
-}
 
 footer.ty-footer {
     border-top: 0
@@ -1238,250 +620,4 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
     color: var(--main-purple);
     font-style: italic;
     text-decoration: underline
-}
-
-/* ---------------->> 一体化模式的侧边菜单 <<---------------- */
-ul#megamenu-menu-list {
-    height: 100%;
-    background: transparent;
-}
-
-/* ---------------->> 一体化模式最近打开文件列表 <<---------------- */
-.megamenu-menu-panel table {
-    font-weight: unset;
-}
-
-/* ---------------->> mermaid <<---------------- */
-.md-diagram-panel.md-fences-adv-panel {
-    background: var(--theme-light-color);
-}
-
-pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
-    background: transparent !important;
-}
-
-
-
-/* ---------------->> 代码框右下角的语言类型显示 <<---------------- */
-pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
-    content: attr(lang);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #e0e0e0;
-    padding: 2px 5px;
-    border-radius: var(--radius-small);
-    z-index: 20;
-}
-
-
-/* ---------------->> 代码块文本 <<---------------- */
-pre.CodeMirror-line>span {
-    color: var(--light-color);
-}
-
-.md-rawblock-tooltip-name {
-    color: var(--theme-color);
-}
-
-
-
-/* ---------------->> 左侧文档列表 <<---------------- */
-.file-list-item.active {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: #efefef;
-    background: var(--item-bg-color-blue);
-    color: var(--active-file-text-color);
-}
-
-.file-list-item:hover {
-    color: var(--theme-color);
-    background: #42a5f514;
-}
-
-/* ---------------->> 滚动条 <<---------------- */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 5px;
-}
-
-::-webkit-scrollbar:hover {
-    height: 10px;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: var(--radius-small);
-    background: rgba(0, 0, 0, .1);
-    width: 10px
-}
-
-/* ---------------->> 一体化-返回按钮 <<---------------- */
-span.megamenu-menu-header-title-back[data-localize=Back]:hover {
-    color: var(--theme-color);
-}
-
-/* ---------------->> 一体化-主题预览卡片 <<---------------- */
-.theme-preview-div {
-    cursor: pointer;
-}
-
-
-/* ---------------->> 快速打开搜索框 <<---------------- */
-#typora-quick-open {
-    border-radius: var(--radius-small);
-}
-
-.typora-quick-open-item:hover {
-    box-shadow: var(--box-shadow);
-    cursor: pointer;
-    color: var(--theme-color);
-    background: var(--theme-light-color);
-}
-
-/* ---------------->> 快速打开搜索框高亮结果 <<---------------- */
-.typora-quick-open-item-title>b {
-    border-radius: var(--radius-small);
-    padding: 2px;
-    color: red;
-    background: yellow;
-}
-
-.typora-quick-open-item.active {
-    background: var(--item-bg-color-blue);
-}
-
-
-
-
-/* ---------------->> 大纲参考线 <<---------------- */
-.outline-h1::after,
-.outline-h2::after,
-.outline-h3::after,
-.outline-h4::after,
-.outline-h5::after,
-.outline-h6::after {
-    content: "";
-    height: calc(100% - 25px);
-    width: 1.3px;
-    background: transparent;
-    position: absolute;
-    top: 25px;
-}
-
-li.outline-item-wrapper.outline-h1.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 6.5px;
-}
-
-li.outline-item-wrapper.outline-h2.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 20px;
-}
-
-li.outline-item-wrapper.outline-h3.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 34px;
-}
-
-li.outline-item-wrapper.outline-h4.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 48.5px;
-}
-
-li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 62.5px;
-}
-
-/* ---------------->> 折叠箭头 <<---------------- */
-.outline-expander:before {
-    font-weight: bold;
-}
-
-
-
-
-.cm-s-inner .cm-link,
-.cm-s-inner.cm-link {
-    color: var(--theme-color);
-}
-
-.theme-preview-div:hover {
-    border-color: var(--main-green);
-}
-
-.theme-preview-div.active>i::before {
-    color: var(--main-green);
-}
-
-#theme-preview-grid {
-    max-width: fit-content;
-}
-
-
-/* ---------------->> 警告框样式 <<---------------- */
-/* ---------------->> 提示 <<---------------- */
-.md-alert {
-    --border: solid 1px var(--border-color);
-    background: var(--gradient-color);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: var(--box-shadow);
-    transition: var(--bg-transition);
-}
-
-/* ---------------->> 不同类型的警告框颜色 <<---------------- */
-.md-alert-tip {
-    --border-color: #1f883d;
-}
-
-.md-alert-note {
-    --border-color: #0969da;
-}
-
-.md-alert-important {
-    --border-color: #8250df;
-}
-
-.md-alert-caution {
-    --border-color: #cf222e;
-}
-
-.md-alert-warning {
-    --border-color: #faad14;
-}
-
-/* ---------------->> 边框 <<---------------- */
-.md-alert {
-    border: var(--border);
-    border-left: 5px solid var(--border-color);
-    border-left-color: var(--border-color) !important;
-}
-
-/* ---------------->> 悬浮样式 <<---------------- */
-.md-alert:hover {
-    background: var(--theme-light-color) !important;
-    box-shadow: var(--box-shadow-large);
-}
-
-/* ---------------->> 警告框下段落悬浮样式重置 <<---------------- */
-blockquote p:hover,
-.md-alert p:hover {
-    background: transparent !important;
-    box-shadow: unset !important;
-}
-
-/* ---------------->> 警告框内文本颜色 <<---------------- */
-div.md-alert span[md-inline="plain"].md-plain,
-span.md-alert-text-container {
-    color: var(--border-color);
-}
-
-/* ---------------->> 警告框内列表样式 <<---------------- */
-.md-alert li.md-list-item::before,
-.md-alert ul li::before,
-.md-alert ol li::before {
-    background: var(--border-color) !important;
 }
