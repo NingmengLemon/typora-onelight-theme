@@ -116,6 +116,8 @@
 
 你可以在`onelight.css`同级目录下新建一个`onelight.user.css`文件，将你的样式放在这个文件，它有更高的优先级，而且你后续要更新只需要更新`onelight.css`，不会覆盖你的样式
 
+⚠️暗色主题添加`onelight-dark.user.css`文件
+
 如果`onelight.user.css`无效，你可能要添加`!important`提高优先级
 
 ### 3.2 风格选择

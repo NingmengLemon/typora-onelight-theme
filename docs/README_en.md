@@ -115,6 +115,8 @@ If you want to add your own styles, it's not recommended to modify the `onelight
 
 You can create a new `onelight.user.css` file in the same directory as `onelight.css`, and put your styles in this file. It has higher priority, and when you update later, you only need to update `onelight.css` without overriding your styles.
 
+⚠️Add `onelight-dark.user.css` file for dark theme.
+
 If `onelight.user.css` doesn't work, you may need to add `!important` to increase priority.
 
 ### 3.3 Style Options
