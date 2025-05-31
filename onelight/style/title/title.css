@@ -65,9 +65,6 @@
     padding-bottom: 0.2em;
 }
 
-#write h2::after {
-    content: none;
-}
 
 #write h3 {
     font-size: 1.5rem;

@@ -28,15 +28,15 @@
 
 ---
 
-![image-20250511190033183](https://s2.loli.net/2025/05/11/tXwTfmnGl65IdNM.png)
+![image-20250531153638583](https://s2.loli.net/2025/05/31/Bzxh8GMVeXnYHPb.png)
 
-![image-20250511184053268](https://s2.loli.net/2025/05/11/dw8bS9NGp351n7O.png)
+![image-20250531153718830](https://s2.loli.net/2025/05/31/lN4ZW7GFVAKdw3u.png)
 
 ![image-20250511190116728](https://s2.loli.net/2025/05/11/dDVoupIWsH9aQxq.png)
 
 ![image-20250511184920000](https://s2.loli.net/2025/05/11/c51PL9yEfrkOCeF.png)
 
-![image-20250511190156498](https://s2.loli.net/2025/05/11/mUofcTY1qNb5OX9.png)
+![image-20250511200329113](https://s2.loli.net/2025/05/11/mUofcTY1qNb5OX9.png)
 
 ![image-20250511185936255](https://s2.loli.net/2025/05/11/ULwkB9dnPiTEpaM.png)
 
@@ -80,16 +80,65 @@
 
 ## 3. About Customization
 
+### 3.1 Folder Structure
+
+```
+📂 themes                              # Typora theme root directory
+├── 📂 onelight                        # OneLight theme resource directory
+│   ├── 📂 fonts                       # Font resource directory
+│   │   ├── CascadiaCode.woff2        
+│   │   └── MiaoZi-GuoZhiTi.woff2     
+│   ├── 📂 img                         # Image resource directory
+│   │   ├── bg.gif                     
+│   │   ├── bg2.gif                    
+│   │   ├── bg3.gif                    
+│   │   ├── bg4.gif                    
+│   │   └── bg5.gif                    
+│   └── 📂 style                       # Style file directory
+│       ├── blockquote.css             # Blockquote style definition
+│       ├── code.css                   # Code block style definition
+│       ├── editor.css                 # Editor style definition
+│       ├── font.css                   # Font style definition
+│       ├── list.css                   # List style definition
+│       ├── table.css                  # Table style definition
+│       └── 📂 title                   # Title style directory
+│           ├── title-colorful.css     # Colorful title style
+│           └── title.css              # Default title style
+├── onelight-dark.css                  # OneLight dark theme style file
+├── onelight.css                       # OneLight theme main style file
+└── onelight.user.css                  # User custom style file (not in repository, create as needed, higher priority)     
+```
+
+### 3.2 Custom Configuration
+
 If you want to add your own styles, it's not recommended to modify the `onelight.css` file directly.
 
 You can create a new `onelight.user.css` file in the same directory as `onelight.css`, and put your styles in this file. It has higher priority, and when you update later, you only need to update `onelight.css` without overriding your styles.
 
 If `onelight.user.css` doesn't work, you may need to add `!important` to increase priority.
 
+### 3.3 Style Options
+
+#### 3.3.1 Headings
+
+##### Default Style
+
+See the headings in the first screenshot
+
+##### Colorful Style
+
+If you want to use the colorful style, you need to add the following at the **top** of the `onelight.user.css` file. Note that it must be at the top!
+
+```css
+@import './onelight/style/title/title-colorful.css';
+```
+
+![image-20250531154421564](https://s2.loli.net/2025/05/31/f7IV4CkcFxYP5ur.png)
+
 ## 4. About Fonts
 
-Default fonts are set at the beginning of the `onelight.css` file, which you can modify as needed. Font files are in the [fonts](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/fonts) folder.
-![](https://github.com/user-attachments/assets/ab75260f-cff0-43b7-b8e5-dfea38e8525c)
+Default fonts are set in the `onelight.css` file (search for root), which you can modify as needed. If you need to import font files, you can configure them in the `font.css` file.
+![](https://s2.loli.net/2025/05/31/xO8RQSmHkWTuhXz.png)
 
 ---
 
@@ -97,18 +146,18 @@ Default fonts are set at the beginning of the `onelight.css` file, which you can
 
 > [!important]
 >
-> Background images are in the `onelight/img` folder. There are several prepared images in the folder, and you can also add your own images (preferably with transparent backgrounds). Then search for `bg.gif` in the CSS file to find the code below and replace the image path:
+> Background images are in the `onelight/img` folder. There are several prepared images in the folder, and you can also add your own images (preferably with transparent backgrounds). Then search for `bg.gif` in the `editor.css` file to find the code below and replace the image name
 >
 > ```css
 > content {
->      background-color: transparent;
->      /* You can replace the image here, or comment out this entire section if you don't want to display it */
->      background-image: url('./onelight/img/bg.gif');
->      background-position: 100% 100%;
->      background-repeat: no-repeat;
->      background-size: 100px auto; /* Adjust the image display size */
->      transition: background-image .5s ease-in-out, background-size .5s ease-in-out
+>     background-color: transparent;
+>     background-image: url('../img/bg.gif');
+>     background-position: 100% 100%;
+>     background-repeat: no-repeat;
+>     background-size: 100px auto;
+>     transition: background-image .5s ease-in-out, background-size .5s ease-in-out
 > }
+>
 > ```
 >
 > <img src="https://s2.loli.net/2025/03/05/7Ds8SCmvWnkwraM.png" style="zoom: 50%;" />

@@ -26,9 +26,9 @@
 
 ---
 
-![image-20250511190033183](https://s2.loli.net/2025/05/11/tXwTfmnGl65IdNM.png)
+![image-20250531153638583](https://s2.loli.net/2025/05/31/Bzxh8GMVeXnYHPb.png)
 
-![image-20250511184053268](https://s2.loli.net/2025/05/11/dw8bS9NGp351n7O.png)
+![image-20250531153718830](https://s2.loli.net/2025/05/31/lN4ZW7GFVAKdw3u.png)
 
 ![image-20250511190116728](https://s2.loli.net/2025/05/11/dDVoupIWsH9aQxq.png)
 
@@ -51,6 +51,8 @@
 ---
 
 ## 2.如何使用
+
+下面两种办法视自己方便程度选一种即可
 
 ### 2.1 下载文件
 
@@ -79,16 +81,71 @@
 
 ## 3.关于自定义
 
+### 3.1 文件夹结构
+
+```
+📂 themes                              # Typora 主题根目录
+├── 📂 onelight                        # OneLight 主题资源目录
+│   ├── 📂 fonts                       # 字体资源目录
+│   │   ├── CascadiaCode.woff2        
+│   │   └── MiaoZi-GuoZhiTi.woff2     
+│   ├── 📂 img                         # 图片资源目录
+│   │   ├── bg.gif                     
+│   │   ├── bg2.gif                    
+│   │   ├── bg3.gif                    
+│   │   ├── bg4.gif                    
+│   │   └── bg5.gif                    
+│   └── 📂 style                       # 样式文件目录
+│       ├── blockquote.css             # 引用块样式定义
+│       ├── code.css                   # 代码块样式定义
+│       ├── editor.css                 # 编辑器样式定义
+│       ├── font.css                   # 字体样式定义
+│       ├── list.css                   # 列表样式定义
+│       ├── table.css                  # 表格样式定义
+│       └── 📂 title                   # 标题样式目录
+│           ├── title-colorful.css     # 彩色标题样式
+│           └── title.css              # 默认标题样式
+├── onelight-dark.css                  # OneLight 暗色主题样式文件
+├── onelight.css                       # OneLight 主题的主样式文件
+└── onelight.user.css                  # 用户自定义样式文件（仓库中没有，有需可以自己创建，优先级高）     
+```
+
+### 3.2 自定义配置
+
 如果你想添加一些自己的样式，不建议你直接修改`onelight.css`文件。
 
 你可以在`onelight.css`同级目录下新建一个`onelight.user.css`文件，将你的样式放在这个文件，它有更高的优先级，而且你后续要更新只需要更新`onelight.css`，不会覆盖你的样式
 
 如果`onelight.user.css`无效，你可能要添加`!important`提高优先级
 
+### 3.2 风格选择
+
+#### 3.2.1 标题
+
+##### 默认风格
+
+见第一张截图中的各级标题
+
+##### 多彩风格
+
+如果你想使用多彩风格，你需要在`onelight.user.css`文件**顶部**添加，注意是顶部！
+
+```css
+@import './onelight/style/title/title-colorful.css';
+```
+
+![image-20250531154421564](https://s2.loli.net/2025/05/31/f7IV4CkcFxYP5ur.png)
+
+
+
+---
+
+
+
 ## 4.关于字体
 
-在`onelight.css`文件开头设置了默认字体，可以自行修改，字体文件在[fonts](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/fonts)文件夹下
-![](https://github.com/user-attachments/assets/ab75260f-cff0-43b7-b8e5-dfea38e8525c)
+在`onelight.css`文件设置了默认字体（搜索root），可以自行修改，如果需要导入字体文件，可在`font.css`中配置
+![](https://s2.loli.net/2025/05/31/xO8RQSmHkWTuhXz.png)
 
 ---
 
@@ -96,18 +153,18 @@
 
 > [!important]
 >
-> 背景图片在`onelight/img`文件夹下，文件夹下有几张准备好的图片，你也可以添加自己的图片（最好使用透明背景的图片），然后在css文件中搜索 `bg.gif`找到下面代码替换图片名
+> 背景图片在`onelight/img`文件夹下，文件夹下有几张准备好的图片，你也可以添加自己的图片（最好使用透明背景的图片），然后在`editor.css`文件中搜索 `bg.gif`找到下面代码替换图片名
 >
 > ```css
 > content {
->      background-color: transparent;
->      /* 可以替换此处的图片，不想显示可以将这段整个注释掉 */
->      background-image: url('./onelight/img/bg.gif');
->      background-position: 100% 100%;
->      background-repeat: no-repeat;
->      background-size: 100px auto; /* 调整图片显示大小 */
->      transition: background-image .5s ease-in-out, background-size .5s ease-in-out
+>     background-color: transparent;
+>     background-image: url('../img/bg.gif');
+>     background-position: 100% 100%;
+>     background-repeat: no-repeat;
+>     background-size: 100px auto;
+>     transition: background-image .5s ease-in-out, background-size .5s ease-in-out
 > }
+> 
 > ```
 >
 > <img src="https://s2.loli.net/2025/03/05/7Ds8SCmvWnkwraM.png" style="zoom: 50%;" />

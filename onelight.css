@@ -7,9 +7,10 @@
 
 
 @import './onelight/style/title/title.css';
-@import './onelight/style/title/title-colorful.css';
+/* @import './onelight/style/title/title-colorful.css'; */
 
 
+/* -------------------------------------------------------- */
 
 :root {
     --bg-color: #f2f2f2;
