@@ -1,0 +1,308 @@
+/* ---------------->> 标题 <<---------------- */
+
+#write h1 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 0.3em;
+
+    /* 添加绿色和蓝色渐变文字效果 */
+    background: linear-gradient(to right, #51f8a5, #00BFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    caret-color: #00BFFF;
+    /* 恢复光标并使用蓝色 */
+
+    /* 确保渐变效果完整显示 */
+    width: fit-content;
+    margin: 0 auto;
+    /* 保持居中 */
+
+    /* 移除水墨效果，添加文字分裂重组效果 */
+    position: relative;
+    transition: transform 0.3s ease;
+
+    /* 扩大点击区域，减少边界触发问题 */
+    padding: 5px;
+
+    /* 添加CSS变量用来跟踪动画状态，防止频繁触发 */
+    --animation-active: 0;
+
+    /* 消除抖动的关键: 延迟反应 */
+    transition: all 0.5s ease;
+}
+
+/* 添加一个额外的选择器，使用更精确的条件防止反复触发动画 */
+#write h1:not(:focus):not(.md-focus):not(.cm-active) {
+    /* 默认无动画 */
+    animation: none;
+}
+
+/* 悬停选择器，添加长延迟，避免鼠标在边界时的抖动触发问题 */
+#write h1:not(:focus):not(.md-focus):not(.cm-active):hover {
+    /* 只有当变量为0时才执行动画，相当于防重入锁 */
+    animation: textSplitReform 1.2s ease 250ms 1 both;
+}
+
+/* 完全删除普通的hover样式 */
+#write h1:hover {
+    /* 覆盖任何可能的动画 */
+    animation: none;
+}
+
+#write h2 {
+    font-size: 1.7rem;
+    margin: 1em 0;
+    border-bottom: none !important;
+    padding-bottom: 0.2em;
+    /* Space for the underline */
+    color: inherit;
+    position: relative;
+    display: block;
+    /* Ensure it takes full available width by default */
+    width: auto;
+    /* Or 100% if auto doesn't work as expected with parent constraints */
+    /* No transition on H2's width itself */
+}
+
+/* Gradient on inner span for H2 text */
+#write h2>span,
+#write h2 span.md-plain {
+    display: inline-block;
+    background: linear-gradient(to right, #00BFFF, #ff89c4, #00BFFF);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    caret-color: #FF69B4;
+    /* 恢复光标并使用粉色 */
+    animation: gradientMove 6s linear infinite;
+}
+
+#write h2::after {
+    /* Underline */
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* Full width of H2 block */
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(to right, #00BFFF, #ff89c4, #00BFFF);
+    background-size: 200% 100%;
+    border-radius: 2px;
+    transform-origin: left center;
+    /* Transformation starts from the left */
+    transform: scaleX(1);
+    /* Initial state: full width, visible */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for appear/disappear */
+    animation: gradientMove 6s linear infinite;
+}
+
+#write h2:hover::after {
+    /* On hover, underline disappears from left to right */
+    transform: scaleX(0);
+    /* Scale to 0, effectively making it disappear */
+}
+
+#write h3 {
+    font-size: 1.5rem;
+    padding-left: 15px;
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(to right, #b779ff, #ffb7ff, #b779ff);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    caret-color: #FF69B4;
+    /* 恢复光标并使用粉色 */
+    animation: gradientMove 6s linear infinite;
+}
+
+#write h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #b779ff, #ffb7ff, #b779ff);
+    background-size: 100% 200%;
+    border-radius: 2px;
+    height: auto;
+    transform: scaleY(1);
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+    animation: gradientMoveVertical 6s linear infinite;
+}
+
+#write h3:hover::after {
+    transform: scaleY(0);
+}
+
+#write h4 {
+    font-size: 1.3rem;
+    width: fit-content;
+    color: #424040 !important;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 1px 12.5px;
+    position: relative;
+    background: linear-gradient(to right, #51f8a5, #00BFFF);
+    border-radius: 4px;
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    transition: background-position 0.1s ease-in-out, color 0.3s ease-in-out;
+}
+
+#write h4:hover {
+    background-position: -100% -100%;
+    color: white !important;
+}
+
+#write h4::after {
+    content: none;
+}
+
+#write h5 {
+    font-size: 1.3rem;
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(to right, #6a99ff, #ff0800);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 0.1s ease-in-out;
+    caret-color: #c70909;
+    padding: 1px 12.5px;
+}
+
+#write h5:hover {
+    background-position: -100% -100%;
+}
+
+#write h5::after {
+    content: none;
+}
+
+#write h6 {
+    font-size: 1.2rem;
+    font-style: normal !important;
+    width: fit-content;
+    background: linear-gradient(to right, #5a80ff, #b445ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    /* 移除原来的下划线 */
+    caret-color: #5a80ff;
+    padding: 1px 12.5px;
+    position: relative;
+    /* 为伪元素定位做准备 */
+}
+
+/* 添加自定义渐变下划线 */
+#write h6::after {
+    content: "";
+    position: absolute;
+    left: 12.5px;
+    right: 12.5px;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(to right, #5a80ff, #b445ff);
+    background-size: 200% 100%;
+    border-radius: 1px;
+    transform: translateY(0.1em);
+    /* 调整下划线位置 */
+
+    /* 创建点状效果 */
+    background-image: repeating-linear-gradient(to right,
+            #5a80ff 0%, #b445ff 100%);
+    background-size: 200% 100%;
+    -webkit-mask-image: repeating-linear-gradient(to right,
+            black 0px, black 4px,
+            transparent 4px, transparent 8px);
+    mask-image: repeating-linear-gradient(to right,
+            black 0px, black 4px,
+            transparent 4px, transparent 8px);
+
+    /* 添加动画 */
+    animation: gradientMove 6s linear infinite;
+}
+
+.megamenu-opened header {
+    background-image: unset;
+}
+
+/* 渐变背景移动动画 */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 垂直渐变背景移动动画 (用于H3的竖条) */
+@keyframes gradientMoveVertical {
+    0% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+/* 文字分裂重组动画，保持不变 */
+@keyframes textSplitReform {
+    0% {
+        transform: scale(1);
+        letter-spacing: normal;
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    25% {
+        transform: scale(1.1);
+        letter-spacing: 5px;
+        opacity: 0.7;
+        filter: blur(2px);
+    }
+
+    50% {
+        transform: scale(0.9);
+        letter-spacing: -3px;
+        opacity: 0.5;
+        filter: blur(4px);
+    }
+
+    75% {
+        transform: scale(1.05);
+        letter-spacing: 2px;
+        opacity: 0.8;
+        filter: blur(1px);
+    }
+
+    100% {
+        transform: scale(1);
+        letter-spacing: normal;
+        opacity: 1;
+        filter: blur(0px);
+    }
+}

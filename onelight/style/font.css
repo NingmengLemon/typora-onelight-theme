@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('../fonts/CascadiaCode.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '喵字果汁体';
+    src: url('../fonts/MiaoZi-GuoZhiTi.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+script,
+text,
+.md-rawblock-after,
+.md-rawblock-before,
+code,
+pre,
+samp,
+tt {
+    font-family: var(--main-font-family);
+}

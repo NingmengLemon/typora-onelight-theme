@@ -1,3 +1,8 @@
+#write {
+    letter-spacing: 0;
+    text-align: left
+}
+
 /* ---------------->> 大纲参考线 <<---------------- */
 .outline-h1::after,
 .outline-h2::after,
@@ -190,11 +195,21 @@ ul.dropdown-menu[aria-labelledby="recent-file-panel-action-btn"] {
 /* ---------------->> 一体化菜单界面背景图片 <<---------------- */
 div#megamenu-section-open {
     background-color: transparent;
-    background-image: url('./onelight/img/bg4.gif');
+    background-image: url('../img/bg4.gif');
     background-position: 100% 0%;
     background-repeat: no-repeat;
     background-size: 100px auto;
     transition: background-image .5s ease-in-out, background-size .5s ease-in-out;
+}
+
+/* ---------------->> 主界面背景图片 <<---------------- */
+content {
+    background-color: transparent;
+    background-image: url('../img/bg.gif');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    transition: background-image .5s ease-in-out, background-size .5s ease-in-out
 }
 
 .context-menu.dropdown-menu>.active>a,

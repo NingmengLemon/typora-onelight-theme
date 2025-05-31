@@ -3,21 +3,13 @@
 @import './onelight/style/editor.css';
 @import './onelight/style/code.css';
 @import './onelight/style/table.css';
-@import './onelight/style/title.css';
+@import './onelight/style/font.css';
 
-@font-face {
-    font-family: 'Cascadia Code';
-    src: url('./onelight/fonts/CascadiaCode.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: '喵字果汁体';
-    src: url('./onelight/fonts/MiaoZi-GuoZhiTi.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+@import './onelight/style/title/title.css';
+@import './onelight/style/title/title-colorful.css';
+
+
 
 :root {
     --bg-color: #f2f2f2;
@@ -77,23 +69,7 @@
 }
 
 
-body,
-script,
-text,
-.md-rawblock-after,
-.md-rawblock-before,
-code,
-pre,
-samp,
-tt {
-    font-family: var(--main-font-family);
-}
-
-#write {
-    letter-spacing: 0;
-    text-align: left
-}
-
+/* ---------------->> 段落 <<---------------- */
 #write p {
     padding: 5px;
     margin: 0;
@@ -102,7 +78,6 @@ tt {
     margin-top: 3px;
 }
 
-/* 为p标签添加过渡动画效果 */
 #write p:not(:has(.md-image)) {
     transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
 }
@@ -215,7 +190,6 @@ a.md-toc-inner {
     box-shadow: var(--box-shadow-large);
 }
 
-
 /* ---------------->> 脚注 <<---------------- */
 .md-def-name {
     padding-right: 3ch;
@@ -228,7 +202,6 @@ a.md-toc-inner {
     vertical-align: middle;
 }
 
-
 /* ---------------->> 高亮 <<---------------- */
 mark {
     margin-right: 2px;
@@ -239,13 +212,6 @@ mark {
     background: transparent;
     color: var(--main-red);
 }
-
-
-
-
-
-
-
 
 .md-fences-adv-panel,
 .md-math-container,
@@ -290,9 +256,6 @@ span#filesearch-case-option-btn:active {
     background-color: var(--theme-color)
 }
 
-
-
-
 /* ---------------->> 脚注 <<---------------- */
 #write .md-footnote {
     margin-right: 2px;
@@ -302,8 +265,6 @@ span#filesearch-case-option-btn:active {
     color: var(--main-red);
     font-weight: 700;
 }
-
-
 
 .md-fences:not(.md-focus) .CodeMirror-code>:hover {
     background-color: var(--code--bg-color-light)
@@ -354,9 +315,6 @@ p.md-toc-content:hover {
     color: #999;
     text-decoration: line-through
 }
-
-
-
 
 
 .fa-folder:before,
@@ -487,18 +445,6 @@ input:focus {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* ---------------->> 高亮标签 <<---------------- */
 span[alt=highlight] {
     margin-right: 2px;
@@ -530,20 +476,6 @@ span[alt=highlight] {
     background: unset;
     color: unset;
 }
-
-
-/* ---------------->> 主界面背景图片 <<---------------- */
-content {
-    background-color: transparent;
-    background-image: url('./onelight/img/bg.gif');
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 100px auto;
-    transition: background-image .5s ease-in-out, background-size .5s ease-in-out
-}
-
-
-
 
 
 .CodeMirror-gutters {

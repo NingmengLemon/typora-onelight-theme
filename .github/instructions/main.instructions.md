@@ -1,0 +1,14 @@
+---
+applyTo: '**/*.css'
+---
+- 这是一个typora主题项目,项目地址为 https://github.com/caolib/typora-onelight-theme
+- onelight.css 是主题的主样式文件,其中导入了其他样式文件,onelight-dark.css 是暗黑主题的样式文件
+- onelight.user.css 是用户自定义样式文件,优先级更高,可以添加用户自定义设置
+- onelight文件夹下包含了主题的样式、图片和字体等资源
+- title是标题样式的相关定义
+- code是代码块样式的相关定义
+- blockquote是引用块样式的相关定义
+- table是表格样式的相关定义
+- list是列表样式的相关定义
+- editor是编辑器样式的相关定义
+- 尽量不要使用!important
