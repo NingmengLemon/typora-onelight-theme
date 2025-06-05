@@ -130,6 +130,8 @@
 
 ##### 多彩风格
 
+###### 浅色主题
+
 如果你想使用多彩风格，你需要在`onelight.user.css`文件**顶部**添加，注意是顶部！
 
 ```css
@@ -138,11 +140,14 @@
 
 ![image-20250531154421564](https://s2.loli.net/2025/05/31/f7IV4CkcFxYP5ur.png)
 
+###### 深色主题
 
+深色主题请在统计目录创建`onelight-dark.user.css`文件，然后加入下面代码
 
----
-
-
+```css
+@import './onelight/style/title/title-colorful.css';
+@import './onelight/style/title/title-colorful-dark.css'
+```
 
 ## 4.关于字体
 
