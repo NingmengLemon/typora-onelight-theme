@@ -96,18 +96,19 @@
 │   │   ├── bg4.gif                    
 │   │   └── bg5.gif                    
 │   └── 📂 style                       # 样式文件目录
-│       ├── blockquote.css             # 引用块样式定义
-│       ├── code.css                   # 代码块样式定义
-│       ├── editor.css                 # 编辑器样式定义
-│       ├── font.css                   # 字体样式定义
-│       ├── list.css                   # 列表样式定义
-│       ├── table.css                  # 表格样式定义
+│       ├── blockquote.css             # 引用块样式
+│       ├── code.css                   # 代码块样式
+│       ├── editor.css                 # 编辑器样式
+│       ├── font.css                   # 字体样式
+│       ├── list.css                   # 列表样式
+│       ├── table.css                  # 表格样式
 │       └── 📂 title                   # 标题样式目录
 │           ├── title-colorful.css     # 彩色标题样式
 │           └── title.css              # 默认标题样式
 ├── onelight-dark.css                  # OneLight 暗色主题样式文件
 ├── onelight.css                       # OneLight 主题的主样式文件
-└── onelight.user.css                  # 用户自定义样式文件（仓库中没有，有需可以自己创建，优先级高）     
+├── onelight.user.css                  # 用户自定义样式文件（仓库中没有，有需要自己创建，样式优先级高）
+└── onelight-dark.user.css             # 同上，但是深色主题自定义样式文件
 ```
 
 ### 3.2 自定义配置

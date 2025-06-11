@@ -136,6 +136,25 @@ a:has(img)::after {
     display: none !important;
 }
 
+/* 取消四级标题的链接效果 */
+h4.md-end-block.md-heading a,
+h4.md-end-block.md-heading a>span {
+    color: white;
+    text-decoration: none;
+}
+
+/* 去除6级标题链接下划线 */
+h6.md-end-block.md-heading a,
+h6.md-end-block.md-heading a>span {
+    text-decoration: none;
+}
+
+/* 取消 h4 标题中链接的箭头效果 */
+#write h4.md-end-block.md-heading a::after {
+    content: none;
+    display: none;
+}
+
 /* 链接箭头 */
 #write a::after {
     content: "";

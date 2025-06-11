@@ -187,3 +187,7 @@ pre.CodeMirror-line>span {
 #write h4 {
     color: var(--text-color);
 }
+
+h4.md-end-block.md-heading>span>a>span {
+    color: var(--text-color);
+}
