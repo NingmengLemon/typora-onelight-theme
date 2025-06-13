@@ -143,7 +143,7 @@
 
 ###### 深色主题
 
-深色主题请在统计目录创建`onelight-dark.user.css`文件，然后加入下面代码
+深色主题请在同级目录创建`onelight-dark.user.css`文件，然后加入下面代码
 
 ```css
 @import './onelight/style/title/title-colorful.css';
