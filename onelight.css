@@ -566,3 +566,11 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
     font-style: italic;
     text-decoration: underline
 }
+
+/* 修复emoji在标题中的显示问题 */
+span[alt="plain"]>span.md-plain {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: initial;
+}

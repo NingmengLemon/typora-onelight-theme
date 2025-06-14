@@ -106,35 +106,12 @@
 
 #write h5 {
     font-size: 1.5rem;
-    position: relative;
     width: fit-content;
-    background: linear-gradient(to right, var(--theme-color), var(--main-green));
-    background-size: 200% 100%;
-    background-position: 0% 0%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transition: background-position 0.1s ease-in-out;
-    caret-color: #f7ce68;
-    padding: 1px 12.5px;
-}
-
-#write h5:hover {
-    background-position: -100% -100%;
+    color: var(--main-yellow);
 }
 
 #write h6 {
     font-size: 1.2rem;
     width: fit-content;
-    background: linear-gradient(to right, #3f5ef8, #8742e7);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: #6a82ff;
-    text-underline-offset: 0.3em;
-    text-decoration-thickness: 2px;
-    caret-color: #6a82ff;
-    padding: 1px 12.5px;
+    color: var(--main-green);
 }

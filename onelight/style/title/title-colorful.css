@@ -67,8 +67,7 @@
 }
 
 /* Gradient on inner span for H2 text */
-#write h2>span,
-#write h2 span.md-plain {
+#write h2 {
     display: inline-block;
     background: linear-gradient(to right, #00BFFF, #ff89c4, #00BFFF);
     background-size: 200% 100%;
