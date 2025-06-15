@@ -4,6 +4,7 @@
 @import './onelight/style/code.css';
 @import './onelight/style/table.css';
 @import './onelight/style/font.css';
+@import './onelight/style/mermaid.css';
 @import './onelight/style/title/title.css';
 /* @import './onelight/style/title/title-colorful.css'; */
 
@@ -65,6 +66,8 @@
     --mica-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     --mica-transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    /* default base dark forest neutral night */
+    --mermaid-theme: default;
 }
 
 
@@ -231,11 +234,6 @@ mark {
     color: var(--main-red);
 }
 
-.md-fences-adv-panel,
-.md-math-container,
-.md-mathjax-preview {
-    font-family: var(--main-font-family);
-}
 
 .searchpanel-search-option-btn.active {
     animation: colorChange 1s infinite;

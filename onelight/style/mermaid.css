@@ -1,0 +1,26 @@
+:root {
+    --stroke: var(--theme-color);
+    --fill: var(--text-color);
+}
+
+.md-diagram .md-diagram-panel {
+    background: var(--theme-light-color);
+}
+
+.md-diagram-panel.md-fences-adv-panel {
+    background: var(--theme-light-color);
+    fill: var(--text-color) !important;
+}
+
+pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
+    background: transparent !important;
+}
+
+.md-fences-adv-panel,
+.md-math-container,
+.md-mathjax-preview,
+text.actor>tspan,
+text.messageText,
+span.nodeLabel.markdown-node-label {
+    font-family: var(--main-font-family) !important;
+}
