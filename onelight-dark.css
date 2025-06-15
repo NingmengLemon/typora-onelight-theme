@@ -1,4 +1,12 @@
 @import "onelight.css";
+@import './onelight/style/blockquote.css';
+@import './onelight/style/editor.css';
+@import './onelight/style/code.css';
+@import './onelight/style/table.css';
+@import './onelight/style/font.css';
+@import './onelight/style/mermaid.css';
+@import './onelight/style/title/title.css';
+/* @import './onelight/style/title/title-colorful.css'; */
 
 :root {
     --bg-color: #282c34;
@@ -65,6 +73,9 @@
     --alert-important-original: #8250df;
     --alert-caution-original: #cf222e;
     --alert-warning-original: #faad14;
+
+    --mermaid-theme: dark;
+
 }
 
 /* 目录 */

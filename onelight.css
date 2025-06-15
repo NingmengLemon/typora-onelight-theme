@@ -4,6 +4,7 @@
 @import './onelight/style/code.css';
 @import './onelight/style/table.css';
 @import './onelight/style/font.css';
+@import './onelight/style/mermaid.css';
 @import './onelight/style/title/title.css';
 /* @import './onelight/style/title/title-colorful.css'; */
 
@@ -231,11 +232,6 @@ mark {
     color: var(--main-red);
 }
 
-.md-fences-adv-panel,
-.md-math-container,
-.md-mathjax-preview {
-    font-family: var(--main-font-family);
-}
 
 .searchpanel-search-option-btn.active {
     animation: colorChange 1s infinite;

@@ -1,14 +1,3 @@
-/* ---------------->> mermaid <<---------------- */
-.md-diagram-panel.md-fences-adv-panel {
-    background: var(--theme-light-color);
-}
-
-pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
-    background: transparent !important;
-}
-
-
-
 /* ---------------->> 代码框右下角的语言类型显示 <<---------------- */
 pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
     content: attr(lang);
