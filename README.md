@@ -150,6 +150,30 @@
 @import './onelight/style/title/title-colorful-dark.css'
 ```
 
+---
+
+
+
+#### 3.2.2 列表
+
+##### 默认风格
+
+见上面<kbd>展开查看更多截图</kbd>的第一张图片
+
+##### 普通风格
+
+使用普通风格需要在对应的`xxx.user.css`文件开头导入，普通风格不会出现[错位](https://github.com/caolib/typora-onelight-theme/issues/32)和[编号](https://github.com/caolib/typora-onelight-theme/issues/28)问题
+
+```css
+@import './onelight/style/list/list-simple.css';
+```
+
+![image-20250616125931065](https://s2.loli.net/2025/06/16/dBJZLFaIy5QjAOH.png)
+
+---
+
+
+
 ## 4.关于字体
 
 在`onelight.css`文件设置了默认字体（搜索root），可以自行修改，如果需要导入字体文件，可在`font.css`中配置
