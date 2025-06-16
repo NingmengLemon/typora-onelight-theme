@@ -6,25 +6,11 @@
     padding-left: 40px !important;
 }
 
-#write ul {
-    list-style-type: disclosure-closed
-}
-
-#write ul ul {
-    list-style-type: square
-}
-
-#write ol {
-    list-style-type: decimal
-}
-
 #write li section {
     font-size: .9rem;
     font-size: .9rem;
 }
 
-#write .ol .li,
-#write .ul .li,
 #write ol li,
 #write ul li {
     list-style-type: none;
@@ -135,6 +121,11 @@
     height: 1.2rem;
     width: 1.2rem;
     margin-left: -1.8em;
+}
+
+li.md-list-item.task-list-item.md-task-list-item::marker {
+    content: none;
+    font-size: inherit;
 }
 
 /* ---------------->> 删除线 <<---------------- */

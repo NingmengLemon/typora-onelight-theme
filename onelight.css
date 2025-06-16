@@ -1,12 +1,18 @@
-@import './onelight/style/list.css';
 @import './onelight/style/blockquote.css';
 @import './onelight/style/editor.css';
 @import './onelight/style/code.css';
 @import './onelight/style/table.css';
 @import './onelight/style/font.css';
 @import './onelight/style/mermaid.css';
+
+/* 标题 */
 @import './onelight/style/title/title.css';
 /* @import './onelight/style/title/title-colorful.css'; */
+/* @import './onelight/style/title/title-colorful-dark.css'; */
+
+/* 列表 */
+@import './onelight/style/list/list.css';
+/* @import './onelight/style/list/list-simple.css'; */
 
 
 /* -------------------------------------------------------- */

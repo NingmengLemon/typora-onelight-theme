@@ -1,0 +1,48 @@
+/* 使用原生marker */
+
+#write ul li {
+    list-style-type: initial;
+}
+
+#write ol li {
+    list-style-type: decimal;
+}
+
+/* 删除before样式 */
+li::before {
+    content: unset !important;
+}
+
+
+ul li::marker {
+    font-size: 25px;
+}
+
+li::marker {
+    color: var(--theme-color);
+    transition: color 0.3s ease;
+}
+
+li:hover::marker {
+    color: var(--main-red);
+}
+
+#write ul li {
+    list-style-type: initial;
+}
+
+#write ul ul li {
+    list-style-type: square;
+}
+
+#write ul ul ul li {
+    list-style-type: circle;
+}
+
+#write ul ul ul ul li {
+    list-style-type: disclosure-closed;
+}
+
+ul>li>ul>li>ul>li>ul>li::marker {
+    font-size: 1.2rem;
+}

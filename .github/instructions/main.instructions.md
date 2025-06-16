@@ -1,5 +1,5 @@
 ---
-applyTo: '**/*.css'
+applyTo: '**/*'
 ---
 - 这是一个typora主题项目,项目地址为 https://github.com/caolib/typora-onelight-theme
 - onelight.css 是主题的主样式文件,其中导入了其他样式文件,onelight-dark.css 是暗黑主题的样式文件
