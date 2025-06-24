@@ -5,18 +5,18 @@
 @import './onelight/style/font.css';
 @import './onelight/style/mermaid.css';
 
-/* 引用块，警告框样式 依次为 原样式 样式2*/
-/* @import './onelight/style/blockquote/blockquote.css'; */
-@import './onelight/style/blockquote/blockquote2.css';
-
-
 /* 标题样式 依次为 原样式 彩色样式 */
 @import './onelight/style/title/title.css';
 /* @import './onelight/style/title/title-colorful-dark.css'; */
 
-/* 列表样式 依次为 原样式 普通样式 */
+/* 列表样式 依次为 默认 普通 */
 @import './onelight/style/list/list.css';
 /* @import './onelight/style/list/list-simple.css'; */
+
+/* 引用块，警告框样式 依次为 原样式 默认*/
+/* @import './onelight/style/blockquote/blockquote.css'; */
+@import './onelight/style/blockquote/blockquote2.css';
+
 
 
 :root {
