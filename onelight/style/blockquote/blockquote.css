@@ -5,7 +5,7 @@
     border-left: 5px solid var(--border-color);
     border-top-right-radius: 10px;
     box-shadow: var(--box-shadow);
-    color: rgb(from var(--text-color) r g b / 0.85);
+    color: rgb(from var(--text-color) r g b / 0.8);
     font-size: .9em;
     margin-bottom: 16px;
     margin-top: 16px;
@@ -31,6 +31,7 @@
 .md-alert {
     --border: solid 1px var(--border-color);
     background: var(--gradient-color);
+    border-radius: 0;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: var(--box-shadow);
@@ -39,37 +40,38 @@
 
 /* ---------------->> 不同类型的警告框颜色 <<---------------- */
 .md-alert-tip {
-    --border-color: #1f883d;
+    --alert-theme-color: #1f883d;
 }
 
 .md-alert-note {
-    --border-color: #0969da;
+    --alert-theme-color: #0969da;
 }
 
 .md-alert-important {
-    --border-color: #8250df;
+    --alert-theme-color: #8250df;
 }
 
 .md-alert-caution {
-    --border-color: #cf222e;
+    --alert-theme-color: #cf222e;
 }
 
 .md-alert-warning {
-    --border-color: #faad14;
+    --alert-theme-color: #faad14;
 }
 
 /* ---------------->> 边框 <<---------------- */
 .md-alert {
     border: var(--border);
-    border-left: 5px solid var(--border-color);
-    border-left-color: var(--border-color) !important;
+    border-left: 5px solid var(--alert-theme-color);
+    border-left-color: var(--alert-theme-color) !important;
+
+    &:hover {
+        background: var(--theme-light-color) !important;
+        box-shadow: var(--box-shadow-large);
+    }
+
 }
 
-/* ---------------->> 悬浮样式 <<---------------- */
-.md-alert:hover {
-    background: var(--theme-light-color) !important;
-    box-shadow: var(--box-shadow-large);
-}
 
 /* ---------------->> 警告框下段落悬浮样式重置 <<---------------- */
 blockquote p:hover,
@@ -81,12 +83,12 @@ blockquote p:hover,
 /* ---------------->> 警告框内文本颜色 <<---------------- */
 div.md-alert span[md-inline="plain"].md-plain,
 span.md-alert-text-container {
-    color: var(--border-color);
+    color: var(--alert-theme-color);
 }
 
 /* ---------------->> 警告框内列表样式 <<---------------- */
 .md-alert li.md-list-item::before,
 .md-alert ul li::before,
 .md-alert ol li::before {
-    background: var(--border-color) !important;
+    background: var(--alert-theme-color) !important;
 }
