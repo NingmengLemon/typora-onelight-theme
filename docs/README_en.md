@@ -1,9 +1,9 @@
 <h1 align='center'>OneLight Theme For Typora</h1>
 
 <p align="center">
-    <a href="https://github.com/caolib/typora-onelight-theme/blob/onelight/README.md">简体中文</a>
+    Simplified Chinese
     |
-    English
+    <a href="https://github.com/caolib/typora-onelight-theme/blob/onelight/docs/README_en.md">English</a>
 </p>
 <p align="center">
   <img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/total?labelColor=grey&color=blue" alt="Downloads">
@@ -16,31 +16,29 @@
   <img src="https://github.com/caolib/typora-onelight-theme/actions/workflows/ci.yml/badge.svg" alt="ci">
 </p>
 
-
 ## 1. Overview
 
-
 > [!tip]
-> **Here are two articles using the OneLight theme, click to see detailed theme effect demonstrations**
+> **Below are two articles using the OneLight theme. Click to view detailed effect demos:**
 >
 > 1. **[OneLight](https://bin-sites.pages.dev/onelight)**、**[OneLight-Dark](https://bin-sites.pages.dev/onelight/dark)**
 > 2. **[Computer Networks](https://bin-sites.pages.dev/net)**
 
 ---
 
-![image-20250531153638583](https://s2.loli.net/2025/05/31/Bzxh8GMVeXnYHPb.png)
+![Preview Image](https://s2.loli.net/2025/05/31/Bzxh8GMVeXnYHPb.png)
 
-![image-20250531153718830](https://s2.loli.net/2025/05/31/lN4ZW7GFVAKdw3u.png)
+![Preview Image](https://s2.loli.net/2025/05/31/lN4ZW7GFVAKdw3u.png)
 
-![image-20250511190116728](https://s2.loli.net/2025/05/11/dDVoupIWsH9aQxq.png)
+![Preview Image](https://s2.loli.net/2025/06/24/shrmC7xiy9tKQH1.png)
 
-![image-20250511184920000](https://s2.loli.net/2025/05/11/c51PL9yEfrkOCeF.png)
+![Preview Image](https://s2.loli.net/2025/06/24/ZVsQ1O3FSRpbJgE.png)
 
-![image-20250511200329113](https://s2.loli.net/2025/05/11/mUofcTY1qNb5OX9.png)
+![Preview Image](https://s2.loli.net/2025/05/11/mUofcTY1qNb5OX9.png)
 
-![image-20250511185936255](https://s2.loli.net/2025/05/11/ULwkB9dnPiTEpaM.png)
+![Preview Image](https://s2.loli.net/2025/05/11/ULwkB9dnPiTEpaM.png)
 
-<details><summary><kbd>Expand to see more screenshots</kbd></summary>
+<details><summary><kbd>Expand for more screenshots</kbd></summary>
   <img src="https://s2.loli.net/2025/05/11/23GUxWvkhDE4doF.png"></br>
   <img src="https://s2.loli.net/2025/05/11/JUrxQsdYvVg6OZe.png"></br>
   <img src="https://s2.loli.net/2025/05/11/aZsAW1kXDBqM2hV.png"></br>
@@ -53,129 +51,172 @@
 
 ## 2. How to Use
 
+Choose one of the following methods:
+
 ### 2.1 Download Files
 
-> 1. Download the [theme file package](https://github.com/caolib/typora-onelight-theme/releases)
-> 2. In Typora, select File → Preferences → Appearance → Open Theme Folder
-> 3. Extract the downloaded package, paste the **CSS files** and **folders** into Typora's theme folder (themes)
-> 4. Restart Typora and switch the theme in the menu bar, and you're done
+> 1. Download the [theme zip file](https://github.com/caolib/typora-onelight-theme/releases)
+> 2. In Typora: File → Preferences → Appearance → Open Theme Folder
+> 3. Unzip the downloaded file, then copy the **CSS files** and **folder** into Typora's themes directory
+> 4. Restart Typora and switch themes via the menu bar
 >
-> The advantage of this method is that you download fewer files, containing only the necessary theme files. The disadvantage is that it's more complicated, and if you want to update later, you'll need to download and replace the files again.
+> *Pros: Smaller download size.  
+> Cons: Manual updates require re-downloading.*
 
-### 2.2 Clone
+### 2.2 Clone Repository
 
 > [!caution]
 >
-> 1. Find Typora's theme folder (themes) as mentioned above, and open a terminal in this folder
->
-> 2. **To avoid cloning irrelevant files from other branches, please make sure to use the command below!! Otherwise, you'll have to download for a long time** (The project is forked from the official repository, and the commit history includes records from the gh-pages branch)
+> 1. Navigate to Typora's themes folder and open a terminal
+> 2. **Use this command to avoid unnecessary files from other branches:**
 >
 >    ```shell
 >    git clone --single-branch https://github.com/caolib/typora-onelight-theme.git
 >    ```
 >
-> The advantage of this method is that it's more convenient. For future updates, you only need to use the `git pull` command to get the latest commits. The disadvantage is that cloning will download all the project files, including some unnecessary md files, etc.
+> *Pros: Easy updates via `git pull`.  
+> Cons: Downloads entire project including non-essential files.*
 
 ---
 
-## 3. About Customization
+## 3. Customization
 
 ### 3.1 Folder Structure
 
-```
-📂 themes                              # Typora theme root directory
-├── 📂 onelight                        # OneLight theme resource directory
-│   ├── 📂 fonts                       # Font resource directory
+📂 themes                              
+├── 📂 onelight                        
+│   ├── 📂 fonts                       
 │   │   ├── CascadiaCode.woff2        
 │   │   └── MiaoZi-GuoZhiTi.woff2     
-│   ├── 📂 img                         # Image resource directory
+│   ├── 📂 img                         
 │   │   ├── bg.gif                     
-│   │   ├── bg2.gif                    
-│   │   ├── bg3.gif                    
-│   │   ├── bg4.gif                    
-│   │   └── bg5.gif                    
-│   └── 📂 style                       # Style file directory
-│       ├── blockquote.css             # Blockquote style definition
-│       ├── code.css                   # Code block style definition
-│       ├── editor.css                 # Editor style definition
-│       ├── font.css                   # Font style definition
-│       ├── list.css                   # List style definition
-│       ├── table.css                  # Table style definition
-│       └── 📂 title                   # Title style directory
-│           ├── title-colorful.css     # Colorful title style
-│           └── title.css              # Default title style
-├── onelight-dark.css                  # OneLight dark theme style file
-├── onelight.css                       # OneLight theme main style file
-└── onelight.user.css                  # User custom style file (not in repository, create as needed, higher priority)     
-```
+│   │   ├── ...                        
+│   └── 📂 style                       
+│       ├── blockquote.css             
+│       ├── code.css                   
+│       ├── editor.css                 
+│       └── ...
+├── onelight-dark.css                  
+├── onelight.css                       
+├── onelight.user.css                  
+└── onelight-dark.user.css             
+
 
 ### 3.2 Custom Configuration
 
-If you want to add your own styles, it's not recommended to modify the `onelight.css` file directly.
-
-You can create a new `onelight.user.css` file in the same directory as `onelight.css`, and put your styles in this file. It has higher priority, and when you update later, you only need to update `onelight.css` without overriding your styles.
-
-⚠️Add `onelight-dark.user.css` file for dark theme.
-
-If `onelight.user.css` doesn't work, you may need to add `!important` to increase priority.
+Place custom styles in `onelight.user.css` (or `onelight-dark.user.css` for dark mode) instead of modifying `onelight.css` directly. This file has higher priority.  
+Add `!important` if styles don't apply.
 
 ### 3.3 Style Options
 
-#### 3.3.1 Headings
+> [!important]
+>
+> **How to switch styles?**  
+> Edit `onelight.css` (light) / `onelight-dark.css` (dark), then toggle imports:
+>
+> ```css
+> /* Blockquote styles: original | default */
+> /* @import './onelight/style/blockquote/blockquote.css'; */
+> @import './onelight/style/blockquote/blockquote2.css';
+> ```
+>
+> Example (switch to original blockquote style):
+> ```css
+> @import './onelight/style/blockquote/blockquote.css';
+> /* @import './onelight/style/blockquote/blockquote2.css'; */
+> ```
 
-##### Default Style
+#### 3.3.1 Headers
 
-See the headings in the first screenshot
+<div align="center">
+  <table>
+    <tr>
+      <th>Default</th>
+      <th>Colorful</th>
+    </tr>
+    <tr>
+      <td><img src="https://s2.loli.net/2025/06/24/9YwPCWLauKxq6E7.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/rzkeDYbj5ZLMp68.png"/></td>
+    </tr>
+    <tr>
+	    <td><img src="https://s2.loli.net/2025/06/24/Bao4lWrA7q23L1F.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/9BqN2fLw3cbFXJV.png"/></td>
+    </tr>
+  </table>
+</div>
 
-##### Colorful Style
+#### 3.3.2 Lists
 
-If you want to use the colorful style, you need to add the following at the **top** of the `onelight.user.css` file. Note that it must be at the top!
+> [!warning]
+> Default style may cause [alignment](https://github.com/caolib/typora-onelight-theme/issues/32) or [numbering](https://github.com/caolib/typora-onelight-theme/issues/28) issues.
 
-```css
-@import './onelight/style/title/title-colorful.css';
-```
+<div align="center">
+  <table>
+    <tr>
+      <th>Default</th>
+      <th>Simplified</th>
+    </tr>
+    <tr>
+      <td><img src="https://s2.loli.net/2025/06/24/ofGeAEH1acyK8WB.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/rNpkRxn6PJ4SfWe.png"/></td>
+    </tr>
+    <tr>
+	  <td><img src="https://s2.loli.net/2025/06/24/ZaflTqwb8tFo6OV.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/MuYtWmLU1rXoHwk.png"/></td>
+    </tr>
+  </table>
+</div>
 
-![image-20250531154421564](https://s2.loli.net/2025/05/31/f7IV4CkcFxYP5ur.png)
+#### 3.3.3 Callouts
 
-## 4. About Fonts
+<div align="center">
+  <table>
+    <tr>
+      <th>Default</th>
+      <th>Original</th>
+    </tr>
+    <tr>
+      <td><img src="https://s2.loli.net/2025/06/24/a98iYcERykNHQfv.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/RNgQLvaqszKUVn4.png"/></td>
+    </tr>
+    <tr>
+	  <td><img src="https://s2.loli.net/2025/06/24/FpqluvZdcAH71my.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/v26zKmDYxMNyUfr.png"/></td>
+    </tr>
+  </table>
+</div>
 
-Default fonts are set in the `onelight.css` file (search for root), which you can modify as needed. If you need to import font files, you can configure them in the `font.css` file.
+
+## 4. Fonts
+
+Font settings are in `root{}` of `onelight.css`. Import fonts via `font.css`.
 ![](https://s2.loli.net/2025/05/31/xO8RQSmHkWTuhXz.png)
 
 ---
 
-## 5. Background Image
+## 5. Background Images
 
 > [!important]
 >
-> Background images are in the `onelight/img` folder. There are several prepared images in the folder, and you can also add your own images (preferably with transparent backgrounds). Then search for `bg.gif` in the `editor.css` file to find the code below and replace the image name
->
+> 1. Find background images in `onelight/img`
+> 2. Replace `bg.gif` in `editor.css`:
 > ```css
 > content {
->     background-color: transparent;
->     background-image: url('../img/bg.gif');
->     background-position: 100% 100%;
->     background-repeat: no-repeat;
->     background-size: 100px auto;
->     transition: background-image .5s ease-in-out, background-size .5s ease-in-out
+>     background-image: url('../img/YOUR_IMAGE.gif');
 > }
->
 > ```
->
 > <img src="https://s2.loli.net/2025/03/05/7Ds8SCmvWnkwraM.png" style="zoom: 50%;" />
 
 ---
 
-## 6. Other
+## 6. Additional Notes
 
-<img align='right' src="https://s2.loli.net/2025/01/04/zt7O3daMLDC5EHW.png" alt="Like" />⭐ If you like this theme, please give it a star, thank you! 🙏
+<img align='right' src="https://s2.loli.net/2025/01/04/zt7O3daMLDC5EHW.png" alt="like" />⭐ If you like this theme, please give it a star! 🙏  
 
-✅ The theme works best in integrated mode ✨
+✅ Best viewed in Focus Mode (Distraction Free) ✨  
 
-❓ If you have any questions, you can ask in [Issues](https://github.com/caolib/typora-onelight-theme/issues). All kinds of feedback are welcome.
+❓ Questions? Open an [Issue](https://github.com/caolib/typora-onelight-theme/issues)  
 
-📄 The [docs](https://github.com/caolib/typora-onelight-theme/tree/onelight/docs) folder contains markdown files of sample articles 📄
+📄 Sample documents in [docs](https://github.com/caolib/typora-onelight-theme/tree/onelight/docs) folder  
 
-🖼️ The [img](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/img) folder contains background images for the theme. If you don't need them, you can delete them directly.
-
-[translated by AI]
+🖼️ Theme backgrounds in [img](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/img) folder (delete if unused)

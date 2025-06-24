@@ -30,9 +30,9 @@
 
 ![image-20250531153718830](https://s2.loli.net/2025/05/31/lN4ZW7GFVAKdw3u.png)
 
-![image-20250511190116728](https://s2.loli.net/2025/05/11/dDVoupIWsH9aQxq.png)
+![image-20250511190116728](https://s2.loli.net/2025/06/24/shrmC7xiy9tKQH1.png)
 
-![image-20250511184920000](https://s2.loli.net/2025/05/11/c51PL9yEfrkOCeF.png)
+![image-20250511184920000](https://s2.loli.net/2025/06/24/ZVsQ1O3FSRpbJgE.png)
 
 ![image-20250511200329113](https://s2.loli.net/2025/05/11/mUofcTY1qNb5OX9.png)
 
@@ -91,20 +91,12 @@
 │   │   └── MiaoZi-GuoZhiTi.woff2     
 │   ├── 📂 img                         # 图片资源目录
 │   │   ├── bg.gif                     
-│   │   ├── bg2.gif                    
-│   │   ├── bg3.gif                    
-│   │   ├── bg4.gif                    
-│   │   └── bg5.gif                    
+│   │   ├── ...                                  
 │   └── 📂 style                       # 样式文件目录
 │       ├── blockquote.css             # 引用块样式
 │       ├── code.css                   # 代码块样式
 │       ├── editor.css                 # 编辑器样式
-│       ├── font.css                   # 字体样式
-│       ├── list.css                   # 列表样式
-│       ├── table.css                  # 表格样式
-│       └── 📂 title                   # 标题样式目录
-│           ├── title-colorful.css     # 彩色标题样式
-│           └── title.css              # 默认标题样式
+│       └── ...
 ├── onelight-dark.css                  # OneLight 暗色主题样式文件
 ├── onelight.css                       # OneLight 主题的主样式文件
 ├── onelight.user.css                  # 用户自定义样式文件（仓库中没有，有需要自己创建，样式优先级高）
@@ -123,55 +115,96 @@
 
 ### 3.2 风格选择
 
+> [!important]
+>
+> **如何切换风格?**
+>
+> 浅色主题修改`onelight.css`,深色主题修改`onelight-dark.css`
+>
+> 在文件顶部有类似下面的导入语句，可以选择性**注释**和**取消注释**来修改选择对应的风格
+>
+> ```css
+> // ...exist code
+> 
+> /* 引用块，警告框样式 依次为 原样式 默认*/
+> /* @import './onelight/style/blockquote/blockquote.css'; */
+> @import './onelight/style/blockquote/blockquote2.css';
+> 
+> // ...exist code
+> ```
+>
+> 比如我要切换引用块、警告框样式风格为“原样式”，可以这样改，以此类推，其他风格的选择不再赘述
+>
+> ```css
+> // ...exist code
+> 
+> /* 引用块，警告框样式 依次为 原样式 默认*/
+> @import './onelight/style/blockquote/blockquote.css';
+> /* @import './onelight/style/blockquote/blockquote2.css'; */
+> 
+> // ...exist code
+> ```
+
 #### 3.2.1 标题
 
-##### 默认风格
-
-见第一张截图中的各级标题
-
-##### 多彩风格
-
-###### 浅色主题
-
-如果你想使用多彩风格，你需要在`onelight.user.css`文件**顶部**添加，注意是顶部！
-
-```css
-@import './onelight/style/title/title-colorful.css';
-```
-
-![image-20250531154421564](https://s2.loli.net/2025/05/31/f7IV4CkcFxYP5ur.png)
-
-###### 深色主题
-
-深色主题请在同级目录创建`onelight-dark.user.css`文件，然后加入下面代码
-
-```css
-@import './onelight/style/title/title-colorful.css';
-@import './onelight/style/title/title-colorful-dark.css'
-```
-
----
-
-
+<div align="center">
+  <table>
+    <tr>
+      <th>默认</th>
+      <th>彩色</th>
+    </tr>
+    <tr>
+      <td><img src="https://s2.loli.net/2025/06/24/9YwPCWLauKxq6E7.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/rzkeDYbj5ZLMp68.png"/></td>
+    </tr>
+    <tr>
+	    <td><img src="https://s2.loli.net/2025/06/24/Bao4lWrA7q23L1F.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/9BqN2fLw3cbFXJV.png"/></td>
+    </tr>
+  </table>
+</div>
 
 #### 3.2.2 列表
 
-##### 默认风格
+> [!warning]
+>
+> 默认风格某些情况下会出现[错位](https://github.com/caolib/typora-onelight-theme/issues/32)和[编号](https://github.com/caolib/typora-onelight-theme/issues/28)问题
 
-见上面<kbd>展开查看更多截图</kbd>的第一张图片
+<div align="center">
+  <table>
+    <tr>
+      <th>默认</th>
+      <th>普通</th>
+    </tr>
+    <tr>
+      <td><img src="https://s2.loli.net/2025/06/24/ofGeAEH1acyK8WB.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/rNpkRxn6PJ4SfWe.png"/></td>
+    </tr>
+    <tr>
+	  <td><img src="https://s2.loli.net/2025/06/24/ZaflTqwb8tFo6OV.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/MuYtWmLU1rXoHwk.png"/></td>
+    </tr>
+  </table>
+</div>
 
-##### 普通风格
+#### 3.2.3 警告框
 
-使用普通风格需要在对应的`xxx.user.css`文件开头导入，普通风格不会出现[错位](https://github.com/caolib/typora-onelight-theme/issues/32)和[编号](https://github.com/caolib/typora-onelight-theme/issues/28)问题
-
-```css
-@import './onelight/style/list/list-simple.css';
-```
-
-![image-20250616125931065](https://s2.loli.net/2025/06/16/dBJZLFaIy5QjAOH.png)
-
----
-
+<div align="center">
+  <table>
+    <tr>
+      <th>默认</th>
+      <th>原样式</th>
+    </tr>
+    <tr>
+      <td><img src="https://s2.loli.net/2025/06/24/a98iYcERykNHQfv.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/RNgQLvaqszKUVn4.png"/></td>
+    </tr>
+    <tr>
+	  <td><img src="https://s2.loli.net/2025/06/24/FpqluvZdcAH71my.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/24/v26zKmDYxMNyUfr.png"/></td>
+    </tr>
+  </table>
+</div>
 
 
 ## 4.关于字体
