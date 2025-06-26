@@ -285,7 +285,6 @@
     padding: 3px 15px;
     /* 保留内边距以便添加边框时不会挤压文本 */
     animation: flowLeftToRight 6s ease-in-out infinite reverse;
-    font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
 
