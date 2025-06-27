@@ -284,80 +284,262 @@ body::after {
     100% { opacity: 1; }
 }
 
-/* 流星效果 */
-.shooting-star {
+/* 流星效果 - 分布在不同区域 */
+#write::before {
+    content: '';
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 10vh;
+    left: -50px;
+    width: 3px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.8),
+                0 0 0 1px rgba(255, 255, 255, 0) 200px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 8s ease-out infinite;
+}
+
+#write::after {
+    content: '';
+    position: fixed;
+    top: 30vh;
+    left: -80px;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.9),
+                0 0 0 1px rgba(255, 255, 255, 0) 250px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 10s ease-out 4s infinite;
+}
+
+/* 额外的流星 */
+body:not(.stars-added)::after {
+    content: '';
+    position: fixed;
+    top: 50vh;
+    left: -120px;
     width: 2px;
     height: 2px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
-    box-shadow: 0 0 10px 2px #fff;
+    box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.7),
+                0 0 0 1px rgba(255, 255, 255, 0) 180px 1px;
+    z-index: 10;
     opacity: 0;
-    z-index: -8;
-    transform: rotate(315deg);
-    animation: shootingStar 6s linear infinite;
-    animation-delay: 2s;
+    pointer-events: none;
+    animation: shootingStar 6s ease-out 2s infinite;
 }
 
-.shooting-star::after {
+.typora-sourceview-on::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 1px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
-    transform: translateX(-100%) rotate(0deg);
+    position: fixed;
+    top: 70vh;
+    left: -40px;
+    width: 3px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0) 220px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 7s ease-out 1s infinite;
 }
 
-.shooting-star:nth-child(2) {
-    top: 20%;
-    left: 80%;
-    animation-delay: 5s;
+/* 新增第五颗流星 */
+#footer-word-count-info::before {
+    content: '';
+    position: fixed;
+    top: 80vh;
+    left: -60px;
+    width: 2.5px;
+    height: 2.5px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.75),
+                0 0 0 1px rgba(255, 255, 255, 0) 190px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 9s ease-out 6s infinite;
 }
 
-.shooting-star:nth-child(3) {
-    top: 40%;
-    left: 10%;
-    animation-delay: 9s;
+/* 在上半区添加的新流星 */
+#sidebar-files-menu::before {
+    content: '';
+    position: fixed;
+    top: 5vh;
+    left: -70px;
+    width: 3.5px;
+    height: 3.5px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    box-shadow: 0 0 11px 2px rgba(255, 255, 255, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0) 210px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 11s ease-out 5s infinite;
 }
 
-/* 更多的流星 */
-.shooting-star:nth-child(4) {
-    top: 15%;
-    left: 30%;
-    animation-delay: 15s;
+#file-library-search-input::before {
+    content: '';
+    position: fixed;
+    top: 15vh;
+    left: -30px;
+    width: 2.7px;
+    height: 2.7px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 9px 1.5px rgba(255, 255, 255, 0.8),
+                0 0 0 1px rgba(255, 255, 255, 0) 195px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 9.5s ease-out 3.5s infinite;
 }
 
-.shooting-star:nth-child(5) {
-    top: 60%;
-    left: 70%;
-    animation-delay: 20s;
+#ty-surface::before {
+    content: '';
+    position: fixed;
+    top: 25vh;
+    left: -90px;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 12px 2.5px rgba(255, 255, 255, 0.9),
+                0 0 0 1px rgba(255, 255, 255, 0) 230px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 12s ease-out 7.5s infinite;
 }
 
-/* 流星动画 */
-@keyframes shootingStar {
+/* 右上角区域的流星 */
+.outline-item-wrapper::before {
+    content: '';
+    position: fixed;
+    top: 10vh;
+    left: 40vw; /* 更靠近右上角的起始位置 */
+    width: 3.2px;
+    height: 3.2px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0) 210px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStarRightSide 10s ease-out 2s infinite;
+}
+
+#header-editor::before {
+    content: '';
+    position: fixed;
+    top: 20vh;
+    left: 60vw; /* 接近右侧的起始位置 */
+    width: 3.5px;
+    height: 3.5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 11px 2px rgba(255, 255, 255, 0.9),
+                0 0 0 1px rgba(255, 255, 255, 0) 225px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStarRightSide 11s ease-out 5.5s infinite;
+}
+
+#setting-panel::before {
+    content: '';
+    position: fixed;
+    top: 5vh;
+    left: 75vw; /* 更靠近右上角 */
+    width: 2.8px;
+    height: 2.8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 9px 1.5px rgba(255, 255, 255, 0.8),
+                0 0 0 1px rgba(255, 255, 255, 0) 190px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStarRightSide 9s ease-out 1s infinite;
+}
+
+/* 右上区域流星的动画 */
+@keyframes shootingStarRightSide {
     0% {
-        transform: translate(0, 0) rotate(315deg);
         opacity: 0;
+        transform: translate(0, 0) rotate(45deg);
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.8),
+                    200px -1px 0 0 rgba(255, 255, 255, 0);
+    }
+    2% {
+        opacity: 1;
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.8),
+                    200px -1px 0 0 rgba(255, 255, 255, 0.7);
     }
     5% {
         opacity: 1;
     }
-    20% {
-        transform: translate(800px, 800px) rotate(315deg);
+    30% {
+        opacity: 0.3;
+        transform: translate(120vw, 120vh) rotate(45deg); /* 确保完全穿过屏幕 */
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3),
+                    200px -1px 0 0 rgba(255, 255, 255, 0.2);
+    }
+    35% {
         opacity: 0;
     }
     100% {
-        transform: translate(800px, 800px) rotate(315deg);
         opacity: 0;
+        transform: translate(120vw, 120vh) rotate(45deg); /* 确保完全穿过屏幕 */
+    }
+}
+
+/* 流星动画 - 缓慢消失 */
+@keyframes shootingStar {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(45deg);
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.8),
+                    200px -1px 0 0 rgba(255, 255, 255, 0);
+    }
+    2% {
+        opacity: 1;
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.8),
+                    200px -1px 0 0 rgba(255, 255, 255, 0.7);
+    }
+    5% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.3;
+        transform: translate(120vw, 120vh) rotate(45deg); /* 确保完全穿过屏幕 */
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3),
+                    200px -1px 0 0 rgba(255, 255, 255, 0.2);
+    }
+    35% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(120vw, 120vh) rotate(45deg); /* 确保完全穿过屏幕 */
     }
 }
 
 /* 添加背景容器以支持星空元素 */
-body::after, body::before, .stars-small, .shooting-star {
+body::after, body::before, .stars-small {
     pointer-events: none;
 }
 
@@ -375,7 +557,7 @@ body:not(.stars-added)::after {
 }
 
 @media print {
-    .stars-small, .shooting-star {
+    .stars-small {
         display: none;
     }
 }
@@ -419,4 +601,261 @@ body:not(.script-added)::after {
 /* 
 以下为自动注入的JavaScript代码（当Typora加载完成时）
 这会自动添加额外的星星和流星元素到页面
-*/ 
+*/
+
+/* 上半区域的流星 - 复制现有逻辑，仅调整位置 */
+h1::before {
+    content: '';
+    position: fixed;
+    top: -50vh; /* 大幅提高起始位置 */
+    left: -200px;
+    width: 3px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0) 200px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 7s ease-out 2s infinite;
+}
+
+h2::before {
+    content: '';
+    position: fixed;
+    top: -60vh; /* 大幅提高起始位置 */
+    left: -170px;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.9),
+                0 0 0 1px rgba(255, 255, 255, 0) 220px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 9s ease-out 4.5s infinite;
+}
+
+h3::before {
+    content: '';
+    position: fixed;
+    top: -45vh; /* 大幅提高起始位置 */
+    left: -230px;
+    width: 3.5px;
+    height: 3.5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 11px 1.5px rgba(255, 255, 255, 0.8),
+                0 0 0 1px rgba(255, 255, 255, 0) 210px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 8s ease-out 1s infinite;
+}
+
+/* 新增更多上半区流星 */
+h4::before {
+    content: '';
+    position: fixed;
+    top: -70vh; /* 大幅提高起始位置 */
+    left: -150px;
+    width: 3.8px;
+    height: 3.8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 13px 2px rgba(255, 255, 255, 0.9),
+                0 0 0 1px rgba(255, 255, 255, 0) 230px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 10s ease-out 3s infinite;
+}
+
+h5::before {
+    content: '';
+    position: fixed;
+    top: -55vh; /* 大幅提高起始位置 */
+    left: -180px;
+    width: 2.5px;
+    height: 2.5px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.75),
+                0 0 0 1px rgba(255, 255, 255, 0) 190px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 7.5s ease-out 0.5s infinite;
+}
+
+h6::before {
+    content: '';
+    position: fixed;
+    top: -40vh; /* 大幅提高起始位置 */
+    left: -250px;
+    width: 3px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1.5px rgba(255, 255, 255, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0) 205px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 8.5s ease-out 6s infinite;
+}
+
+/* 更多分散的上半区流星 */
+blockquote::before {
+    content: '';
+    position: fixed;
+    top: -65vh; /* 大幅提高起始位置 */
+    left: -145px;
+    width: 3.2px;
+    height: 3.2px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1.8px rgba(255, 255, 255, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0) 215px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 9.5s ease-out 7s infinite;
+}
+
+code::before {
+    content: '';
+    position: fixed;
+    top: -75vh; /* 大幅提高起始位置 */
+    left: -120px;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    box-shadow: 0 0 14px 2px rgba(255, 255, 255, 0.95),
+                0 0 0 1px rgba(255, 255, 255, 0) 240px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 11s ease-out 3.5s infinite;
+}
+
+a::before {
+    content: '';
+    position: fixed;
+    top: -80vh; /* 大幅提高起始位置 */
+    left: -165px;
+    width: 2.8px;
+    height: 2.8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 9px 1.3px rgba(255, 255, 255, 0.8),
+                0 0 0 1px rgba(255, 255, 255, 0) 200px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStar 8s ease-out 5.2s infinite;
+}
+
+/* 专门针对右上角的流星 */
+strong::before {
+    content: '';
+    position: fixed;
+    top: -20vh; /* 位置在左上方 */
+    left: 10vw; /* 起点在屏幕左侧但更靠中间 */
+    width: 3.5px;
+    height: 3.5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.9),
+                0 0 0 1px rgba(255, 255, 255, 0) 220px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStarTopRight 9s ease-out 2.5s infinite;
+}
+
+em::before {
+    content: '';
+    position: fixed;
+    top: -15vh; /* 位置在左上方 */
+    left: 20vw; /* 起点在屏幕左侧但更靠中间 */
+    width: 3px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1.5px rgba(255, 255, 255, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0) 200px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStarTopRight 7.5s ease-out 1s infinite;
+}
+
+pre::before {
+    content: '';
+    position: fixed;
+    top: -25vh; /* 位置在左上方 */
+    left: 5vw; /* 起点在屏幕左侧但更靠中间 */
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    box-shadow: 0 0 13px 2.5px rgba(255, 255, 255, 0.95),
+                0 0 0 1px rgba(255, 255, 255, 0) 230px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStarTopRight 10s ease-out 4s infinite;
+}
+
+/* 添加更多右上角流星 */
+table::before {
+    content: '';
+    position: fixed;
+    top: -10vh; /* 位置在左上方 */
+    left: 15vw; /* 起点在屏幕左侧但更靠中间 */
+    width: 3.2px;
+    height: 3.2px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    box-shadow: 0 0 11px 1.8px rgba(255, 255, 255, 0.85),
+                0 0 0 1px rgba(255, 255, 255, 0) 210px 1px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    animation: shootingStarTopRight 8.5s ease-out 6.5s infinite;
+}
+
+/* 从左上到右上方向的流星动画 */
+@keyframes shootingStarTopRight {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(20deg); /* 更平缓的角度，向上倾斜 */
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.8),
+                    200px -50px 0 0 rgba(255, 255, 255, 0); /* 调整尾巴方向 */
+    }
+    2% {
+        opacity: 1;
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.8),
+                    200px -50px 0 0 rgba(255, 255, 255, 0.7); /* 调整尾巴方向 */
+    }
+    5% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.3;
+        transform: translate(120vw, -60vh) rotate(20deg); /* 移动到右上角 并确保完全穿出屏幕 */
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.3),
+                    200px -50px 0 0 rgba(255, 255, 255, 0.2); /* 调整尾巴方向 */
+    }
+    35% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(120vw, -60vh) rotate(20deg); /* 保持在右上角 并确保完全穿出屏幕 */
+    }
+} 
