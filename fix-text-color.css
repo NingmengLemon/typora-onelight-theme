@@ -131,19 +131,35 @@ body::before {
     height: 1px;
     z-index: -10; 
     background: transparent;
-    box-shadow: 757px 1166px #FFF, 1554px 147px #FFF, 1205px 1239px #FFF, 
-                1149px 493px #FFF, 183px 123px #FFF, 1076px 957px #FFF,
-                137px 1723px #FFF, 497px 632px #FFF, 1845px 1279px #FFF,
-                1021px 825px #FFF, 347px 583px #FFF, 689px 1230px #FFF,
-                1864px 428px #FFF, 1334px 1100px #FFF, 412px 1513px #FFF,
-                500px 765px #FFF, 1023px 325px #FFF, 1155px 1852px #FFF,
-                206px 1783px #FFF, 913px 355px #FFF, 1365px 912px #FFF,
-                458px 248px #FFF, 1520px 1745px #FFF, 1018px 50px #FFF,
-                267px 612px #FFF, 953px 1763px #FFF, 1788px 523px #FFF,
-                478px 1860px #FFF, 1295px 236px #FFF, 1612px 1148px #FFF,
-                1691px 667px #FFF, 893px 276px #FFF, 54px 987px #FFF,
-                1792px 83px #FFF, 656px 1312px #FFF, 1212px 1483px #FFF;
-    animation: animStar 150s linear infinite;
+    box-shadow: 757px 1166px rgba(255, 255, 255, 0.8), 1554px 147px rgba(255, 255, 255, 0.9), 
+                1205px 1239px rgba(255, 255, 255, 0.7), 1149px 493px rgba(255, 255, 255, 1), 
+                183px 123px rgba(255, 255, 255, 0.6), 1076px 957px rgba(255, 255, 255, 0.8), 
+                137px 1723px rgba(255, 255, 255, 0.9), 497px 632px rgba(255, 255, 255, 0.7), 
+                1845px 1279px rgba(255, 255, 255, 1), 1021px 825px rgba(255, 255, 255, 0.6), 
+                347px 583px rgba(255, 255, 255, 0.8), 689px 1230px rgba(255, 255, 255, 0.9), 
+                1864px 428px rgba(255, 255, 255, 0.7), 1334px 1100px rgba(255, 255, 255, 1), 
+                412px 1513px rgba(255, 255, 255, 0.6), 500px 765px rgba(255, 255, 255, 0.8), 
+                1023px 325px rgba(255, 255, 255, 0.9), 1155px 1852px rgba(255, 255, 255, 0.7), 
+                206px 1783px rgba(255, 255, 255, 1), 913px 355px rgba(255, 255, 255, 0.6), 
+                1365px 912px rgba(255, 255, 255, 0.8), 458px 248px rgba(255, 255, 255, 0.9), 
+                1520px 1745px rgba(255, 255, 255, 0.7), 1018px 50px rgba(255, 255, 255, 1), 
+                267px 612px rgba(255, 255, 255, 0.6), 953px 1763px rgba(255, 255, 255, 0.8), 
+                1788px 523px rgba(255, 255, 255, 0.9), 478px 1860px rgba(255, 255, 255, 0.7), 
+                1295px 236px rgba(255, 255, 255, 1), 1612px 1148px rgba(255, 255, 255, 0.6), 
+                1691px 667px rgba(255, 255, 255, 0.8), 893px 276px rgba(255, 255, 255, 0.9), 
+                54px 987px rgba(255, 255, 255, 0.7), 1792px 83px rgba(255, 255, 255, 1), 
+                656px 1312px rgba(255, 255, 255, 0.6), 1212px 1483px rgba(255, 255, 255, 0.8),
+                251px 874px rgba(255, 255, 255, 0.9), 1988px 341px rgba(255, 255, 255, 0.7), 
+                888px 1563px rgba(255, 255, 255, 1), 1431px 59px rgba(255, 255, 255, 0.6), 
+                333px 1912px rgba(255, 255, 255, 0.8), 1754px 811px rgba(255, 255, 255, 0.9), 
+                602px 222px rgba(255, 255, 255, 0.7), 1222px 1777px rgba(255, 255, 255, 1),
+                128px 1888px rgba(255, 255, 255, 0.6), 930px 420px rgba(255, 255, 255, 0.8), 
+                1670px 1450px rgba(255, 255, 255, 0.9), 400px 900px rgba(255, 255, 255, 0.7), 
+                1950px 100px rgba(255, 255, 255, 1), 50px 1500px rgba(255, 255, 255, 0.6),
+                1423px 632px rgba(255,255,255,0.8), 876px 1923px rgba(255,255,255,0.9),
+                1823px 223px rgba(255,255,255,0.7), 123px 777px rgba(255,255,255,1),
+                1111px 111px rgba(255,255,255,0.6), 1999px 1555px rgba(255,255,255,0.8);
+    animation: animStar 100s linear infinite, animBreathe 5s ease-in-out infinite alternate;
 }
 
 /* 星星 - 第二层 (大一点的星星) */
@@ -156,15 +172,35 @@ body::after {
     height: 2px;
     z-index: -10; 
     background: transparent;
-    box-shadow: 1766px 1618px #FFF, 303px 1863px #FFF, 889px 1034px #FFF, 
-                117px 124px #FFF, 125px 948px #FFF, 1205px 461px #FFF,
-                1831px 1108px #FFF, 233px 1476px #FFF, 978px 345px #FFF,
-                1135px 1290px #FFF, 384px 756px #FFF, 623px 1265px #FFF,
-                1835px 592px #FFF, 512px 983px #FFF, 1558px 344px #FFF,
-                322px 1316px #FFF, 1069px 238px #FFF, 1756px 1715px #FFF,
-                867px 1456px #FFF, 236px 607px #FFF, 1590px 855px #FFF,
-                723px 73px #FFF, 1238px 1897px #FFF, 493px 382px #FFF;
-    animation: animStar 100s linear infinite;
+    box-shadow: 1766px 1618px rgba(255, 255, 255, 0.9), 303px 1863px rgba(255, 255, 255, 1), 
+                889px 1034px rgba(255, 255, 255, 0.8), 117px 124px rgba(255, 255, 255, 0.9), 
+                125px 948px rgba(255, 255, 255, 1), 1205px 461px rgba(255, 255, 255, 0.8), 
+                1831px 1108px rgba(255, 255, 255, 0.9), 233px 1476px rgba(255, 255, 255, 1), 
+                978px 345px rgba(255, 255, 255, 0.8), 1135px 1290px rgba(255, 255, 255, 0.9), 
+                384px 756px rgba(255, 255, 255, 1), 623px 1265px rgba(255, 255, 255, 0.8), 
+                1835px 592px rgba(255, 255, 255, 0.9), 512px 983px rgba(255, 255, 255, 1), 
+                1558px 344px rgba(255, 255, 255, 0.8), 322px 1316px rgba(255, 255, 255, 0.9), 
+                1069px 238px rgba(255, 255, 255, 1), 1756px 1715px rgba(255, 255, 255, 0.8), 
+                867px 1456px rgba(255, 255, 255, 0.9), 236px 607px rgba(255, 255, 255, 1), 
+                1590px 855px rgba(255, 255, 255, 0.8), 723px 73px rgba(255, 255, 255, 0.9), 
+                1238px 1897px rgba(255, 255, 255, 1), 493px 382px rgba(255, 255, 255, 0.8),
+                1888px 200px rgba(255, 255, 255, 0.9), 77px 1500px rgba(255, 255, 255, 1),
+                642px 642px rgba(255, 255, 255, 0.8), 1499px 1221px rgba(255, 255, 255, 0.9),
+                1980px 800px rgba(255, 255, 255, 1), 450px 1800px rgba(255, 255, 255, 0.8),
+                288px 921px rgba(255,255,255,0.9), 1341px 331px rgba(255,255,255,1),
+                999px 1666px rgba(255,255,255,0.8), 1631px 259px rgba(255,255,255,0.9),
+                555px 1999px rgba(255,255,255,1), 1801px 811px rgba(255,255,255,0.8),
+                199px 682px rgba(255,255,255,0.9), 731px 1198px rgba(255,255,255,1),
+                1456px 456px rgba(255,255,255,0.8), 1987px 1342px rgba(255,255,255,0.9),
+                367px 1832px rgba(255,255,255,1), 1050px 50px rgba(255,255,255,0.8),
+                229px 1432px rgba(255,255,255,0.9), 811px 731px rgba(255,255,255,1),
+                1566px 999px rgba(255,255,255,0.8), 652px 199px rgba(255,255,255,0.9),
+                1732px 1888px rgba(255,255,255,1), 50px 1050px rgba(255,255,255,0.8),
+                1229px 432px rgba(255,255,255,0.9), 1811px 1731px rgba(255,255,255,1),
+                566px 1999px rgba(255,255,255,0.8), 1652px 299px rgba(255,255,255,0.9),
+                732px 888px rgba(255,255,255,1), 150px 150px rgba(255,255,255,0.8);
+    animation: animStar 50s linear infinite, animBreathe 7s ease-in-out infinite alternate;
+    animation-delay: 2s;
 }
 
 /* 星星 - 第三层 (微小星星，增加密度) */
@@ -177,24 +213,43 @@ body::after {
     height: 1px;
     z-index: -9;
     background: transparent;
-    box-shadow: 1088px 256px rgba(255, 255, 255, 0.7), 1915px 758px rgba(255, 255, 255, 0.7),
-                512px 1848px rgba(255, 255, 255, 0.8), 795px 543px rgba(255, 255, 255, 0.7),
-                1408px 1087px rgba(255, 255, 255, 0.7), 263px 1544px rgba(255, 255, 255, 0.6),
-                1231px 283px rgba(255, 255, 255, 0.8), 178px 967px rgba(255, 255, 255, 0.6),
-                1528px 448px rgba(255, 255, 255, 0.7), 1935px 1765px rgba(255, 255, 255, 0.8),
-                845px 24px rgba(255, 255, 255, 0.6), 1813px 1093px rgba(255, 255, 255, 0.7),
-                582px 1125px rgba(255, 255, 255, 0.8), 1240px 1228px rgba(255, 255, 255, 0.7),
-                409px 925px rgba(255, 255, 255, 0.9), 1184px 1785px rgba(255, 255, 255, 0.7),
-                1978px 675px rgba(255, 255, 255, 0.6), 792px 1744px rgba(255, 255, 255, 0.7),
-                1683px 1336px rgba(255, 255, 255, 0.8), 324px 696px rgba(255, 255, 255, 0.6),
-                1725px 972px rgba(255, 255, 255, 0.7), 597px 1459px rgba(255, 255, 255, 0.6),
-                1805px 266px rgba(255, 255, 255, 0.9), 647px 890px rgba(255, 255, 255, 0.9),
-                933px 412px rgba(255, 255, 255, 0.7), 1852px 1183px rgba(255, 255, 255, 0.8),
-                1728px 305px rgba(255, 255, 255, 0.6), 389px 1129px rgba(255, 255, 255, 0.7),
-                1304px 1487px rgba(255, 255, 255, 0.9), 189px 1797px rgba(255, 255, 255, 0.8),
-                945px 680px rgba(255, 255, 255, 0.7), 1929px 84px rgba(255, 255, 255, 0.6),
-                1770px 1299px rgba(255, 255, 255, 0.7), 561px 232px rgba(255, 255, 255, 0.8);
-    animation: animStar 200s linear infinite;
+    box-shadow: 1088px 256px rgba(255, 255, 255, 0.4), 1915px 758px rgba(255, 255, 255, 0.5), 
+                512px 1848px rgba(255, 255, 255, 0.3), 795px 543px rgba(255, 255, 255, 0.4), 
+                1408px 1087px rgba(255, 255, 255, 0.5), 263px 1544px rgba(255, 255, 255, 0.3), 
+                1231px 283px rgba(255, 255, 255, 0.4), 178px 967px rgba(255, 255, 255, 0.5), 
+                1528px 448px rgba(255, 255, 255, 0.3), 1935px 1765px rgba(255, 255, 255, 0.4), 
+                845px 24px rgba(255, 255, 255, 0.5), 1813px 1093px rgba(255, 255, 255, 0.3), 
+                582px 1125px rgba(255, 255, 255, 0.4), 1240px 1228px rgba(255, 255, 255, 0.5), 
+                409px 925px rgba(255, 255, 255, 0.3), 1184px 1785px rgba(255, 255, 255, 0.4), 
+                1978px 675px rgba(255, 255, 255, 0.5), 792px 1744px rgba(255, 255, 255, 0.3), 
+                1683px 1336px rgba(255, 255, 255, 0.4), 324px 696px rgba(255, 255, 255, 0.5), 
+                1725px 972px rgba(255, 255, 255, 0.3), 597px 1459px rgba(255, 255, 255, 0.4), 
+                1805px 266px rgba(255, 255, 255, 0.5), 647px 890px rgba(255, 255, 255, 0.3), 
+                933px 412px rgba(255, 255, 255, 0.4), 1852px 1183px rgba(255, 255, 255, 0.5), 
+                1728px 305px rgba(255, 255, 255, 0.3), 389px 1129px rgba(255, 255, 255, 0.4), 
+                1304px 1487px rgba(255, 255, 255, 0.5), 189px 1797px rgba(255, 255, 255, 0.3), 
+                945px 680px rgba(255, 255, 255, 0.4), 1929px 84px rgba(255, 255, 255, 0.5), 
+                1770px 1299px rgba(255, 255, 255, 0.3), 561px 232px rgba(255, 255, 255, 0.4),
+                42px 424px rgba(255, 255, 255, 0.5), 1675px 1988px rgba(255, 255, 255, 0.3), 
+                999px 999px rgba(255, 255, 255, 0.4), 1337px 137px rgba(255, 255, 255, 0.5), 
+                222px 1222px rgba(255, 255, 255, 0.3), 1881px 188px rgba(255, 255, 255, 0.4),
+                335px 843px rgba(255,255,255,0.5), 1024px 1444px rgba(255,255,255,0.3),
+                1567px 732px rgba(255,255,255,0.4), 688px 1821px rgba(255,255,255,0.5),
+                1900px 500px rgba(255,255,255,0.3), 200px 1000px rgba(255,255,255,0.4),
+                701px 121px rgba(255,255,255,0.5), 1432px 1654px rgba(255,255,255,0.3),
+                187px 832px rgba(255,255,255,0.4), 1654px 333px rgba(255,255,255,0.5),
+                815px 1389px rgba(255,255,255,0.3), 1293px 948px rgba(255,255,255,0.4),
+                444px 555px rgba(255,255,255,0.5), 1777px 177px rgba(255,255,255,0.3),
+                22px 1690px rgba(255,255,255,0.4), 1987px 934px rgba(255,255,255,0.5),
+                623px 1892px rgba(255,255,255,0.3), 1492px 72px rgba(255,255,255,0.4),
+                888px 1111px rgba(255,255,255,0.5), 1621px 1321px rgba(255,255,255,0.3),
+                284px 1583px rgba(255,255,255,0.4), 983px 621px rgba(255,255,255,0.5),
+                1385px 1024px rgba(255,255,255,0.3), 482px 1982px rgba(255,255,255,0.4),
+                1932px 832px rgba(255,255,255,0.5), 321px 1832px rgba(255,255,255,0.3),
+                1832px 1321px rgba(255,255,255,0.4), 832px 321px rgba(255,255,255,0.5),
+                1121px 1121px rgba(255,255,255,0.3), 1488px 1844px rgba(255,255,255,0.4);
+    animation: animStar 150s linear infinite, animBreathe 10s ease-in-out infinite alternate;
+    animation-delay: 4s;
 }
 
 /* 星星移动动画 */
@@ -206,6 +261,16 @@ body::after {
         transform: translateY(-2000px);
     }
 } 
+
+/* 星星呼吸/闪烁动画 */
+@keyframes animBreathe {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* 流星效果 */
 .shooting-star {
