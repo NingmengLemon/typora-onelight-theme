@@ -127,8 +127,9 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    width: 1px;
-    height: 1px;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
     z-index: -10; 
     background: transparent;
     box-shadow: 757px 1166px rgba(255, 255, 255, 0.8), 1554px 147px rgba(255, 255, 255, 0.9), 
@@ -158,7 +159,10 @@ body::before {
                 1950px 100px rgba(255, 255, 255, 1), 50px 1500px rgba(255, 255, 255, 0.6),
                 1423px 632px rgba(255,255,255,0.8), 876px 1923px rgba(255,255,255,0.9),
                 1823px 223px rgba(255,255,255,0.7), 123px 777px rgba(255,255,255,1),
-                1111px 111px rgba(255,255,255,0.6), 1999px 1555px rgba(255,255,255,0.8);
+                1111px 111px rgba(255,255,255,0.6), 1999px 1555px rgba(255,255,255,0.8),
+                284px 1912px rgba(255,255,255,0.8), 1055px 741px rgba(255,255,255,0.9),
+                1734px 123px rgba(255,255,255,0.7), 444px 1444px rgba(255,255,255,1),
+                987px 299px rgba(255,255,255,0.6), 1621px 1821px rgba(255,255,255,0.8);
     animation: animStar 100s linear infinite, animBreathe 5s ease-in-out infinite alternate;
 }
 
@@ -168,8 +172,9 @@ body::after {
     position: fixed;
     top: 0;
     left: 0;
-    width: 2px;
-    height: 2px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
     z-index: -10; 
     background: transparent;
     box-shadow: 1766px 1618px rgba(255, 255, 255, 0.9), 303px 1863px rgba(255, 255, 255, 1), 
@@ -198,7 +203,10 @@ body::after {
                 1732px 1888px rgba(255,255,255,1), 50px 1050px rgba(255,255,255,0.8),
                 1229px 432px rgba(255,255,255,0.9), 1811px 1731px rgba(255,255,255,1),
                 566px 1999px rgba(255,255,255,0.8), 1652px 299px rgba(255,255,255,0.9),
-                732px 888px rgba(255,255,255,1), 150px 150px rgba(255,255,255,0.8);
+                732px 888px rgba(255,255,255,1), 150px 150px rgba(255,255,255,0.8),
+                812px 1723px rgba(255,255,255,0.9), 1432px 333px rgba(255,255,255,1),
+                488px 876px rgba(255,255,255,0.8), 1954px 1482px rgba(255,255,255,0.9),
+                699px 281px rgba(255,255,255,1), 1188px 1982px rgba(255,255,255,0.8);
     animation: animStar 50s linear infinite, animBreathe 7s ease-in-out infinite alternate;
     animation-delay: 2s;
 }
@@ -211,6 +219,7 @@ body::after {
     left: 0;
     width: 1px;
     height: 1px;
+    border-radius: 50%;
     z-index: -9;
     background: transparent;
     box-shadow: 1088px 256px rgba(255, 255, 255, 0.4), 1915px 758px rgba(255, 255, 255, 0.5), 
@@ -247,7 +256,10 @@ body::after {
                 1385px 1024px rgba(255,255,255,0.3), 482px 1982px rgba(255,255,255,0.4),
                 1932px 832px rgba(255,255,255,0.5), 321px 1832px rgba(255,255,255,0.3),
                 1832px 1321px rgba(255,255,255,0.4), 832px 321px rgba(255,255,255,0.5),
-                1121px 1121px rgba(255,255,255,0.3), 1488px 1844px rgba(255,255,255,0.4);
+                1121px 1121px rgba(255,255,255,0.3), 1488px 1844px rgba(255,255,255,0.4),
+                356px 978px rgba(255,255,255,0.5), 1123px 1589px rgba(255,255,255,0.3),
+                1789px 467px rgba(255,255,255,0.4), 254px 1234px rgba(255,255,255,0.5),
+                876px 121px rgba(255,255,255,0.3), 1998px 1876px rgba(255,255,255,0.4);
     animation: animStar 150s linear infinite, animBreathe 10s ease-in-out infinite alternate;
     animation-delay: 4s;
 }
@@ -264,12 +276,12 @@ body::after {
 
 /* 星星呼吸/闪烁动画 */
 @keyframes animBreathe {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    0%   { opacity: 0.1; }
+    20%  { opacity: 1; }
+    40%  { opacity: 0.3; }
+    60%  { opacity: 0.8; }
+    80%  { opacity: 0.2; }
+    100% { opacity: 1; }
 }
 
 /* 流星效果 */
