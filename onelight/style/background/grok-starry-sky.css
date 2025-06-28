@@ -52,7 +52,7 @@ body::before {
                 284px 1912px rgba(255,255,255,0.8), 1055px 741px rgba(255,255,255,0.9),
                 1734px 123px rgba(255,255,255,0.7), 444px 1444px rgba(255,255,255,1),
                 987px 299px rgba(255,255,255,0.6), 1621px 1821px rgba(255,255,255,0.8);
-    animation: animStar 12s linear infinite, animBreathe 6s ease-in-out infinite alternate;
+    animation: animStar 12s linear infinite, animBreathe 3s ease-in-out infinite alternate;
 }
 
 /* 星星 - 第二层 (大一点的星星) */
@@ -97,7 +97,7 @@ body::after {
                 812px 1723px rgba(255,255,255,0.9), 1432px 333px rgba(255,255,255,1),
                 488px 876px rgba(255,255,255,0.8), 1954px 1482px rgba(255,255,255,0.9),
                 699px 281px rgba(255,255,255,1), 1188px 1982px rgba(255,255,255,0.8);
-    animation: animStar 16s linear infinite, animBreathe 8s ease-in-out infinite alternate;
+    animation: animStar 8s linear infinite, animBreathe 4s ease-in-out infinite alternate;
 }
 
 html::before {
@@ -141,7 +141,7 @@ html::before {
                 550px 1850px rgba(255,255,255,0.8), 1999px 250px rgba(255,255,255,1),
                 25px 999px rgba(255,255,255,0.7), 1280px 1480px rgba(255,255,255,0.9),
                 880px 80px rgba(255,255,255,0.6), 1580px 1180px rgba(255,255,255,0.8);
-    animation: animStar 15s linear infinite, animBreathe 6s ease-in-out infinite alternate;
+    animation: animStar 10s linear infinite, animBreathe 5s ease-in-out infinite alternate;
 }
 
 /* 星星 - 第三层 (微小星星) */
@@ -194,7 +194,7 @@ html::after {
                 356px 978px rgba(255,255,255,0.5), 1123px 1589px rgba(255,255,255,0.3),
                 1789px 467px rgba(255,255,255,0.4), 254px 1234px rgba(255,255,255,0.5),
                 876px 121px rgba(255,255,255,0.3), 1998px 1876px rgba(255,255,255,0.4);
-    animation: animStar 20s linear infinite, animBreathe 8s ease-in-out infinite alternate;
+    animation: animStar 14s linear infinite, animBreathe 7s ease-in-out infinite alternate;
 }
 
 /* 星星移动动画 */
