@@ -315,9 +315,9 @@
     /* 边框宽度 */
     background: linear-gradient(135deg,
             #FF8C66 0%,
-            #fdfe88 25%,
+            #dddf3b 25%,
             #f74d66 50%,
-            #0b88bb 75%,
+            #62aaf1 75%,
             #FF8C66 100%);
     background-size: 200% 100%;
     -webkit-mask:
