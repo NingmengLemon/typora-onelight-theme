@@ -186,6 +186,25 @@ Add `!important` if styles don't apply.
   </table>
 </div>
 
+#### 3.2.4 背景
+
+Dynamic starry background For the dark theme, add `@import './onelight/style/background/grok-starry-sky.css';` at the top of `onelight-dark.user.css` can be imported immediately.
+> [!warning]
+> Dynamic starry background will consume some CPU resources.
+> 
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Default</th>
+      <th>Dynamic starry background</th>
+    </tr>
+    <tr>
+      <td><img src="https://s2.loli.net/2025/06/28/4hVHnSvQeaMCs2b.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/28/8RZjDTbkf1mQapg.png"/></td>
+    </tr>
+  </table>
+</div>
 
 ## 4. Fonts
 

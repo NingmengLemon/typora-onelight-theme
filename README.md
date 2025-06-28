@@ -186,7 +186,6 @@
     </tr>
   </table>
 </div>
-
 #### 3.2.3 警告框
 
 <div align="center">
@@ -205,7 +204,26 @@
     </tr>
   </table>
 </div>
+#### 3.2.4 背景
 
+动态星空背景针对暗色主题，在`onelight-dark.user.css`顶部添加`@import './onelight/style/background/grok-starry-sky.css';`即可
+
+> [!warning]
+>
+> 动态星空背景会消耗一定的CPU资源
+
+<div align="center">
+  <table>
+    <tr>
+      <th>默认</th>
+      <th>动态星空</th>
+    </tr>
+    <tr>
+      <td><img src="https://s2.loli.net/2025/06/28/4hVHnSvQeaMCs2b.png"/></td>
+      <td><img src="https://s2.loli.net/2025/06/28/8RZjDTbkf1mQapg.png"/></td>
+    </tr>
+  </table>
+</div>
 
 ## 4.关于字体
 
