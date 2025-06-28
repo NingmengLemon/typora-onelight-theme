@@ -52,7 +52,7 @@ body::before {
                 284px 1912px rgba(255,255,255,0.8), 1055px 741px rgba(255,255,255,0.9),
                 1734px 123px rgba(255,255,255,0.7), 444px 1444px rgba(255,255,255,1),
                 987px 299px rgba(255,255,255,0.6), 1621px 1821px rgba(255,255,255,0.8);
-    animation: animStar 100s linear infinite, animBreathe 5s ease-in-out infinite alternate;
+    animation: animStar 12s linear infinite, animBreathe 6s ease-in-out infinite alternate;
 }
 
 /* 星星 - 第二层 (大一点的星星) */
@@ -97,8 +97,51 @@ body::after {
                 812px 1723px rgba(255,255,255,0.9), 1432px 333px rgba(255,255,255,1),
                 488px 876px rgba(255,255,255,0.8), 1954px 1482px rgba(255,255,255,0.9),
                 699px 281px rgba(255,255,255,1), 1188px 1982px rgba(255,255,255,0.8);
-    animation: animStar 50s linear infinite, animBreathe 7s ease-in-out infinite alternate;
-    animation-delay: 2s;
+    animation: animStar 16s linear infinite, animBreathe 8s ease-in-out infinite alternate;
+}
+
+html::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    z-index: -10; 
+    background: transparent;
+    transform-origin: 50vw 200vh;
+    box-shadow: 832px 451px rgba(255,255,255,0.7), 198px 1823px rgba(255,255,255,0.9),
+                1456px 88px rgba(255,255,255,1), 743px 1299px rgba(255,255,255,0.6),
+                1888px 670px rgba(255,255,255,0.8), 301px 1950px rgba(255,255,255,1),
+                1129px 234px rgba(255,255,255,0.7), 53px 876px rgba(255,255,255,0.9),
+                1675px 1432px rgba(255,255,255,0.6), 921px 505px rgba(255,255,255,0.8),
+                222px 1678px rgba(255,255,255,1), 1388px 321px rgba(255,255,255,0.7),
+                476px 943px rgba(255,255,255,0.9), 1799px 1199px rgba(255,255,255,0.6),
+                101px 101px rgba(255,255,255,0.8), 666px 1555px rgba(255,255,255,1),
+                1598px 487px rgba(255,255,255,0.7), 81px 1333px rgba(255,255,255,0.9),
+                1245px 765px rgba(255,255,255,0.6), 1912px 1912px rgba(255,255,255,0.8),
+                5px 600px rgba(255,255,255,1), 555px 123px rgba(255,255,255,0.7),
+                1821px 1054px rgba(255,255,255,0.9), 388px 1777px rgba(255,255,255,0.6),
+                1198px 588px rgba(255,255,255,0.8), 23px 1498px rgba(255,255,255,1),
+                1045px 82px rgba(255,255,255,0.7), 687px 1134px rgba(255,255,255,0.9),
+                1632px 1632px rgba(255,255,255,0.6), 411px 411px rgba(255,255,255,0.8),
+                1499px 1987px rgba(255,255,255,1), 99px 888px rgba(255,255,255,0.7),
+                1088px 132px rgba(255,255,255,0.9), 734px 1569px rgba(255,255,255,0.6),
+                1833px 933px rgba(255,255,255,0.8), 321px 189px rgba(255,255,255,1),
+                1532px 1754px rgba(255,255,255,0.7), 601px 601px rgba(255,255,255,0.9),
+                299px 1983px rgba(255,255,255,0.6), 1776px 453px rgba(255,255,255,0.8),
+                900px 1100px rgba(255,255,255,1), 1301px 83px rgba(255,255,255,0.7),
+                45px 1678px rgba(255,255,255,0.9), 1150px 750px rgba(255,255,255,0.6),
+                1950px 1350px rgba(255,255,255,0.8), 210px 310px rgba(255,255,255,1),
+                1654px 1876px rgba(255,255,255,0.7), 832px 999px rgba(255,255,255,0.9),
+                10px 1432px rgba(255,255,255,0.6), 1367px 222px rgba(255,255,255,0.8),
+                777px 1777px rgba(255,255,255,1), 1824px 842px rgba(255,255,255,0.7),
+                350px 150px rgba(255,255,255,0.9), 1000px 1000px rgba(255,255,255,0.6),
+                550px 1850px rgba(255,255,255,0.8), 1999px 250px rgba(255,255,255,1),
+                25px 999px rgba(255,255,255,0.7), 1280px 1480px rgba(255,255,255,0.9),
+                880px 80px rgba(255,255,255,0.6), 1580px 1180px rgba(255,255,255,0.8);
+    animation: animStar 15s linear infinite, animBreathe 6s ease-in-out infinite alternate;
 }
 
 /* 星星 - 第三层 (微小星星) */
@@ -107,8 +150,8 @@ html::after {
     position: fixed;
     top: 0;
     left: 0;
-    width: 1px;
-    height: 1px;
+    width: 3px;
+    height: 3px;
     border-radius: 50%;
     z-index: -9;
     background: transparent;
@@ -151,8 +194,7 @@ html::after {
                 356px 978px rgba(255,255,255,0.5), 1123px 1589px rgba(255,255,255,0.3),
                 1789px 467px rgba(255,255,255,0.4), 254px 1234px rgba(255,255,255,0.5),
                 876px 121px rgba(255,255,255,0.3), 1998px 1876px rgba(255,255,255,0.4);
-    animation: animStar 150s linear infinite, animBreathe 10s ease-in-out infinite alternate;
-    animation-delay: 4s;
+    animation: animStar 20s linear infinite, animBreathe 8s ease-in-out infinite alternate;
 }
 
 /* 星星移动动画 */
@@ -167,12 +209,17 @@ html::after {
 
 /* 星星呼吸/闪烁动画 */
 @keyframes animBreathe {
-    0%   { opacity: 0.1; }
-    20%  { opacity: 1; }
-    40%  { opacity: 0.3; }
+    0%   { opacity: 0; }
+    10%  { opacity: 0.2; }
+    20%  { opacity: 0.4; }
+    30%  { opacity: 0.6; }
+    40%  { opacity: 0.8; }
+    50%  { opacity: 1; }
     60%  { opacity: 0.8; }
-    80%  { opacity: 0.2; }
-    100% { opacity: 1; }
+    70%  { opacity: 0.6; }
+    80%  { opacity: 0.4; }
+    90%  { opacity: 0.2; }
+    100% { opacity: 0; }
 }
 
 /* 添加背景容器以支持星空元素 */
