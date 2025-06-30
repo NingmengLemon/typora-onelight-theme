@@ -90,3 +90,8 @@ blockquote p:hover,
     background: transparent !important;
     box-shadow: unset !important;
 }
+
+/* ---------------->> 警告框内粗体文本 <<---------------- */
+#write .md-alert strong {
+    color: var(--alert-theme-color);
+}
