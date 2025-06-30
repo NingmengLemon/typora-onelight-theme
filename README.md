@@ -155,12 +155,10 @@
     </tr>
     <tr>
       <td><img src="https://s2.loli.net/2025/06/24/9YwPCWLauKxq6E7.png"/></td>
-      <!-- TODO -->
-      <td><img src=""/></td>
+      <td><img src="https://pic1.imgdb.cn/item/68621c9058cb8da5c87ebcae.gif"/></td>
     <tr>
 	    <td><img src="https://s2.loli.net/2025/06/24/Bao4lWrA7q23L1F.png"/></td>
-      <!-- TODO -->
-      <td><img src=""/></td>
+      <td><img src="https://pic1.imgdb.cn/item/68621c9658cb8da5c87ebcb3.gif"/></td>
   </table>
 </div>
 
@@ -222,8 +220,7 @@
     </tr>
     <tr>
       <td><img src="https://s2.loli.net/2025/06/28/4hVHnSvQeaMCs2b.png"/></td>
-      <!-- TODO -->
-      <td><img src=""/></td> 
+      <td><img src="https://pic1.imgdb.cn/item/68621f3158cb8da5c87ec9f2.gif"/></td> 
     </tr>
   </table>
 </div>
