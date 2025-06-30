@@ -196,3 +196,22 @@ h4.md-end-block.md-heading>span>a>span {
 .md-alert-warning {
     --border-color: color-mix(in srgb, var(--alert-theme-color) var(--darken-ratio), black);
 }
+
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(134 134 134 / 27%);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
