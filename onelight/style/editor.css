@@ -195,20 +195,20 @@ ul.dropdown-menu[aria-labelledby="recent-file-panel-action-btn"] {
 /* ---------------->> 一体化菜单界面背景图片 <<---------------- */
 div#megamenu-section-open {
     background-color: transparent;
-    background-image: url('../img/bg4.gif');
+    background-image: url('../img/mutou.gif');
     background-position: 100% 0%;
     background-repeat: no-repeat;
-    background-size: 100px auto;
+    background-size: 150px auto;
     transition: background-image .5s ease-in-out, background-size .5s ease-in-out;
 }
 
 /* ---------------->> 主界面背景图片 <<---------------- */
 content {
     background-color: transparent;
-    background-image: url('../img/bg.gif');
+    background-image: url('../img/mutou2.gif');
     background-position: 100% 100%;
     background-repeat: no-repeat;
-    background-size: 100px auto;
+    background-size: 150px auto;
     transition: background-image .5s ease-in-out, background-size .5s ease-in-out
 }
 
