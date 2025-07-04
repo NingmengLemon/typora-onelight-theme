@@ -51,8 +51,7 @@
     --main-yellow: color-mix(in srgb, var(--main-yellow-original) var(--darken-ratio), black);
     --light-color: #6e6e6e;
     --theme-light-color: #353a45;
-    --code--bg-color: #282c34;
-    --code--bg-color-light: #3d404e;
+    --code-bg-color-light: #3d404e;
     --border-color: var(--theme-color);
     --border: solid 0.5px var(--theme-color)94;
     /* ---------------->> 字体 <<---------------- */
@@ -83,7 +82,7 @@
 
 /* 目录 */
 p.md-toc-content {
-    background: var(--code--bg-color-light);
+    background: var(--code-bg-color-light);
 }
 
 /* 代码块文本 */
@@ -103,15 +102,6 @@ pre.CodeMirror-line>span {
     transition: var(--bg-transition);
     background: var(--bg-color);
     box-shadow: var(--box-shadow-large);
-}
-
-
-
-
-
-/* 代码块 */
-.md-fences {
-    box-shadow: unset;
 }
 
 /* 行内代码 */

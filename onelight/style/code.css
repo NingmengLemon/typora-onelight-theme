@@ -41,11 +41,19 @@ pre.CodeMirror-line>span {
     background: var(--select-text-bg-color) !important;
 }
 
-/* ---------------->> 代码块 <<---------------- */
-#write pre {
-    background: var(--code-bg-color) !important;
-    font-family: var(--main-font-family)
+/* 代码块活动行高亮 */
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background-color: var(--code-bg-color-active);
 }
+
+/* 活动行行号 */
+.CodeMirror-activeline .CodeMirror-activeline-gutter {
+    .CodeMirror-linenumber {
+        color: white;
+    }
+}
+
+
 
 /* ---------------->> 代码语言类型 <<---------------- */
 span.ty-input.ty-input-after.ty-cm-lang-input {
@@ -70,7 +78,7 @@ code {
 
 .md-fences {
     background-color: var(--code-bg-color);
-    box-shadow: 0 4px 10px gray;
+    box-shadow: var(--box-shadow);
     color: var(--bg-color);
     margin: 0 0 20px;
     padding: .4em 1em .3em;
@@ -80,8 +88,8 @@ code {
 /* ---------------->> 代码块光标 <<---------------- */
 .CodeMirror div.CodeMirror-cursor {
     border-left: 1.5px solid var(--main-green);
-    /* z-index: 5; */
 }
+
 
 
 /* 代码配色 */

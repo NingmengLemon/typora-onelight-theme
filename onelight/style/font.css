@@ -20,6 +20,12 @@ text,
 code,
 pre,
 samp,
-tt {
+tt,
+.md-fences-adv-panel,
+.md-math-container,
+.md-mathjax-preview,
+text.actor>tspan,
+text.messageText,
+span.nodeLabel.markdown-node-label {
     font-family: var(--main-font-family);
 }

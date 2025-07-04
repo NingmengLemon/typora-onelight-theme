@@ -12,15 +12,11 @@
     fill: var(--text-color) !important;
 }
 
-pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
+pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm[lang='mermaid'] {
     background: transparent !important;
 }
 
-.md-fences-adv-panel,
-.md-math-container,
-.md-mathjax-preview,
-text.actor>tspan,
-text.messageText,
-span.nodeLabel.markdown-node-label {
-    font-family: var(--main-font-family) !important;
+/* 代码区 */
+pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm.modeLoaded.md-focus[lang='mermaid'] {
+    background: var(--code-bg-color) !important;
 }

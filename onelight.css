@@ -45,8 +45,9 @@
     --main-yellow: #f9b03d;
     --light-color: #b2b2b2;
     --theme-light-color: white;
-    --code--bg-color: #282c34;
-    --code--bg-color-light: #3d404e;
+    --code-bg-color: #282c34;
+    --code-bg-color-light: #3d404e;
+    --code-bg-color-active: #414855;
     --border-color: var(--theme-color);
     --border: solid 0.5px var(--theme-color)94;
     /* ---------------->> 字体 <<---------------- */
@@ -284,8 +285,8 @@ span#filesearch-case-option-btn:active {
     font-weight: 700;
 }
 
-.md-fences:not(.md-focus) .CodeMirror-code>:hover {
-    background-color: var(--code--bg-color-light)
+.md-fences .CodeMirror-code>:hover {
+    background-color: var(--code-bg-color-light)
 }
 
 hr {
