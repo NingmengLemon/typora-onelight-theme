@@ -252,7 +252,7 @@ content {
 
 /* ---------------->> 任务列表按钮 <<---------------- */
 .ty-check:before {
-    color: #00bb00;
+    color: rgb(0, 187, 0);
 }
 
 /* ---------------->> 删除按钮 <<---------------- */
@@ -297,12 +297,14 @@ content {
 #footer-word-count:hover,
 .ty-show-spell-check #footer-spell-check,
 .ty-show-word-count #footer-word-count {
-    background: #eee;
+    background: var(--bg-color);
     color: var(--theme-color);
 }
 
 .footer-item:hover,
 .sidebar-footer-item:hover {
+    background: var(--bg-color);
+    opacity: 1;
     color: var(--theme-color);
 }
 
@@ -314,7 +316,7 @@ content {
 }
 
 div#md-searchpanel {
-    background: var(--main-bg);
+    background: var(--bg-color);
 }
 
 #md-searchpanel .btn {
