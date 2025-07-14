@@ -77,7 +77,20 @@
     --mica-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(100, 100, 100, 0.1);
     --mica-transition: background-color 0.5s ease, box-shadow 0.5s ease;
+
+    /* ---------------->> Mermaid 图表，详情见 https://support.typoraio.cn/Diagram-Options/ <<---------------- */
+    /* 主题，可切换为 "default" "base" "dark" "forest" "neutral" "night" */
     --mermaid-theme: dark;
+    /* 字体 */
+    --mermaid-font-family: var(--main-font-family), "trebuchet ms", verdana, arial, sans-serif;
+    /* 时序图编号 or "off", see https://mermaid-js.github.io/mermaid/#/sequenceDiagram?id=sequencenumbers*/
+    --mermaid-sequence-numbers: on;
+    /* 线条风格 可切换为 "linear","basis","natural","step" */
+    --mermaid-flowchart-curve: linear;
+    /* 甘特图左侧边距 */
+    --mermaid--gantt-left-padding: 75;
+    /* 时序图主题 simple：普通 hand：手绘风格 */
+    --sequence-theme: hand;
 }
 
 /* 目录 */
