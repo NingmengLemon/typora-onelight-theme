@@ -65,23 +65,17 @@
 
 
 #write h3 {
-    font-size: 1.7rem;
     color: var(--theme-color);
-    padding-left: 15px;
+    font-size: 1.7rem;
     position: relative;
+
+    span.md-plain {
+        border-left: 4px solid var(--theme-color);
+        padding-left: 8px;
+        margin: 0;
+    }
 }
 
-#write h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: var(--theme-color);
-    border-radius: 2px;
-    z-index: 0;
-}
 
 #write h4 {
     font-size: 1.5rem;

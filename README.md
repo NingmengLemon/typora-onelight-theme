@@ -232,7 +232,7 @@
 
 ---
 
-## 4.背景图片
+## 5.背景图片
 
 > [!important]
 >
@@ -254,7 +254,7 @@
 
 ---
 
-## 5.其他
+## 6.其他
 
 <img align='right' src="https://s2.loli.net/2025/01/04/zt7O3daMLDC5EHW.png" alt="喜欢" />⭐ 如果喜欢主题的话，请给一个star吧，感谢🙏！
 
