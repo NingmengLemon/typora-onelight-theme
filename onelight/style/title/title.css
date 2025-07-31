@@ -42,7 +42,7 @@
     line-height: 25px;
     padding: 0 1px 0 1px;
     bottom: 0;
-    color: var(--item-bg-color-blue);
+    color: var(--item-color);
     font-size: .9rem;
     position: absolute;
     right: calc(100% + 3px);
@@ -70,11 +70,14 @@
     position: relative;
 
     span.md-plain {
-        border-left: 4px solid var(--theme-color);
-        padding-left: 8px;
-        margin: 0;
+        background: linear-gradient(135deg, #e6f7ff, #bae7ff);
+        border: 2px solid var(--theme-color);
+        border-radius: 10px;
+        padding: 5px;
     }
 }
+
+
 
 
 #write h4 {
