@@ -86,41 +86,6 @@
     transform: scaleX(0);
 }
 
-#write h3 {
-    font-size: 1.5rem;
-    padding-left: 15px;
-    position: relative;
-    width: fit-content;
-    background: linear-gradient(to right, #ffbe70 0%, #ff8da1 25%, #71d8e1 50%, #5895db 75%, #ffbe70 100%); /* 再次加深奶油紫和薄荷绿，增强对比 */
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    caret-color: #b392f5; /* 调整为更深的紫色光标 */
-    animation: gradientFlowRight 6s linear infinite;
-}
-
-#write h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(to bottom, #ffbe70 0%, #ff8da1 25%, #71d8e1 50%, #5895db 75%, #ffbe70 100%); /* 再次加深奶油紫和薄荷绿，增强对比 */
-    background-size: 100% 200%;
-    border-radius: 2px;
-    height: auto;
-    transform: scaleY(1);
-    transform-origin: center;
-    transition: transform 0.3s ease-out;
-    animation: gradientFlowDown 6s linear infinite;
-}
-
-#write h3:hover::after {
-    transform: scaleY(0);
-}
-
 /* 修正为真正从左到右流动的动画 */
 @keyframes gradientFlowRight {
     0% {
@@ -145,8 +110,8 @@
     }
 }
 
-#write h4 {
-    font-size: 1.3rem;
+#write h3 {
+    font-size: 1.5rem;
     width: fit-content;
     line-height: 1.6;
     margin: 20px 0;
@@ -161,8 +126,8 @@
 }
 
 /* 创建H4文字渐变效果 */
-#write h4 span,
-#write h4 span.md-plain {
+#write h3 span,
+#write h3 span.md-plain {
     display: inline-block;
     /* 修改为在浅色背景上可读的深色奶油系渐变 */
     background: linear-gradient(to right, #796f84, #5b4b47 , #796f84);
@@ -179,8 +144,8 @@
 }
 
 /* 添加H4悬浮效果 - 字体变为纯白色 */
-#write h4:hover span,
-#write h4:hover span.md-plain {
+#write h3:hover span,
+#write h3:hover span.md-plain {
     background: none;
     color: #ffffff; /* 悬浮时为柔和的深灰色，而不是纯白 */
     text-shadow: 0 0 4px rgba(75, 68, 83, 0.2);
@@ -189,7 +154,7 @@
 }
 
 /* 在悬浮时改变背景渐变为暗青色系，并添加扩散光效 */
-#write h4:hover {
+#write h3:hover {
     background: linear-gradient(to right, #ffc8bb, #aadddd, #ffc8bb); /* 悬浮时为对比更强的奶油色 */
     background-size: 200% 100%;
     animation: gradientFlowRight 3s linear infinite, glowPulse 2s ease-in-out infinite alternate;
@@ -197,6 +162,11 @@
         0 0 15px rgba(255, 160, 160, 0.4),
         0 0 25px rgba(160, 200, 255, 0.4),
         0 0 40px rgba(160, 200, 255, 0.2); /* 悬浮辉光也加深 */
+}
+
+/* 覆盖基础文件中的H3左侧装饰条 */
+#write h3::after {
+    content: none !important;
 }
 
 /* 添加脉冲发光动画 */
@@ -261,7 +231,7 @@
     }
 }
 
-#write h5 {
+#write h4 {
     font-size: 1.3rem;
     position: relative;
     width: fit-content;
@@ -285,16 +255,16 @@
 }
 
 /* 移除默认状态下的所有伪元素 */
-#write h5::before {
+#write h4::before {
     content: none;
 }
 
-#write h5::after {
+#write h4::after {
     content: none;
 }
 
 /* 悬停效果 - 只在悬停时显示边框并加速动画 */
-#write h5:hover {
+#write h4:hover {
     transform: scale(1.02);
     /* 降低放大效果 */
     animation: flowLeftToRight 3s ease-in-out infinite reverse;
@@ -302,7 +272,7 @@
 }
 
 /* 悬停时添加边框效果 */
-#write h5:hover::before {
+#write h4:hover::before {
     content: "";
     position: absolute;
     top: 0;
@@ -334,7 +304,7 @@
 }
 
 /* 专为H6设计的从左到右流动动画 - 修复卡顿问题 */
-@keyframes h6FlowFixedStutter {
+@keyframes h5FlowFixedStutter {
     0% {
         background-position: 0% 50%;
     }
@@ -344,8 +314,8 @@
     }
 }
 
-#write h6 {
-    font-size: 1.2rem;
+#write h5 {
+    font-size: 1.3rem;
     position: relative;
     width: fit-content;
     /* 新的"热带岛屿"三色渐变主题 */
@@ -361,17 +331,17 @@
     color: transparent;
     caret-color: #FFC300; /* 调整为芒果黄光标 */
     padding: 1px 12.5px;
-    animation: h6FlowFixedStutter 6s ease-in-out infinite reverse;
+    animation: h5FlowFixedStutter 6s ease-in-out infinite reverse;
     transition: all 0.3s ease;
 }
 
 /* 悬停时加速流动 */
-#write h6:hover {
-    animation: h6FlowFixedStutter 3s ease-in-out infinite reverse;
+#write h5:hover {
+    animation: h5FlowFixedStutter 3s ease-in-out infinite reverse;
 }
 
 /* 横线效果使用after伪元素 */
-#write h6::after {
+#write h5::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -389,14 +359,14 @@
     transition: all 0.4s ease;
     transform: translateX(-50%);
     opacity: 0;
-    animation: h6FlowFixedStutter 6s ease-in-out infinite reverse;
+    animation: h5FlowFixedStutter 6s ease-in-out infinite reverse;
 }
 
 /* 悬停时显示横线，从中间向两边延伸 */
-#write h6:hover::after {
+#write h5:hover::after {
     width: 85%;
     opacity: 1;
-    animation: h6FlowFixedStutter 3s ease-in-out infinite reverse;
+    animation: h5FlowFixedStutter 3s ease-in-out infinite reverse;
 }
 
 /* 增强文字分裂重组动画效果 */
@@ -435,4 +405,18 @@
         transform: scale(1) rotate(0);
         opacity: 1;
     }
+}
+
+#write h6 {
+    font-size: 1.2rem;
+    padding-left: 15px;
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(to right, #ffbe70 0%, #ff8da1 25%, #71d8e1 50%, #5895db 75%, #ffbe70 100%); /* 再次加深奶油紫和薄荷绿，增强对比 */
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    caret-color: #b392f5; /* 调整为更深的紫色光标 */
+    animation: gradientFlowRight 6s linear infinite;
 }
