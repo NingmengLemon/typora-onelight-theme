@@ -222,7 +222,7 @@
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: transparent !important;
     text-decoration: none;
     caret-color: #5a80ff;
     padding: 3px 15px;
