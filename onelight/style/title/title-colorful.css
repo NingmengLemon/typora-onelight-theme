@@ -131,6 +131,8 @@
     z-index: 1;
     text-shadow: none; /* 移除在亮色背景下不必要的阴影 */
     transition: all 0.3s ease;
+    border: 0;
+    padding: 0;
 }
 
 /* 添加H3悬浮效果 - 字体变为纯白色 */
