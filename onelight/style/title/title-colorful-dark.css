@@ -96,6 +96,7 @@
     padding: 1px 12.5px;
     position: relative;
     border-radius: 4px;
+    border: none !important;
     background: linear-gradient(to right, #055cb4, #025a86, #047389, #039393, #028d8d, #055cb4);
     background-size: 200% 100%;
     animation: gradientFlowRight 6s linear infinite;
@@ -123,8 +124,15 @@
     z-index: 1;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    border: 0;
+    border: none !important;
     padding: 0;
+}
+
+/* 空文本状态下隐藏H3背景 */
+#write h3:empty {
+    background: none;
+    box-shadow: none;
+    min-height: 0;
 }
 
 /* 添加H3悬浮效果 - 字体变为纯白色 */

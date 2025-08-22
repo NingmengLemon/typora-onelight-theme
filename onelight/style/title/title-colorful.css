@@ -47,7 +47,7 @@
     margin: 1em 0;
     border-bottom: none !important;
     padding-bottom: 0.2em;
-    color: inherit;
+    color: #ff8da1;  /* 设置为接近渐变色的颜色，减少闪烁 */
     position: relative;
     display: block;
     width: auto;
@@ -108,6 +108,7 @@
     padding: 1px 12.5px;
     position: relative;
     border-radius: 4px;
+    border: none !important;
     background: linear-gradient(to right, #a9e5fc , #dce6d3 , #fccbb8 , #fccbb8, #dce6d3 , #a9e5fc ); /* 再次加深奶油橙和奶油紫，增强对比 */
     background-size: 200% 100%;
     animation: gradientFlowRight 8s linear infinite;
@@ -131,8 +132,15 @@
     z-index: 1;
     text-shadow: none; /* 移除在亮色背景下不必要的阴影 */
     transition: all 0.3s ease;
-    border: 0;
+    border: none !important;
     padding: 0;
+}
+
+/* 空文本状态下隐藏H3背景 */
+#write h3:empty {
+    background: none;
+    box-shadow: none;
+    min-height: 0;
 }
 
 /* 添加H3悬浮效果 - 字体变为纯白色 */
