@@ -178,11 +178,6 @@
      color: var(--text-color);
  }
 
- #write h3 span.md-plain {
-     background: linear-gradient(135deg, #1a3a5c, #2a4a6c) !important;
- }
-
-
 
  /* Github风格警告框 */
  .md-alert-tip {

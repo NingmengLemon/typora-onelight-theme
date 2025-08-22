@@ -123,6 +123,8 @@
     z-index: 1;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    border: 0;
+    padding: 0;
 }
 
 /* 添加H3悬浮效果 - 字体变为纯白色 */
@@ -273,6 +275,7 @@
     animation: flowLeftToRight 3s ease-in-out infinite reverse;
     z-index: -1;
 }
+
 /* 修正为真正从左到右流动的动画 */
 @keyframes gradientFlowRight {
     0% {

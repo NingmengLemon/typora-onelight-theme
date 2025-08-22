@@ -206,11 +206,12 @@
 
 #### 3.2.4 背景
 
-动态星空背景针对暗色主题，在`onelight-dark.user.css`顶部添加`@import './onelight/style/background/grok-starry-sky.css';`即可
+动态星空背景针对暗色主题，在`onelight-dark.user.css`顶部添加:
 
-> [!warning]
->
-> 动态星空背景会消耗一定的CPU资源
+```css
+@import './onelight/style/background/grok.css';
+@import './onelight/style/background/grok-gpu.css';
+```
 
 <div align="center">
   <table>

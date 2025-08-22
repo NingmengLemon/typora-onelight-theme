@@ -186,13 +186,13 @@ Add `!important` if styles don't apply.
     </tr>
   </table>
 </div>
+#### 3.2.4 background
 
-#### 3.2.4 背景
-
-Dynamic starry background For the dark theme, add `@import './onelight/style/background/grok-starry-sky.css';` at the top of `onelight-dark.user.css` can be imported immediately.
-> [!warning]
-> Dynamic starry background will consume some CPU resources.
-> 
+Dynamic starry background For the dark theme, at the top of `onelight-dark.user.css`,add:
+```css
+@import './onelight/style/background/grok.css';
+@import './onelight/style/background/grok-gpu.css';
+```
 
 <div align="center">
   <table>
