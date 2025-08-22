@@ -498,7 +498,8 @@ span[alt=highlight] {
 }
 
 .md-search-hit {
-    background: #ff0;
+    background: #ff0 !important;
+    color: black !important;
     box-shadow: var(--box-shadow);
 }
 
