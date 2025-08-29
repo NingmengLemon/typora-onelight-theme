@@ -164,9 +164,13 @@ h6.md-end-block.md-heading a>span {
     text-decoration: none;
 }
 
-/* 取消 h4 标题中链接的箭头效果 */
-#write h4.md-end-block.md-heading a::after {
-    content: none;
+/* 取消标题中链接的箭头效果 */
+#write h1 a::after,
+#write h2 a::after,
+#write h3 a::after,
+#write h4 a::after,
+#write h5 a::after,
+#write h6 a::after {
     display: none;
 }
 
