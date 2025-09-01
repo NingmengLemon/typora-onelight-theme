@@ -3,6 +3,7 @@
 @import './onelight/style/table.css';
 @import './onelight/style/font.css';
 @import './onelight/style/mermaid.css';
+@import './onelight/style/kbd/kbd.css';
 
 /* 标题样式 依次为 默认 彩色 */
 @import './onelight/style/title/title.css';
@@ -312,9 +313,10 @@ hr {
 
 
 /* ---------------->> 键盘快捷键 <<---------------- */
+
 kbd {
     font-family: var(--main-font-family);
-    font-weight: 700
+    font-weight: 700;
 }
 
 /* ---------------->> 目录 <<---------------- */
