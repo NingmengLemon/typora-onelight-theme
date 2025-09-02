@@ -20,7 +20,7 @@ kbd::before {
     bottom: 0;
     border-radius: 8px;
     box-shadow: inset 0px -4px 0px #dddddd,
-        0px -4px 0px #f4f5f6;
+        0px -4px 0px var(--bg-color);
     transition: 0.3s ease-in-out;
     z-index: -1;
 }
