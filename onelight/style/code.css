@@ -159,3 +159,10 @@ code {
     border: solid 0.25px #e9405c;
     color: #fff;
 }
+
+
+/* 代码类型下拉列表 */
+.auto-suggest-container li.active,
+.auto-suggest-container li:hover {
+    background-color: var(--item-bg-color-blue);
+}
