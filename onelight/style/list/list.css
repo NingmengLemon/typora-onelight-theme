@@ -65,10 +65,10 @@
     position: absolute;
 }
 
-#write .ol .li:first-child,
+/* #write .ol .li:first-child,
 #write ol li:first-child {
     counter-reset: li
-}
+} */
 
 #write .ol .li:hover:before,
 #write .ul .li:hover:before,
@@ -86,9 +86,10 @@
 /* ---------------->> 有序列表前数字 <<---------------- */
 #write .ol>.li:before,
 #write ol>li:before {
+    padding: 0 5px;
     border-radius: .825em;
     color: #fff;
-    content: counter(li);
+    content: counter(list-item);
     counter-increment: li;
     font-size: .65em;
     height: 1.65em;
@@ -96,7 +97,9 @@
     margin-left: -25px;
     margin-top: 10px;
     text-align: center;
-    width: 1.65em;
+    width: auto;
+    min-width: 1.65em;
+    white-space: nowrap;
     transition: transform 0.5s;
 }
 

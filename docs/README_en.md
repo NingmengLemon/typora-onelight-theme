@@ -149,8 +149,7 @@ Add `!important` if styles don't apply.
 #### 3.3.2 Lists
 
 > [!warning]
-> Default style may cause [alignment](https://github.com/caolib/typora-onelight-theme/issues/32) or [numbering](https://github.com/caolib/typora-onelight-theme/issues/28) issues.
-
+> Default style may cause [alignment](https://github.com/caolib/typora-onelight-theme/issues/32)
 <div align="center">
   <table>
     <tr>

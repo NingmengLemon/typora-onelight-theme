@@ -166,7 +166,7 @@
 
 > [!warning]
 >
-> 默认风格某些情况下会出现[错位](https://github.com/caolib/typora-onelight-theme/issues/32)和[编号](https://github.com/caolib/typora-onelight-theme/issues/28)问题
+> 默认风格某些情况下会出现[错位](https://github.com/caolib/typora-onelight-theme/issues/32)
 
 <div align="center">
   <table>
