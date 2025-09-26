@@ -12,6 +12,10 @@
     font-style: normal;
 }
 
+:root {
+    --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
 body,
 script,
 text,

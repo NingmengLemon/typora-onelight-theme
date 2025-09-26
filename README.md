@@ -54,7 +54,7 @@
 
 下面两种办法视自己方便程度选一种即可
 
-### 2.1 下载文件
+### 2.1 下载文件（推荐）
 
 > 1. 下载[主题文件压缩包](https://github.com/caolib/typora-onelight-theme/releases)
 > 2. 在typora中选择 文件 → 偏好设置 → 外观 → 打开主题文件夹
@@ -228,8 +228,7 @@
 
 ## 4.关于字体
 
-在`onelight.css`文件设置了默认字体（搜索root），可以自行修改，如果需要导入字体文件，可在`font.css`中配置
-![](https://s2.loli.net/2025/05/31/xO8RQSmHkWTuhXz.png)
+在`font.css`文件设置了默认字体，可以自行修改，如果需要导入字体文件，可在`font.css`中配置
 
 ---
 

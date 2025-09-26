@@ -53,7 +53,7 @@
 
 Choose one of the following methods:
 
-### 2.1 Download Files
+### 2.1 Download Files（Recommended）
 
 > 1. Download the [theme zip file](https://github.com/caolib/typora-onelight-theme/releases)
 > 2. In Typora: File → Preferences → Appearance → Open Theme Folder
@@ -208,7 +208,7 @@ Dynamic starry background For the dark theme, at the top of `onelight-dark.user.
 
 ## 4. Fonts
 
-Font settings are in `root{}` of `onelight.css`. Import fonts via `font.css`.
+Font settings are in `root{}` of `font.css`. Import fonts via `font.css`.
 ![](https://s2.loli.net/2025/05/31/xO8RQSmHkWTuhXz.png)
 
 ---

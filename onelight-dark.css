@@ -55,8 +55,6 @@
      --code-bg-color-light: #3d404e;
      --border-color: var(--theme-color);
      --border: solid 0.5px var(--theme-color)94;
-     /* ---------------->> 字体 <<---------------- */
-     --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
      /* ---------------->> 悬浮 <<---------------- */
      --item-bg-color-red: rgb(from var(--main-red) r g b / 0.22);
      --item-bg-color-blue: rgb(from var(--theme-color) r g b / 0.26);
