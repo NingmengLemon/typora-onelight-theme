@@ -1,0 +1,324 @@
+/* =====================================
+   着重标记样式模块 - 适配亮色风格标题样式
+   加粗适配H6，高亮适配H4，斜体适配H5，引用适配H3
+   ===================================== */
+
+
+/* ---------------->> 高亮 (==高亮==) - 适配H4样式 <<---------------- */
+/* 使用更高优先级的选择器覆盖原有样式 */
+#write p mark,
+#write li mark,
+#write span mark,
+#write mark {
+    font-size: inherit !important; /* 保持原字体大小 */
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+    margin: 0 2px !important;
+    padding: 2px 10px !important;
+    border-radius: 6px;
+    border: none !important;
+    
+    /* 文字使用渐变色 */
+    background: linear-gradient(135deg,
+            #FF8C66 0%,
+            #dddf3b 25%,
+            #f74d66 50%,
+            #62aaf1 75%,
+            #FF8C66 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    
+    text-decoration: none;
+    animation: flowLeftToRight 6s ease-in-out infinite reverse;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 使用伪元素创建动态渐变边框 */
+#write p mark::before,
+#write li mark::before,
+#write span mark::before,
+#write mark::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    padding: 2px; /* 边框宽度 */
+    background: linear-gradient(135deg,
+            #FF8C66 0%,
+            #dddf3b 25%,
+            #f74d66 50%,
+            #62aaf1 75%,
+            #FF8C66 100%);
+    background-size: 200% 100%;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: flowLeftToRight 6s ease-in-out infinite reverse;
+    z-index: -1;
+}
+
+/* 高亮悬停效果 - 加速文字和边框动画 */
+#write p mark:hover,
+#write li mark:hover,
+#write span mark:hover,
+#write mark:hover {
+    transform: scale(1.02);
+    animation: flowLeftToRight 3s ease-in-out infinite reverse;
+}
+
+/* 悬停时加速边框动画 */
+#write p mark:hover::before,
+#write li mark:hover::before,
+#write span mark:hover::before,
+#write mark:hover::before {
+    animation: flowLeftToRight 3s ease-in-out infinite reverse;
+    padding: 3px; /* 悬停时边框稍微加粗 */
+}
+
+/* ---------------->> 斜体 (*斜体*) - 适配H5样式 <<---------------- */
+/* 使用更高优先级的选择器覆盖原有样式 */
+#write p em,
+#write li em,
+#write span em,
+#write em {
+    font-size: inherit !important; /* 保持原字体大小 */
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+    padding: 1px 12.5px;
+    
+    /* "热带岛屿"三色渐变主题 */
+    background: linear-gradient(135deg,
+            #FC6C85 0%,
+            #58b6a0 25%,
+            #3A8E7A 50%,
+            #FFC300 75%,
+            #FC6C85 100%);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: h5FlowFixedStutter 6s ease-in-out infinite reverse;
+    transition: all 0.3s ease;
+}
+
+/* 悬停时加速流动 */
+#write p em:hover,
+#write li em:hover,
+#write span em:hover,
+#write em:hover {
+    animation: h5FlowFixedStutter 3s ease-in-out infinite reverse;
+}
+
+
+/* ---------------->> 加粗 (**加粗**) - 适配H6样式 <<---------------- */
+/* 使用更高优先级的选择器覆盖原有样式 */
+#write p strong,
+#write li strong,
+#write span strong,
+#write strong {
+    font-size: inherit !important; /* 保持原字体大小 */
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+    padding: 1px 12.5px;
+    font-weight: bold;
+    
+    /* H6的多色彩渐变 */
+    background: linear-gradient(135deg,
+            #ffbe70 0%,
+            #ff8da1 15%,
+            #71d8e1 30%,
+            #27cae7 45%,
+            #27cae7 60%,
+            #71e1d8 75%,
+            #5895db 90%,
+            #ffbe70 100%);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    animation: h5FlowFixedStutter 6s ease-in-out infinite reverse;
+    transition: all 0.3s ease;
+}
+
+/* 悬停时加速流动 */
+#write p strong:hover,
+#write li strong:hover,
+#write span strong:hover,
+#write strong:hover {
+    animation: h5FlowFixedStutter 3s ease-in-out infinite reverse;
+}
+
+/* =====================================
+   动画定义
+   ===================================== */
+
+
+/* 从左到右流动动画 - 修复卡顿问题 */
+@keyframes flowLeftToRight {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+/* H5和H6共用的从左到右流动动画 - 修复卡顿问题 */
+@keyframes h5FlowFixedStutter {
+    0% {
+        background-position: -200% 50%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+
+/* 脉冲发光动画 */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 160, 160, 0.5),
+            0 0 15px rgba(255, 160, 160, 0.4),
+            0 0 25px rgba(160, 200, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(255, 160, 160, 0.6),
+            0 0 20px rgba(255, 160, 160, 0.5),
+            0 0 35px rgba(160, 200, 255, 0.4),
+            0 0 50px rgba(160, 200, 255, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 160, 160, 0.5),
+            0 0 15px rgba(255, 160, 160, 0.4),
+            0 0 25px rgba(160, 200, 255, 0.3);
+    }
+}
+
+/* =====================================
+   引用和链接样式
+   ===================================== */
+   
+/* 引用代码样式 - 静态背景渐变 */
+body #write code,
+body #write p code,
+body #write li code,
+body #write span code {
+    background: linear-gradient(to right, #a9e5fc , #dce6d3 , #fccbb8 , #fccbb8, #dce6d3 , #a9e5fc ) !important;
+    color: #796f84 !important;
+    padding: 3px 8px !important;
+    border-radius: 4px !important;
+    border: none !important;
+    position: relative !important;
+    margin: 2px 4px !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: 1.6 !important;
+    transition: transform 0.3s ease, box-shadow 0.5s ease, background 0.5s ease !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 引用代码悬浮效果 - 只保留发光，去掉流动 */
+body #write code:hover,
+body #write p code:hover,
+body #write li code:hover,
+body #write span code:hover {
+    background: linear-gradient(to right, #ffc8bb, #aadddd, #ffc8bb) !important;
+    animation: glowPulse 2s ease-in-out infinite alternate !important;
+    box-shadow: 0 0 5px rgba(255, 160, 160, 0.5),
+        0 0 15px rgba(255, 160, 160, 0.4),
+        0 0 25px rgba(160, 200, 255, 0.4),
+        0 0 40px rgba(160, 200, 255, 0.2) !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 4px rgba(75, 68, 83, 0.2) !important;
+}
+
+/* ---------------->> 链接 ([链接]()) - 静态渐变样式 <<---------------- */
+/* 使用最高优先级覆盖原有链接样式 */
+html body #write a,
+html body #write p a,
+html body #write li a,
+html body #write span a,
+html body a>span.md-plain,
+html body a.md-url,
+html body a {
+    background: linear-gradient(90deg, #00BFFF 0%, #51f8a5 50%, #00BFFF 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    text-decoration: underline !important;
+    text-decoration-color: transparent !important;
+    position: relative !important;
+    font-weight: 700 !important;
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+}
+
+/* 链接下划线静态渐变 */
+html body #write a::before,
+html body #write p a::before,
+html body #write li a::before,
+html body #write span a::before,
+html body a>span.md-plain::before,
+html body a.md-url::before,
+html body a::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 1.2em !important;
+    bottom: 0 !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, #00BFFF 0%, #51f8a5 50%, #00BFFF 100%) !important;
+}
+
+/* 链接箭头图标静态渐变 */
+html body #write a::after,
+html body #write p a::after,
+html body #write li a::after,
+html body #write span a::after,
+html body a>span.md-plain::after,
+html body a.md-url::after,
+html body a::after {
+    background-image: none !important;
+    background: linear-gradient(to right, #00BFFF 0%, #51f8a5 50%, #00BFFF 100%) !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E") no-repeat center !important;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E") no-repeat center !important;
+    -webkit-mask-size: contain !important;
+    mask-size: contain !important;
+    width: 1.1em !important;
+    height: 1.1em !important;
+}
+
+/* 超强优先级确保覆盖所有原有链接样式 */
+html body #write a,
+html body #write p a,
+html body #write li a,
+html body #write span a,
+html body a>span.md-plain,
+html body a.md-url,
+html body a,
+body a>span.md-plain,
+body a.md-url,
+body a {
+    color: transparent !important;
+    background: linear-gradient(90deg, #00BFFF 0%, #51f8a5 50%, #00BFFF 100%) !important;
+    background-size: 100% 100% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}
+
