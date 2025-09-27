@@ -3,55 +3,6 @@
    加粗适配H6，高亮适配H4，斜体适配H5，引用适配H3
    ===================================== */
 
-/* ---------------->> 引用 (`引用`) - 适配H3样式 <<---------------- */
-/* 使用更高优先级的选择器覆盖原有样式 */
-#write p code,
-#write li code,
-#write span code,
-#write code {
-    font-size: inherit !important; /* 保持原字体大小 */
-    width: fit-content;
-    line-height: 1.6;
-    margin: 2px 4px;
-    padding: 3px 8px;
-    position: relative;
-    border-radius: 4px;
-    border: none !important;
-    
-    /* 确保背景渐变动画正确应用 - 覆盖原有样式 */
-    background: linear-gradient(to right, #a9e5fc , #dce6d3 , #fccbb8 , #fccbb8, #dce6d3 , #a9e5fc ) !important;
-    background-color: transparent !important; /* 覆盖原有的 background-color */
-    background-size: 200% 100% !important;
-    
-    /* 强制应用动画 */
-    animation: gradientFlowRight 8s linear infinite !important;
-    transition: transform 0.3s ease, box-shadow 0.5s ease, background 0.5s ease !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
-    
-    /* 文字颜色采用深色奶油系 - 覆盖原有颜色 */
-    color: #796f84 !important;
-    font-family: inherit !important;
-    font-size: inherit !important; /* 覆盖原有字体大小 */
-    word-break: normal !important;
-    word-wrap: normal !important;
-}
-
-/* 添加引用悬浮效果 - 背景变色和发光效果 */
-#write p code:hover,
-#write li code:hover,
-#write span code:hover,
-#write code:hover {
-    background: linear-gradient(to right, #ffc8bb, #aadddd, #ffc8bb) !important;
-    background-color: transparent !important; /* 确保覆盖原有背景色 */
-    background-size: 200% 100% !important;
-    animation: gradientFlowRight 3s linear infinite, glowPulse 2s ease-in-out infinite alternate !important;
-    box-shadow: 0 0 5px rgba(255, 160, 160, 0.5),
-        0 0 15px rgba(255, 160, 160, 0.4),
-        0 0 25px rgba(160, 200, 255, 0.4),
-        0 0 40px rgba(160, 200, 255, 0.2) !important;
-    color: #ffffff !important;
-    text-shadow: 0 0 4px rgba(75, 68, 83, 0.2) !important;
-}
 
 /* ---------------->> 高亮 (==高亮==) - 适配H4样式 <<---------------- */
 /* 使用更高优先级的选择器覆盖原有样式 */
@@ -64,7 +15,7 @@
     width: fit-content;
     display: inline-block;
     margin: 0 2px !important;
-    padding: 1px 6px !important;
+    padding: 2px 10px !important;
     border-radius: 6px;
     border: none !important;
     
@@ -170,43 +121,6 @@
     animation: h5FlowFixedStutter 3s ease-in-out infinite reverse;
 }
 
-/* 横线效果使用after伪元素 - 已禁用 */
-/*
-#write p em::after,
-#write li em::after,
-#write span em::after,
-#write em::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background: linear-gradient(135deg,
-            #FC6C85 0%,
-            #58b6a0 25%,
-            #3A8E7A 50%,
-            #FFC300 75%,
-            #FC6C85 100%);
-    background-size: 300% 100%;
-    transition: all 0.4s ease;
-    transform: translateX(-50%);
-    opacity: 0;
-    animation: h5FlowFixedStutter 6s ease-in-out infinite reverse;
-}
-*/
-
-/* 悬停时显示横线，从中间向两边延伸 - 已禁用 */
-/*
-#write p em:hover::after,
-#write li em:hover::after,
-#write span em:hover::after,
-#write em:hover::after {
-    width: calc(100% - 20px);
-    opacity: 1;
-    animation: h5FlowFixedStutter 3s ease-in-out infinite reverse;
-}
-*/
 
 /* ---------------->> 加粗 (**加粗**) - 适配H6样式 <<---------------- */
 /* 使用更高优先级的选择器覆盖原有样式 */
@@ -251,15 +165,6 @@
    动画定义
    ===================================== */
 
-/* 从左到右流动的渐变动画 */
-@keyframes gradientFlowRight {
-    0% {
-        background-position: 200% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 /* 从左到右流动动画 - 修复卡顿问题 */
 @keyframes flowLeftToRight {
@@ -274,12 +179,16 @@
 /* H5和H6共用的从左到右流动动画 - 修复卡顿问题 */
 @keyframes h5FlowFixedStutter {
     0% {
+        background-position: -200% 50%;
+    }
+    50% {
         background-position: 0% 50%;
     }
     100% {
-        background-position: 300% 50%;
+        background-position: 200% 50%;
     }
 }
+
 
 /* 脉冲发光动画 */
 @keyframes glowPulse {
@@ -301,149 +210,115 @@
     }
 }
 
-/* ---------------->> 链接 ([链接]()) - 适配H1+H5样式 <<---------------- */
-/* 使用更高优先级的选择器覆盖原有样式 */
-body #write p a,
-body #write li a, 
-body #write span a,
-body #write a,
-a>span.md-plain,
-a.md-url {
-    font-size: inherit !important; /* 保持原字体大小 */
-    position: relative !important;
-    
-    /* 保持原有的下划线样式 */
-    text-decoration: underline !important;
-    text-decoration-color: transparent !important; /* 先隐藏原下划线颜色 */
-    margin-left: 1px !important;
-    margin-right: 1px !important;
-    font-weight: 700 !important; /* 保持链接的粗体效果 */
-    
-    /* 文字使用H1的渐变色：蓝紫色系 */
-    background: linear-gradient(to right, #7ac9ff, #d6a9ff, #7ac9ff) !important;
-    background-size: 300% 100% !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    color: transparent !important;
-    
-    /* 使用H5的动画效果 - 改为linear让流动更平滑 */
-    animation: h5FlowFixedStutter 6s linear infinite reverse !important;
-    transition: all 0.3s ease !important;
-}
-
-/* 悬停时加速流动 */
-body #write p a:hover,
-body #write li a:hover,
-body #write span a:hover,
-body #write a:hover,
-a>span.md-plain:hover,
-a.md-url:hover {
-    animation: h5FlowFixedStutter 3s linear infinite reverse !important;
-}
-
-/* 保留箭头图标，添加渐变下划线 */
-body #write p a::before,
-body #write li a::before,
-body #write span a::before, 
-body #write a::before,
-a>span.md-plain::before,
-a.md-url::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 1.2em; /* 为箭头图标留出空间 */
-    bottom: 0;
-    height: 1px;
-    
-    /* 使用H1的渐变色作为下划线 */
-    background: linear-gradient(to right, #7ac9ff, #d6a9ff, #7ac9ff) !important;
-    background-size: 300% 100% !important;
-    animation: h5FlowFixedStutter 6s linear infinite reverse !important;
-    transition: all 0.3s ease !important;
-}
-
-/* 悬停时下划线加速动画 */
-body #write p a:hover::before,
-body #write li a:hover::before,
-body #write span a:hover::before,
-body #write a:hover::before,
-a>span.md-plain:hover::before,
-a.md-url:hover::before {
-    animation: h5FlowFixedStutter 3s linear infinite reverse !important;
-    height: 2px !important; /* 悬停时稍微加粗 */
-}
-
-/* 修改箭头图标为渐变色并添加流动动画 */
-body #write p a::after,
-body #write li a::after,
-body #write span a::after, 
-body #write a::after,
-a>span.md-plain::after,
-a.md-url::after {
-    /* 移除原有SVG，使用渐变背景配合mask */
-    background-image: none !important;
-    background: linear-gradient(to right, #7ac9ff, #d6a9ff, #7ac9ff) !important;
-    background-size: 300% 100% !important;
-    
-    /* 使用mask创建箭头形状 */
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E") no-repeat center !important;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E") no-repeat center !important;
-    -webkit-mask-size: contain !important;
-    mask-size: contain !important;
-    
-    /* 保持原有尺寸 */
-    width: 1.1em !important;
-    height: 1.1em !important;
-    
-    /* 添加流动动画 */
-    animation: h5FlowFixedStutter 6s linear infinite reverse !important;
-    transition: all 0.3s ease !important;
-}
-
-/* 悬停时箭头也加速动画 */
-body #write p a:hover::after,
-body #write li a:hover::after,
-body #write span a:hover::after,
-body #write a:hover::after,
-a>span.md-plain:hover::after,
-a.md-url:hover::after {
-    animation: h5FlowFixedStutter 3s linear infinite reverse !important;
-    transform: scale(1.1) !important;
-}
-
 /* =====================================
-   强制确保引用动画工作的额外规则
+   引用和链接样式
    ===================================== */
    
-/* 使用最高优先级确保引用动画正常工作 */
+/* 引用代码样式 - 静态背景渐变 */
 body #write code,
 body #write p code,
 body #write li code,
 body #write span code {
-    animation: gradientFlowRight 8s linear infinite !important;
     background: linear-gradient(to right, #a9e5fc , #dce6d3 , #fccbb8 , #fccbb8, #dce6d3 , #a9e5fc ) !important;
-    background-size: 200% 100% !important;
+    color: #796f84 !important;
+    padding: 3px 8px !important;
+    border-radius: 4px !important;
+    border: none !important;
+    position: relative !important;
+    margin: 2px 4px !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: 1.6 !important;
+    transition: transform 0.3s ease, box-shadow 0.5s ease, background 0.5s ease !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* 确保悬浮动画也能正常工作 */
+/* 引用代码悬浮效果 - 只保留发光，去掉流动 */
 body #write code:hover,
 body #write p code:hover,
 body #write li code:hover,
 body #write span code:hover {
-    animation: gradientFlowRight 3s linear infinite, glowPulse 2s ease-in-out infinite alternate !important;
+    background: linear-gradient(to right, #ffc8bb, #aadddd, #ffc8bb) !important;
+    animation: glowPulse 2s ease-in-out infinite alternate !important;
+    box-shadow: 0 0 5px rgba(255, 160, 160, 0.5),
+        0 0 15px rgba(255, 160, 160, 0.4),
+        0 0 25px rgba(160, 200, 255, 0.4),
+        0 0 40px rgba(160, 200, 255, 0.2) !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 4px rgba(75, 68, 83, 0.2) !important;
 }
 
-/* 额外确保链接文字渐变正常工作（如果上面的规则被覆盖） */
+/* ---------------->> 链接 ([链接]()) - 静态渐变样式 <<---------------- */
+/* 使用最高优先级覆盖原有链接样式 */
 html body #write a,
 html body #write p a,
 html body #write li a,
-html body #write span a {
-    background: linear-gradient(to right, #7ac9ff, #d6a9ff, #7ac9ff) !important;
-    background-size: 300% 100% !important;
+html body #write span a,
+html body a>span.md-plain,
+html body a.md-url,
+html body a {
+    background: linear-gradient(90deg, #00BFFF 0%, #51f8a5 50%, #00BFFF 100%) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     color: transparent !important;
-    animation: h5FlowFixedStutter 6s linear infinite reverse !important;
     text-decoration: underline !important;
     text-decoration-color: transparent !important;
+    position: relative !important;
+    font-weight: 700 !important;
+    margin-left: 1px !important;
+    margin-right: 1px !important;
 }
+
+/* 链接下划线静态渐变 */
+html body #write a::before,
+html body #write p a::before,
+html body #write li a::before,
+html body #write span a::before,
+html body a>span.md-plain::before,
+html body a.md-url::before,
+html body a::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 1.2em !important;
+    bottom: 0 !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, #00BFFF 0%, #51f8a5 50%, #00BFFF 100%) !important;
+}
+
+/* 链接箭头图标静态渐变 */
+html body #write a::after,
+html body #write p a::after,
+html body #write li a::after,
+html body #write span a::after,
+html body a>span.md-plain::after,
+html body a.md-url::after,
+html body a::after {
+    background-image: none !important;
+    background: linear-gradient(to right, #00BFFF 0%, #51f8a5 50%, #00BFFF 100%) !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E") no-repeat center !important;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E") no-repeat center !important;
+    -webkit-mask-size: contain !important;
+    mask-size: contain !important;
+    width: 1.1em !important;
+    height: 1.1em !important;
+}
+
+/* 超强优先级确保覆盖所有原有链接样式 */
+html body #write a,
+html body #write p a,
+html body #write li a,
+html body #write span a,
+html body a>span.md-plain,
+html body a.md-url,
+html body a,
+body a>span.md-plain,
+body a.md-url,
+body a {
+    color: transparent !important;
+    background: linear-gradient(90deg, #00BFFF 0%, #51f8a5 50%, #00BFFF 100%) !important;
+    background-size: 100% 100% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}
+
