@@ -346,11 +346,6 @@ p.md-toc-content:hover {
     background: #ff00001a
 }
 
-.md-task-list-item.task-list-done span {
-    color: #999;
-    text-decoration: line-through
-}
-
 
 .fa-folder:before,
 .md-image-btn:before {
