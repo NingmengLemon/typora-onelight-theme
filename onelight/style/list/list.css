@@ -131,7 +131,7 @@
 #write input[type=checkbox] {
     appearance: none;
     -webkit-appearance: none;
-    border: 2px solid var(--theme-color, #666);
+    border: 2px solid var(--alert-theme-color, var(--theme-color));
     border-radius: 4px;
     display: inline-block;
     vertical-align: middle;
@@ -153,8 +153,8 @@
 }
 
 #write input[type=checkbox]:checked {
-    background: var(--theme-color, #666);
-    border-color: var(--theme-color, #666);
+    background: var(--alert-theme-color, var(--theme-color));
+    border-color: var(--alert-theme-color, var(--theme-color));
 }
 
 #write input[type=checkbox]:checked::after {

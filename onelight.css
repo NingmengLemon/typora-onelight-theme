@@ -306,7 +306,7 @@ span#filesearch-case-option-btn:active {
 
 hr {
     background-color: transparent;
-    border-top: 2px dashed var(--theme-color);
+    border-top: 2px dashed var(--alert-theme-color, var(--theme-color));
     height: 2px
 }
 
