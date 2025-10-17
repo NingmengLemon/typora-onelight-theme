@@ -9,7 +9,6 @@ body:
     id: theme_version
     attributes:
       label: 主题版本
-      description: 请输入你正在使用的主题版本号（如 v1.2.3）
       placeholder: v1.2.3
     validations:
       required: true
@@ -17,27 +16,23 @@ body:
     id: typora_version
     attributes:
       label: Typora 编辑器版本
-      description: 请输入你正在使用的 Typora 版本号（如 1.8.7）
-      placeholder: 1.8.7
+      placeholder: v1.8.7
     validations:
       required: false
   - type: dropdown
     id: platform
     attributes:
-      label: 你的平台
-      description: 请选择你遇到问题的平台
+      label: 系统
       options:
         - Windows
         - macOS
         - Linux
-        - 其他
     validations:
       required: false
   - type: textarea
     id: description
     attributes:
       label: 错误描述
-      description: 请详细描述你遇到的错误或显示问题。
-      placeholder: 例如：xxx 功能无法正常显示，字体显示异常等，最好附加截图
+      placeholder: 例如：xxx 功能无法正常显示，最好附加截图和markdown代码
     validations:
       required: true
