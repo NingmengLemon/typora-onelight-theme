@@ -166,3 +166,25 @@ code {
 .auto-suggest-container li:hover {
     background-color: var(--item-bg-color-blue);
 }
+
+#write code {
+    background-color: var(--item-hover-bg-color);
+    color: #eb4c37;
+    font-family: var(--main-font-family);
+    font-size: .9rem;
+    font-size: .9rem;
+}
+
+#write li code,
+#write p code,
+#write span code {
+    border-radius: var(--radius-small);
+    margin: 0 2px;
+    padding: 2px 4px;
+    word-break: break-all;
+    word-wrap: break-word
+}
+
+#write .md-heading code {
+    font-size: unset;
+}
