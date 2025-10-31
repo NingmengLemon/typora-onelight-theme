@@ -341,10 +341,6 @@ p.md-toc-content:hover {
     color: var(--main-yellow);
 }
 
-.md-image-btn:before {
-    font-family: var(--main-font-family)
-}
-
 .md-image-btn,
 .modal-content {
     background: var(--theme-light-color)
