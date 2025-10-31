@@ -57,7 +57,7 @@
     /* ---------------->> 阴影 <<---------------- */
     --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
     --box-shadow-large: 0 8px 15px rgba(0, 0, 0, .3);
-    --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+    --drop-shadow: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
     --brightness: brightness(1);
     /* ---------------->> 过渡 <<---------------- */
     --transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -65,9 +65,9 @@
     /* ---------------->> 左到右透明渐变色 <<---------------- */
     --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
     /* ---------------->> 圆角 <<---------------- */
-    --radius-small: 5px;
-    --radius-large: 10px;
-    --radius-xlarge: 15px;
+    --radius-small: 10px;
+    --radius-large: 15px;
+    --radius-xlarge: 20px;
     /* ---------------->> 云母 <<---------------- */
     --mica-bg: rgba(255, 255, 255, 0.65);
     --mica-blur: blur(12px) saturate(1.3);
@@ -205,7 +205,7 @@ a.md-toc-inner {
     border-left: 0;
     border-right: 0;
     filter: var(--drop-shadow) var(--brightness);
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-large);
     display: block;
     height: auto;
     margin: 0 auto;
