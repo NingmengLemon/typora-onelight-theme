@@ -65,9 +65,9 @@
     /* ---------------->> 左到右透明渐变色 <<---------------- */
     --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
     /* ---------------->> 圆角 <<---------------- */
-    --radius-small: 5px;
-    --radius-large: 10px;
-    --radius-xlarge: 15px;
+    --radius-small: 10px;
+    --radius-large: 15px;
+    --radius-xlarge: 20px;
     /* ---------------->> 云母 <<---------------- */
     --mica-bg: rgba(255, 255, 255, 0.65);
     --mica-blur: blur(12px) saturate(1.3);
