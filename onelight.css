@@ -125,6 +125,10 @@
     font-weight: 700
 }
 
+#write h4 strong {
+    color: unset !important;
+}
+
 /* ---------------->> 斜体 <<---------------- */
 #write em,
 #write i {
