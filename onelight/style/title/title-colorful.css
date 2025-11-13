@@ -65,7 +65,6 @@
 }
 
 /* Gradient on inner span for H2 text */
-#write h2>span,
 #write h2 span.md-plain {
     display: inline-block;
     background: linear-gradient(to right, #ff8da1, #ffbe70, #ff8da1);
@@ -133,7 +132,6 @@
 }
 
 /* 创建H3文字渐变效果 */
-#write h3 span,
 #write h3 span.md-plain {
     display: inline-block;
     /* 修改为在浅色背景上可读的深色奶油系渐变 */
@@ -162,7 +160,6 @@
 }
 
 /* 添加H3悬浮效果 - 字体变为纯白色 */
-#write h3:hover span,
 #write h3:hover span.md-plain {
     background: none;
     color: #ffffff;
@@ -445,4 +442,8 @@
 /* 悬停时加速流动 */
 #write h6:hover {
     animation: h5FlowFixedStutter 3s ease-in-out infinite reverse;
+}
+
+.md-heading .md-inline-math {
+    color: var(--text-color);
 }

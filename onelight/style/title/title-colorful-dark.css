@@ -63,7 +63,6 @@
 }
 
 /* Gradient on inner span for H2 text */
-#write h2>span,
 #write h2 span.md-plain {
     display: inline-block;
     background: linear-gradient(to right, #00BFFF, #ff89c4, #00BFFF);
@@ -119,7 +118,6 @@
 }
 
 /* 创建H3文字渐变效果 */
-#write h3 span,
 #write h3 span.md-plain {
     display: inline-block;
     background: linear-gradient(to right, #FFFFFF, #E8F5E9, #BBDEFB, #D1C4E9, #E1F5FE, #FFFFFF);
@@ -145,7 +143,6 @@
 }
 
 /* 添加H3悬浮效果 - 字体变为纯白色 */
-#write h3:hover span,
 #write h3:hover span.md-plain {
     background: none;
     color: #FFFFFF;
@@ -440,4 +437,8 @@
         transform: scale(1) rotate(0);
         opacity: 1;
     }
+}
+
+.md-heading .md-inline-math {
+    color: var(--text-color);
 }
