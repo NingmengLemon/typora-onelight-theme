@@ -4,6 +4,7 @@
 @import './onelight/style/font.css';
 @import './onelight/style/mermaid.css';
 @import './onelight/style/kbd/kbd.css';
+@import './onelight/style/plugin/copilot.css';
 
 /* 标题样式 依次为 默认 彩色 */
 @import './onelight/style/title/title.css';
@@ -107,7 +108,7 @@
 /* 仅在p标签不包含图片时应用悬停效果 */
 #write p:not(:has(.md-image)):hover {
     box-shadow: var(--box-shadow);
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     background: var(--theme-light-color);
 }
 

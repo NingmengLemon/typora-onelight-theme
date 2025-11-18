@@ -1,0 +1,25 @@
+/* 对https://github.com/Snowflyt/typora-copilot的适配 */
+
+/* 模型选择菜单 */
+.chat-panel-dropdown .chat-panel-dropdown-menu {
+    min-width: 180px !important;
+}
+
+.chat-panel-dropdown .chat-panel-dropdown-menu .chat-panel-dropdown-item:hover {
+    color: var(--theme-color)
+}
+
+/* 欢迎标题 */
+p.welcome-subtitle {
+    color: unset !important;
+}
+
+.chat-panel-header {
+    padding: 0 5px !important;
+}
+
+
+
+div#copilot-chat-container {
+    --border-color: #d1d1d1;
+}
