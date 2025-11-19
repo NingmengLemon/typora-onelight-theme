@@ -66,7 +66,7 @@
     /* ---------------->> 左到右透明渐变色 <<---------------- */
     --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
     /* ---------------->> 圆角 <<---------------- */
-    --radius-small: 5px;
+    --radius-xsmall: 5px;
     --radius-small: 10px;
     --radius-large: 15px;
     --radius-xlarge: 20px;
@@ -109,7 +109,7 @@
 /* 仅在p标签不包含图片时应用悬停效果 */
 #write p:not(:has(.md-image)):hover {
     box-shadow: var(--box-shadow);
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-xsmall);
     background: var(--theme-light-color);
 }
 
