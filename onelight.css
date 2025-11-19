@@ -11,8 +11,8 @@
 /* @import './onelight/style/title/title-colorful.css'; */
 
 /* 列表样式 依次为 默认 普通 */
-@import './onelight/style/list/list.css';
-/* @import './onelight/style/list/list-simple.css'; */
+/* @import './onelight/style/list/list.css'; */
+@import './onelight/style/list/list-simple.css';
 
 /* 引用块，警告框样式 依次为 原样式 默认*/
 /* @import './onelight/style/blockquote/blockquote.css'; */
@@ -66,6 +66,7 @@
     /* ---------------->> 左到右透明渐变色 <<---------------- */
     --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
     /* ---------------->> 圆角 <<---------------- */
+    --radius-small: 5px;
     --radius-small: 10px;
     --radius-large: 15px;
     --radius-xlarge: 20px;
