@@ -70,7 +70,7 @@ pre[lang=sequence] {
 /* ---------------->> 代码块 <<---------------- */
 .md-fences,
 code {
-    border-radius: var(--radius-small);
+    border-radius: 5px;
     margin-left: .2em;
     margin-right: .2em;
     padding: .1em
