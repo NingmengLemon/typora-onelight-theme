@@ -68,9 +68,10 @@
     --transition: box-shadow 0.3s ease, transform 0.3s ease;
     --bg-transition: background-color 0.5s ease;
     /* ---------------->> 圆角 <<---------------- */
-    --radius-small: 5px;
-    --radius-large: 10px;
-    --radius-xlarge: 15px;
+    --radius-xsmall: 5px;
+    --radius-small: 10px;
+    --radius-small: 15px;
+    --radius-xlarge: 20px;
     /* ---------------->> 云母 <<---------------- */
     --mica-bg: rgba(30, 30, 30, 0.75);
     --mica-blur: blur(12px) saturate(1.1);

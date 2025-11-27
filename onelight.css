@@ -68,7 +68,7 @@
     /* ---------------->> 圆角 <<---------------- */
     --radius-xsmall: 5px;
     --radius-small: 10px;
-    --radius-large: 15px;
+    --radius-small: 15px;
     --radius-xlarge: 20px;
     /* ---------------->> 云母 <<---------------- */
     --mica-bg: rgba(255, 255, 255, 0.65);
@@ -211,7 +211,7 @@ a.md-toc-inner {
     border-left: 0;
     border-right: 0;
     filter: var(--drop-shadow) var(--brightness);
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     display: block;
     height: auto;
     margin: 0 auto;
@@ -240,7 +240,7 @@ a.md-toc-inner {
 mark {
     margin-right: 2px;
     margin-left: 2px;
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     padding: 2px 5px 2px 5px;
     border: 1.5px solid;
     background: transparent;
@@ -318,7 +318,7 @@ p.md-toc-content {
     padding-left: 10px !important;
     margin-left: 20px !important;
     background: var(--gradient-color);
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     box-shadow: var(--box-shadow);
 }
 
@@ -354,7 +354,7 @@ p.md-toc-content:hover {
 
 .modal-content,
 video {
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
 }
 
 video {
@@ -470,7 +470,7 @@ input:focus {
 span[alt=highlight] {
     margin-right: 2px;
     margin-left: 2px;
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     padding: 5px;
     background: #ff0;
     color: red;
@@ -482,7 +482,7 @@ span[alt=highlight] {
 .md-search-hit.md-search-select,
 .md-search-select {
     padding: 2px 5px 2px 5px;
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     background: #ff0 !important;
     color: red !important;
     box-shadow: var(--box-shadow);
@@ -515,7 +515,7 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
 
 #typora-source .CodeMirror-lines {
     background: var(--theme-light-color);
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     max-width: 90%
 }
 

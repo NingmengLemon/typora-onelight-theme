@@ -2,12 +2,12 @@
 figure.md-table-fig.table-figure {
     border: 0;
     box-shadow: var(--box-shadow);
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
 }
 
 /* ---------------->> 表格调节组件 <<---------------- */
 .ty-table-edit {
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     background-color: var(--mica-bg) !important;
     backdrop-filter: var(--mica-blur);
     border: var(--mica-border);
