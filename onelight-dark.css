@@ -3,6 +3,9 @@
 @import './onelight/style/code.css';
 @import './onelight/style/table.css';
 @import './onelight/style/font.css';
+
+/* @import './onelight/style/heading.css'; */
+
 @import './onelight/style/mermaid.css';
 @import './onelight/style/kbd/kbd-dark.css';
 @import './onelight/style/plugin/copilot-dark.css';
