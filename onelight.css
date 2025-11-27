@@ -68,7 +68,7 @@
     /* ---------------->> 圆角 <<---------------- */
     --radius-xsmall: 5px;
     --radius-small: 10px;
-    --radius-small: 15px;
+    --radius-large: 15px;
     --radius-xlarge: 20px;
     /* ---------------->> 云母 <<---------------- */
     --mica-bg: rgba(255, 255, 255, 0.65);

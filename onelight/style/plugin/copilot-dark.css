@@ -4,3 +4,7 @@
 div#copilot-chat-container {
     --border-color: #333;
 }
+
+div#common-dialog-message>div>div {
+    background: transparent !important;
+}
