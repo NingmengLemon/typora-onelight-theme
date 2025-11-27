@@ -121,7 +121,18 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
 
 /* ---------------->> 快速打开搜索框 <<---------------- */
 #typora-quick-open {
-    border-radius: var(--radius-small);
+    height: 80vh;
+    width: 40vw;
+    border-radius: var(--radius-xsmall);
+    padding-right: 0;
+}
+
+div#typora-quick-open-input {
+    padding: 0 5px;
+}
+
+.typora-quick-open-list {
+    max-height: 95%;
 }
 
 .typora-quick-open-item:hover {
@@ -129,6 +140,10 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
     cursor: pointer;
     color: var(--theme-color);
     background: var(--theme-light-color);
+}
+
+.ty-quick-open-category-title {
+    color: var(--theme-color);
 }
 
 /* ---------------->> 一体化模式的侧边菜单 <<---------------- */
