@@ -1,7 +1,7 @@
 <h1 align='center'>OneLight Theme For Typora</h1>
 
 <p align="center">
-	简体中文
+	简体中文 |
 	<a href="https://zdoc.app/de/caolib/typora-onelight-theme">Deutsch</a> | 
 	<a href="https://zdoc.app/en/caolib/typora-onelight-theme">English</a> | 
 	<a href="https://zdoc.app/es/caolib/typora-onelight-theme">Español</a> | 
@@ -9,8 +9,9 @@
 	<a href="https://zdoc.app/ja/caolib/typora-onelight-theme">日本語</a> | 
 	<a href="https://zdoc.app/ko/caolib/typora-onelight-theme">한국어</a> | 
 	<a href="https://zdoc.app/pt/caolib/typora-onelight-theme">Português</a> | 
-	<a href="https://zdoc.app/ru/caolib/typora-onelight-theme">Русский</a> | 
+	<a href="https://zdoc.app/ru/caolib/typora-onelight-theme">Русский</a>
 </p>
+
 
 <p align="center">
   <img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/total?labelColor=grey&color=blue" alt="Downloads">
@@ -243,18 +244,20 @@
 
 > [!important]
 >
-> 背景图片在`onelight/img`文件夹下，文件夹下有几张准备好的图片，你也可以添加自己的图片（最好使用透明背景的图片），然后在`editor.css`文件中搜索 `bg.gif`找到下面代码替换图片名
+> 背景图片在`onelight/img`文件夹下，另外仓库`docs/img`路径下也有一些其他图片可以使用，你也可以添加自己的图片（最好使用透明背景的图片），然后在`editor.css`文件中搜索关键字 `背景图片`找到下面代码替换图片名
 >
 > ```css
-> content {
->     background-color: transparent;
->     background-image: url('../img/bg.gif');
->     background-position: 100% 100%;
->     background-repeat: no-repeat;
->     background-size: 100px auto;
->     transition: background-image .5s ease-in-out, background-size .5s ease-in-out
+> div#megamenu-section-open {
+>     // ...
+>     background-image: url('../img/mutou.gif');
+>     // ...
 > }
 > 
+> content {
+>     //...
+>     background-image: url('../img/mutou.gif');
+>     //...
+> }
 > ```
 >
 > <img src="https://s2.loli.net/2025/03/05/7Ds8SCmvWnkwraM.png" style="zoom: 50%;" />
