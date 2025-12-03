@@ -1,10 +1,17 @@
 <h1 align='center'>OneLight Theme For Typora</h1>
 
 <p align="center">
-    简体中文
-    |
-    <a href="https://github.com/caolib/typora-onelight-theme/blob/onelight/docs/README_en.md">English</a>
+	简体中文
+	<a href="https://zdoc.app/de/caolib/typora-onelight-theme">Deutsch</a> | 
+	<a href="https://zdoc.app/en/caolib/typora-onelight-theme">English</a> | 
+	<a href="https://zdoc.app/es/caolib/typora-onelight-theme">Español</a> | 
+	<a href="https://zdoc.app/fr/caolib/typora-onelight-theme">français</a> | 
+	<a href="https://zdoc.app/ja/caolib/typora-onelight-theme">日本語</a> | 
+	<a href="https://zdoc.app/ko/caolib/typora-onelight-theme">한국어</a> | 
+	<a href="https://zdoc.app/pt/caolib/typora-onelight-theme">Português</a> | 
+	<a href="https://zdoc.app/ru/caolib/typora-onelight-theme">Русский</a> | 
 </p>
+
 <p align="center">
   <img src="https://img.shields.io/github/downloads/caolib/typora-onelight-theme/total?labelColor=grey&color=blue" alt="Downloads">
   <img src="https://img.shields.io/github/v/release/caolib/typora-onelight-theme?labelColor=grey&color=red" alt="Release">
@@ -265,6 +272,3 @@
 📄 [docs](https://github.com/caolib/typora-onelight-theme/tree/onelight/docs)文件夹中有示例文章的markdown文件📄
 
 🖼️ [img](https://github.com/caolib/typora-onelight-theme/tree/onelight/onelight/img)文件夹中有主题的背景图片，如果不需要可以直接删除
-
-
-
