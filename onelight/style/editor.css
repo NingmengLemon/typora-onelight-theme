@@ -229,7 +229,7 @@ content {
 .context-menu.dropdown-menu>li>a:hover,
 .menu-style-btn.active {
     cursor: pointer;
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     background: var(--item-bg-color-blue);
     color: var(--theme-color)
 }
@@ -250,7 +250,7 @@ content {
 /* ---------------->> 右键菜单 <<---------------- */
 .dropdown-menu,
 .menu-item-container a.menu-style-btn {
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-small);
     background-color: var(--mica-bg) !important;
     backdrop-filter: var(--mica-blur);
     -webkit-backdrop-filter: var(--mica-blur);

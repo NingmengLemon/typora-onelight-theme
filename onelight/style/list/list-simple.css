@@ -22,7 +22,7 @@ ul>li>ul>li>ul>li>ul>li::marker {
 }
 
 ul li::marker {
-    color: var(--theme-color);
+    color: var(--alert-theme-color, var(--theme-color));
     font-size: 1.5em;
 }
 
@@ -34,7 +34,7 @@ ul li::marker {
 
 ol li::marker {
     font-size: 1rem;
-    color: var(--theme-color);
+    color: var(--alert-theme-color, var(--theme-color));
 }
 
 
