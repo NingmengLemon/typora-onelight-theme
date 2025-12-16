@@ -342,3 +342,13 @@ div#md-searchpanel {
 #md-searchpanel .btn:hover {
     background: var(--item-bg-color-blue);
 }
+
+.long-btn {
+    border-width: 2px;
+    border-radius: var(--radius-small);
+}
+
+.long-btn:last-of-type {
+    min-width: 300px;
+    width: fit-content;
+}
