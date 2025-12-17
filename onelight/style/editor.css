@@ -69,7 +69,7 @@ li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children >
 
 /* ---------------->> 快速打开搜索框高亮结果 <<---------------- */
 .typora-quick-open-item-title>b {
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-xsmall);
     padding: 2px;
     color: red;
     background: yellow;
