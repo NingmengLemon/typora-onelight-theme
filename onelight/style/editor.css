@@ -352,3 +352,25 @@ div#md-searchpanel {
     min-width: 300px;
     width: fit-content;
 }
+
+
+/* 大纲折叠按钮 */
+
+.outline-expander {
+    padding-right: 4px;
+    padding-left: 0;
+}
+
+.outline-expander:before {
+    content: "\eab6";
+    font-family: codicon;
+    font-size: unset;
+}
+
+.outline-expander:hover:before {
+    content: "\eab4";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before {
+    content: "\eab4";
+}
