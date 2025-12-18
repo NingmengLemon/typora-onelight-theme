@@ -97,7 +97,20 @@ jobs:
       - name: 打包文件
         run: |
           echo ${{ env.TAG_NAME }}
+          # 1) 全量包（包含 onelight 目录下全部资源）
           zip -r onelight-${{ env.TAG_NAME }}.zip ./onelight.css ./onelight-dark.css ./onelight
+
+          # 2) 无图片包（排除 onelight/img）
+          zip -r onelight-${{ env.TAG_NAME }}-noimg.zip ./onelight.css ./onelight-dark.css ./onelight \
+            -x "onelight/img/*" "onelight/img/**"
+
+          # 3) 无字体包（排除 onelight/fonts）
+          zip -r onelight-${{ env.TAG_NAME }}-nofont.zip ./onelight.css ./onelight-dark.css ./onelight \
+            -x "onelight/fonts/*" "onelight/fonts/**"
+
+          # 4) 最小包（排除字体和图片）
+          zip -r onelight-${{ env.TAG_NAME }}-minimal.zip ./onelight.css ./onelight-dark.css ./onelight \
+            -x "onelight/fonts/*" "onelight/fonts/**" "onelight/img/*" "onelight/img/**"
 
       - name: 创建发布
         id: release
@@ -116,6 +129,36 @@ jobs:
           upload_url: ${{ steps.release.outputs.upload_url }}
           asset_path: onelight-${{ env.TAG_NAME }}.zip
           asset_name: onelight-${{ env.TAG_NAME }}.zip
+          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+      - name: 上传发布文件（无图片）
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: onelight-${{ env.TAG_NAME }}-noimg.zip
+          asset_name: onelight-${{ env.TAG_NAME }}-noimg.zip
+          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+      - name: 上传发布文件（无字体）
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: onelight-${{ env.TAG_NAME }}-nofont.zip
+          asset_name: onelight-${{ env.TAG_NAME }}-nofont.zip
+          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+      - name: 上传发布文件（最小）
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: onelight-${{ env.TAG_NAME }}-minimal.zip
+          asset_name: onelight-${{ env.TAG_NAME }}-minimal.zip
           asset_content_type: application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
