@@ -84,7 +84,7 @@
     margin-right: 1.2em;
 }
 
-/* ---------- Typora 聚焦标题的编号（保持一致） ---------- */
+/* ---------- 聚焦标题的编号 ---------- */
 h2.md-focus.md-heading:before {
     counter-increment: heading-h2;
     content: counter(heading-h2) " ";
@@ -115,8 +115,6 @@ h6.md-focus.md-heading:before {
     margin-right: 1.2em;
 }
 
-
-/* 侧边栏大纲 */
 /* 全局初始化所有大纲计数器 */
 .sidebar-content {
     counter-reset: outline-h1 outline-h2 outline-h3 outline-h4 outline-h5 outline-h6;
@@ -167,7 +165,7 @@ h6.md-focus.md-heading:before {
     content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
 }
 
-/* 六级标题（你缺少的部分） */
+/* 六级标题 */
 .sidebar-content .outline-h6 .outline-label:before {
     counter-increment: outline-h6;
     content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) "." counter(outline-h6) " ";
@@ -212,4 +210,3 @@ h6.md-focus.md-heading:before {
     content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4) "." counter(heading-h5) "." counter(heading-h6) " ";
     margin-right: 1.2em;
 }
-

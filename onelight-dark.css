@@ -3,14 +3,10 @@
 @import './onelight/style/code.css';
 @import './onelight/style/table.css';
 @import './onelight/style/font.css';
-
-/* @import './onelight/style/heading.css'; */
-
 @import './onelight/style/mermaid.css';
 @import './onelight/style/kbd/kbd-dark.css';
 @import './onelight/style/plugin/copilot-dark.css';
-
-/* @import './onelight/style/background/grok-gpu.css'; */
+@import './onelight/style/icon.css';
 
 /* 标题样式 依次为 原样式 彩色样式 */
 @import './onelight/style/title/title.css';
@@ -39,7 +35,6 @@
     --side-bar-bg-color: var(--bg-color);
     --item-hover-bg-color: rgb(from var(--bg-color) r g b / 0.8);
     --item-hover-text-color: var(--main-red);
-    --monospace: monospace;
     --side-bar-menu-active-tint: var(--main-green);
     --outline-color: #7a7a7a;
     --tb-border-color: #393e49;

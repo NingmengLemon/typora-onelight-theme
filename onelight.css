@@ -5,6 +5,7 @@
 @import './onelight/style/mermaid.css';
 @import './onelight/style/kbd/kbd.css';
 @import './onelight/style/plugin/copilot.css';
+@import './onelight/style/icon.css';
 
 /* 标题样式 依次为 默认 彩色 */
 @import './onelight/style/title/title.css';
@@ -33,7 +34,6 @@
     --side-bar-bg-color: var(--bg-color);
     --item-hover-bg-color: hsla(0, 0%, 90%, .59);
     --item-hover-text-color: var(--main-red);
-    --monospace: monospace;
     --select-text-font-color: white !important;
     --select-text-bg-color: #3266D0;
     --side-bar-menu-active-tint: var(--main-green);
@@ -155,14 +155,6 @@ a {
     color: var(--main-purple) !important;
 }
 
-/* 目录、表格组件、图片链接、脚注链接取消链接箭头 */
-#write a.md-toc-inner::after,
-.md-reset>a::after,
-a:has(img)::after,
-.footnotes.md-def-footnote.md-end-block a::after {
-    display: none !important;
-}
-
 
 /* 取消四级标题的链接效果 */
 h4.md-end-block.md-heading a,
@@ -177,25 +169,21 @@ h6.md-end-block.md-heading a>span {
     text-decoration: none;
 }
 
-/* 取消标题中链接的箭头效果 */
-#write h1 a::after,
-#write h2 a::after,
-#write h3 a::after,
-#write h4 a::after,
-#write h5 a::after,
-#write h6 a::after {
-    display: none;
+/* 链接箭头 */
+#write a>span.md-plain::after {
+    content: '\eb14';
+    font-family: 'codicon';
+    margin-left: 4px;
+    vertical-align: middle;
+    line-height: 1;
+    display: inline-block;
 }
 
-/* 链接箭头 */
-#write a::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 1.1em;
-    height: 1.1em;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c94ae9'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E");
+/* 取消标题中链接的箭头效果 */
+.md-heading .md-plain::after {
+    display: none !important;
 }
+
 
 /* ---------------->> 目录项 <<---------------- */
 a.md-toc-inner {
@@ -222,18 +210,6 @@ a.md-toc-inner {
 
 #write img:hover {
     box-shadow: var(--box-shadow-large);
-}
-
-/* ---------------->> 脚注 <<---------------- */
-.md-def-name {
-    padding-right: 3ch;
-}
-
-.md-footnote {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
 }
 
 /* ---------------->> 高亮 <<---------------- */
@@ -274,12 +250,6 @@ span#filesearch-case-option-btn:active {
     margin-right: -28px
 }
 
-.pin-outline #outline-content .outline-active strong,
-.pin-outline .outline-active {
-    color: var(--theme-color);
-    font-weight: 700
-}
-
 .active-tab-files #info-panel-tab-file .info-panel-tab-border,
 .active-tab-outline #info-panel-tab-outline .info-panel-tab-border {
     background-color: var(--theme-color)
@@ -295,15 +265,29 @@ span#filesearch-case-option-btn:active {
     font-weight: 700;
 }
 
+.md-def-name {
+    padding-right: 3ch;
+}
+
+.md-footnote {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.md-def-name:after {
+    content: ']:';
+}
+
 .md-fences .CodeMirror-code>:hover {
     background-color: var(--code-bg-color-light)
 }
 
 hr {
-    background-color: transparent;
     border-top: 2px dashed var(--alert-theme-color, var(--theme-color));
-    height: 2px
 }
+
 
 
 /* ---------------->> 键盘快捷键 <<---------------- */
@@ -328,8 +312,7 @@ p.md-toc-content:hover {
 }
 
 
-.info-panel-tab-title:hover,
-.outline-label:hover {
+.info-panel-tab-title:hover {
     color: var(--theme-color)
 }
 
@@ -454,11 +437,7 @@ input:focus {
 }
 
 .outline-item:hover {
-    background: var(--item-bg-color-red);
-    border-left: 28px solid transparent;
-    border-right: 28px solid transparent;
-    margin-left: -28px;
-    margin-right: -28px
+    background: var(--item-bg-color-blue);
 }
 
 .file-library-node.file-tree-node.file-library-file-node:hover {

@@ -64,7 +64,7 @@ li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children >
 }
 
 #theme-preview-grid {
-    max-width: fit-content;
+    max-width: 100%;
 }
 
 /* ---------------->> 快速打开搜索框高亮结果 <<---------------- */
@@ -80,17 +80,16 @@ li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children >
 }
 
 /* ---------------->> 左侧文档列表 <<---------------- */
-.file-list-item.active {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: #efefef;
-    background: var(--item-bg-color-blue);
-    color: var(--active-file-text-color);
+.file-list-item.active,
+.file-list-item.active:hover {
+    margin: 0 5px;
+    border-radius: 10px;
+    background: rgb(from var(--theme-color) r g b / 0.2);
+    border: 2px solid var(--theme-color);
 }
 
 .file-list-item:hover {
-    color: var(--theme-color);
-    background: #42a5f514;
+    background: var(--theme-light-color);
 }
 
 /* ---------------->> 滚动条 <<---------------- */
@@ -148,7 +147,7 @@ div#typora-quick-open-input {
 
 /* ---------------->> 一体化模式的侧边菜单 <<---------------- */
 ul#megamenu-menu-list {
-    height: 100%;
+    height: 90%;
     background: transparent;
 }
 
@@ -231,7 +230,7 @@ content {
     cursor: pointer;
     border-radius: var(--radius-small);
     background: var(--item-bg-color-blue);
-    color: var(--theme-color)
+    color: unset;
 }
 
 .menu-item-container a.menu-style-btn.active,
@@ -284,10 +283,10 @@ content {
 }
 
 /* ---------------->> 左侧文件树 <<---------------- */
-.file-library-node.file-tree-node.file-library-file-node.active,
-.file-node-content:hover {
-    color: var(--theme-color)
+.file-tree-node.active>.file-node-background {
+    background-color: var(--theme-light-color);
 }
+
 
 .file-library-node:not(.file-node-root):focus>.file-node-content {
     outline: unset;
@@ -343,6 +342,10 @@ div#md-searchpanel {
     background: var(--item-bg-color-blue);
 }
 
+#md-searchpanel .input-group-addon.close-btn {
+    background: transparent;
+}
+
 .long-btn {
     border-width: 2px;
     border-radius: var(--radius-small);
@@ -354,23 +357,26 @@ div#md-searchpanel {
 }
 
 
-/* 大纲折叠按钮 */
-
-.outline-expander {
-    padding-right: 4px;
-    padding-left: 0;
+#recent-file-panel-action-btn.btn:hover {
+    color: unset;
 }
 
-.outline-expander:before {
-    content: "\eab6";
-    font-family: codicon;
-    font-size: unset;
+/* 主题窗口版本标签 */
+.theme-preview-div {
+    position: relative;
 }
 
-.outline-expander:hover:before {
-    content: "\eab4";
-}
-
-.outline-item-open>.outline-item>.outline-expander:before {
-    content: "\eab4";
+.theme-preview-div[data-theme="onelight.css"]::after,
+.theme-preview-div[data-theme="onelight-dark.css"]::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -3px;
+    width: 90px;
+    height: 20px;
+    background-image: url("https://img.shields.io/github/v/release/caolib/typora-onelight-theme?labelColor=grey&color=red");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
 }

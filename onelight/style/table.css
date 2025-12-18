@@ -65,7 +65,7 @@ td.md-reset.md-grid-ext>a {
 
 /* ---------------->> 表头 <<---------------- */
 #write table tr th {
-    background-color: #42a5f53d;
+    background-color: #42a5f51a;
     color: var(--theme-color);
     font-weight: 700
 }
