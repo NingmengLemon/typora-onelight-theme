@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Cascadia Code';
-    src: url('../fonts/CascadiaCode.woff2') format('woff2');
+    font-family: 'Jetbrains Mono';
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,7 +20,8 @@
 }
 
 :root {
-    --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --main-font-family: "Jetbrains Mono", "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --monospace: "Jetbrains Mono", "Cascadia Code", monospace;
 }
 
 body,
