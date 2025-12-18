@@ -118,7 +118,6 @@ h6.md-focus.md-heading:before {
 
 /* 侧边栏大纲 */
 /* 全局初始化所有大纲计数器 */
-/* 全局初始化所有大纲计数器 */
 .sidebar-content {
     counter-reset: outline-h1 outline-h2 outline-h3 outline-h4 outline-h5 outline-h6;
 }
@@ -173,3 +172,44 @@ h6.md-focus.md-heading:before {
     counter-increment: outline-h6;
     content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) "." counter(outline-h6) " ";
 }
+
+/* ---------- 禁用 title.css 的 hover 标签，保持编号一致 ---------- */
+#write h2:hover:before,
+#write h3:hover:before,
+#write h4:hover:before,
+#write h5:hover:before,
+#write h6:hover:before {
+    position: static;
+    right: auto;
+    bottom: auto;
+    line-height: normal;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+}
+
+#write h2:hover:before {
+    content: counter(heading-h2) " ";
+    margin-right: 1.2em;
+}
+
+#write h3:hover:before {
+    content: counter(heading-h2) "." counter(heading-h3) " ";
+    margin-right: 1.2em;
+}
+
+#write h4:hover:before {
+    content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4) " ";
+    margin-right: 1.2em;
+}
+
+#write h5:hover:before {
+    content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4) "." counter(heading-h5) " ";
+    margin-right: 1.2em;
+}
+
+#write h6:hover:before {
+    content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4) "." counter(heading-h5) "." counter(heading-h6) " ";
+    margin-right: 1.2em;
+}
+
