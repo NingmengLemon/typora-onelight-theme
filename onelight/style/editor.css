@@ -228,7 +228,6 @@ content {
 .context-menu.dropdown-menu>li>a:hover,
 .menu-style-btn.active {
     cursor: pointer;
-    border-radius: var(--radius-small);
     background: var(--item-bg-color-blue);
     color: unset;
 }
@@ -260,6 +259,26 @@ content {
 
 .dropdown-menu .divider {
     opacity: 0;
+}
+
+li.has-extra-menu {
+    border: 2px solid transparent;
+}
+
+li.has-extra-menu.active {
+    border-color: var(--theme-color);
+    border-radius: var(--radius-xsmall);
+}
+
+li[data-key],
+li[data-group="dev-tool"] {
+    border: 2px solid transparent;
+}
+
+li[data-key]:hover,
+li[data-group="dev-tool"]:hover {
+    border-color: var(--theme-color);
+    border-radius: var(--radius-xsmall);
 }
 
 /* ---------------->> 任务列表按钮 <<---------------- */
