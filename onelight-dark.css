@@ -1,12 +1,15 @@
 @import "onelight.css";
 @import './onelight/style/editor.css';
 @import './onelight/style/code.css';
-@import './onelight/style/table.css';
 @import './onelight/style/font.css';
 @import './onelight/style/mermaid.css';
 @import './onelight/style/kbd/kbd-dark.css';
 @import './onelight/style/plugin/copilot-dark.css';
 @import './onelight/style/icon.css';
+
+/* 表格样式 依次为 无边框 方形有边框 */
+@import './onelight/style/table/table.css';
+/* @import './onelight/style/table/table-square.css'; */
 
 /* 标题样式 依次为 原样式 彩色样式 */
 @import './onelight/style/title/title.css';
@@ -105,7 +108,7 @@ pre.CodeMirror-line>span {
 
 /* 引用块 */
 #write blockquote {
-    border: solid 0.5px var(--theme-color-original);
+    border: solid 2px var(--theme-color);
     border-left: 5px solid var(--border-color);
     border-left-color: var(--border-color) !important;
     background: unset;
@@ -122,10 +125,6 @@ pre.CodeMirror-line>span {
     background-color: var(--code-bg-color);
 }
 
-/* 表格 */
-#write table tr th {
-    color: var(--main-red-original);
-}
 
 
 /* 一体化菜单选项 */

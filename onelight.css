@@ -1,11 +1,15 @@
 @import './onelight/style/editor.css';
 @import './onelight/style/code.css';
-@import './onelight/style/table.css';
 @import './onelight/style/font.css';
 @import './onelight/style/mermaid.css';
 @import './onelight/style/kbd/kbd.css';
 @import './onelight/style/plugin/copilot.css';
 @import './onelight/style/icon.css';
+
+/* 表格样式 依次为 无边框 方形有边框 */
+@import './onelight/style/table/table.css';
+/* @import './onelight/style/table/table-square.css'; */
+
 
 /* 标题样式 依次为 默认 彩色 */
 @import './onelight/style/title/title.css';

@@ -1,3 +1,7 @@
+:root {
+    --tb-hover-bg: color-mix(in srgb, var(--theme-color) 20%, transparent);
+}
+
 /* ---------------->> 表格 <<---------------- */
 figure.md-table-fig.table-figure {
     border: 0;
@@ -7,7 +11,7 @@ figure.md-table-fig.table-figure {
 
 /* ---------------->> 表格调节组件 <<---------------- */
 .ty-table-edit {
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-xsmall);
     background-color: var(--mica-bg) !important;
     backdrop-filter: var(--mica-blur);
     border: var(--mica-border);
@@ -65,7 +69,11 @@ td.md-reset.md-grid-ext>a {
 
 /* ---------------->> 表头 <<---------------- */
 #write table tr th {
-    background-color: #42a5f51a;
+    background-color: var(--tb-hover-bg);
     color: var(--theme-color);
     font-weight: 700
+}
+
+#write table tr td:hover {
+    background: var(--tb-hover-bg);
 }
