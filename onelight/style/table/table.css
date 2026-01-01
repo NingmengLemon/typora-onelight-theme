@@ -74,6 +74,6 @@ td.md-reset.md-grid-ext>a {
     font-weight: 700
 }
 
-#write table tr td:hover {
+#write table tr:hover {
     background: var(--tb-hover-bg);
 }

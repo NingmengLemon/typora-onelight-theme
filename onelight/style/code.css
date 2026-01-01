@@ -16,8 +16,8 @@ pre.CodeMirror-line>span {
     color: var(--light-color);
 }
 
-.md-rawblock-tooltip-name {
-    color: var(--theme-color);
+.md-rawblock:hover>.md-rawblock-container {
+    border-radius: var(--radius-small);
 }
 
 /* ---------------->> meta代码块 <<---------------- */

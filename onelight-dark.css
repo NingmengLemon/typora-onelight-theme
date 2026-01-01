@@ -7,19 +7,21 @@
 @import './onelight/style/plugin/copilot-dark.css';
 @import './onelight/style/icon.css';
 
-/* 表格样式 依次为 无边框 方形有边框 */
+/* 关于下面的设置，因为深色主题导入了浅色主题，所以修改深色主题时最好将浅色主题的配置设成一样 */
+
+/* 表格样式 依次为 1.无边框 2.方形有边框 */
 @import './onelight/style/table/table.css';
 /* @import './onelight/style/table/table-square.css'; */
 
-/* 标题样式 依次为 原样式 彩色样式 */
+/* 标题样式 依次为 1.原样式 2.彩色样式 */
 @import './onelight/style/title/title.css';
 /* @import './onelight/style/title/title-colorful-dark.css'; */
 
-/* 列表样式 依次为 默认 普通 */
+/* 列表样式 依次为 1.圆形序号 2.普通 */
 /* @import './onelight/style/list/list.css'; */
 @import './onelight/style/list/list-simple.css';
 
-/* 引用块，警告框样式 依次为 原样式 默认*/
+/* 引用块，警告框样式 依次为 1.原样式 2.默认*/
 /* @import './onelight/style/blockquote/blockquote.css'; */
 @import './onelight/style/blockquote/blockquote2.css';
 

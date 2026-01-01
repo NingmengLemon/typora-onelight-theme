@@ -235,6 +235,7 @@ content {
 .menu-item-container a.menu-style-btn.active,
 .menu-item-container a.menu-style-btn:hover {
     background-color: var(--item-bg-color-blue) !important;
+    border: 2px solid var(--theme-color);
 }
 
 .context-menu {
@@ -252,7 +253,7 @@ content {
     background-color: var(--mica-bg) !important;
     backdrop-filter: var(--mica-blur);
     -webkit-backdrop-filter: var(--mica-blur);
-    border: var(--mica-border);
+    border: var(--trans-border);
     box-shadow: var(--box-shadow);
     transition: var(--mica-transition);
 }
@@ -262,7 +263,7 @@ content {
 }
 
 li.has-extra-menu {
-    border: 2px solid transparent;
+    border: var(--trans-border);
 }
 
 li.has-extra-menu.active {
@@ -272,7 +273,7 @@ li.has-extra-menu.active {
 
 li[data-key],
 li[data-group="dev-tool"] {
-    border: 2px solid transparent;
+    border: var(--trans-border);
 }
 
 li[data-key]:hover,
