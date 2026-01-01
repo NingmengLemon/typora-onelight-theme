@@ -209,6 +209,7 @@
     color: transparent !important;
     text-decoration: none;
     caret-color: #5a80ff;
+    --ol-title-decoration-color: #5a80ff;
     padding: 3px 15px;
     animation: flowLeftToRight 6s ease-in-out infinite reverse;
     transition: all 0.3s ease-in-out;
@@ -287,6 +288,7 @@
     background-clip: text;
     color: transparent;
     caret-color: #c70909;
+    --ol-title-decoration-color: #5a80ff;
     padding: 1px 12.5px;
     animation: h5FlowFixedStutter 6s ease-in-out infinite reverse;
     transition: all 0.3s ease;
@@ -343,6 +345,7 @@
     background-clip: text;
     color: transparent;
     caret-color: #c70909;
+    --ol-title-decoration-color: #5a80ff;
     padding: 1px 12.5px;
     animation: h5FlowFixedStutter 6s ease-in-out infinite reverse;
     transition: all 0.3s ease;
