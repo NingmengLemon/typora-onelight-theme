@@ -1,5 +1,5 @@
 /* ---------------->> 代码框右下角的语言类型显示 <<---------------- */
-pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
+pre.md-fences.md-end-block.ty-contain-cm::after {
     content: attr(lang);
     position: absolute;
     right: 0;
