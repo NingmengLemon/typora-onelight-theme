@@ -49,7 +49,6 @@ ol li::marker {
 #write li>p {
     margin: 0;
     padding: 0;
-    margin-left: 10px;
 }
 
 /* ---------------->> 完成任务的删除线 <<---------------- */

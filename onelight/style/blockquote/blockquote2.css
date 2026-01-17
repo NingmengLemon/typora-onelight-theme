@@ -1,3 +1,7 @@
+:root {
+    --transparency: 0.1;
+}
+
 #write {
 
     /* ---------------->> 引用块 <<---------------- */
@@ -57,10 +61,11 @@
 
     /* ---------------->> GH风格警告框 <<---------------- */
     .md-alert {
+        margin-top: 16px;
         border-color: var(--alert-theme-color);
         border-left-color: var(--alert-theme-color) !important;
         border-radius: 10px;
-        background: rgb(from var(--alert-theme-color) r g b / 0.2);
+        background: rgb(from var(--alert-theme-color) r g b / var(--transparency));
         box-shadow: var(--box-shadow);
         transition: var(--bg-transition);
         border: solid 2px var(--alert-theme-color);
