@@ -23,7 +23,7 @@
 
     blockquote:hover {
         transition: var(--bg-transition);
-        background: var(--bg-color);
+        background: var(--theme-light-color);
         box-shadow: var(--box-shadow-large);
     }
 

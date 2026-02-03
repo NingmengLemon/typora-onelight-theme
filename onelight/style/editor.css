@@ -239,7 +239,7 @@ content {
 }
 
 .context-menu {
-    padding-bottom: 0;
+    padding: 0;
 }
 
 .ty-bold:before {
@@ -260,6 +260,10 @@ content {
 
 .dropdown-menu .divider {
     opacity: 0;
+}
+
+.menu-item-container {
+    padding-top: 10px;
 }
 
 li.has-extra-menu {
@@ -386,17 +390,46 @@ div#md-searchpanel {
     position: relative;
 }
 
+/* 当前版本 */
+.theme-preview-div[data-theme="onelight.css"]::before,
+.theme-preview-div[data-theme="onelight-dark.css"]::before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 17px;
+    width: 80px;
+    height: 20px;
+    background-image: url("https://img.shields.io/badge/%E5%BD%93%E5%89%8D-v1.12.2-blue?style=flat-square");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* 最新版本 */
 .theme-preview-div[data-theme="onelight.css"]::after,
 .theme-preview-div[data-theme="onelight-dark.css"]::after {
     content: '';
     position: absolute;
     right: 0px;
-    bottom: -3px;
-    width: 90px;
+    top: -1px;
+    width: 80px;
     height: 20px;
-    background-image: url("https://img.shields.io/github/v/release/caolib/typora-onelight-theme?labelColor=grey&color=red");
+    background-image: url("https://img.shields.io/github/v/release/caolib/typora-onelight-theme?style=flat-square&label=%E6%9C%80%E6%96%B0&color=red");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 10;
     pointer-events: none;
+}
+
+
+.theme-preview-content {
+    width: 250px;
+    height: 100%;
+}
+
+.theme-preview-div {
+    box-shadow: var(--box-shadow-large);
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
