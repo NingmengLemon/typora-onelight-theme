@@ -1,38 +1,35 @@
 /* 有序列表 */
-#write ul li {
+#write ul>li {
     list-style-type: initial;
 }
 
-#write ul ul li {
+#write ul ul>li {
     list-style-type: square;
 }
 
-#write ul ul ul li {
+#write ul ul ul>li {
     list-style-type: circle;
 }
 
-#write ul ul ul ul li {
+#write ul ul ul ul>li {
     list-style-type: disclosure-closed;
 }
-
-
 
 ul>li>ul>li>ul>li>ul>li::marker {
     font-size: 1.2rem;
 }
 
-ul li::marker {
+ul>li::marker {
     color: var(--alert-theme-color, var(--theme-color));
     font-size: 1.5em;
 }
 
 /* 有序列表 */
-
-#write ol li {
-    list-style-type: decimal;
+#write ol>li {
+    list-style-type: decimal !important;
 }
 
-ol li::marker {
+ol>li::marker {
     font-size: 1rem;
     color: var(--alert-theme-color, var(--theme-color));
 }
